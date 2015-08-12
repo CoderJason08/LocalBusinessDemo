@@ -11,14 +11,42 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/**********  全局头文件  **********/
 #import "Masonry.h"
 #import "MBProgressHUD+PKX.h"
+#import "XLFunction.h"
+#import "XLNewtWorkManager.h"
 
+/**********  随机色  **********/
 #define Random_COLOR [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0  blue:arc4random_uniform(256)/255.0  alpha:1]
 
+
+/**********  屏幕参数  **********/
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define Button_WIDTH ([UIScreen mainScreen].bounds.size.width / 5)
 #define TabBar_HEIGHT 49
+
+/**********  网络请求  **********/
+
+/**
+ *  平台ID
+ */
+#define APP_ID @"1001"
+
+/**
+ *  平台标识符
+ */
+#define APP_KEY @"5bV9JhaMn2GJ5MZe"
+
+/**
+ *  baseURL
+ */
+#define kBaseURL @"http://www.qd-life.com/"
+
+/**
+ *  获取首页数据
+ */
+#define kIndexInfo @"?anu=api/1/index/get_index_info"
 
 #endif

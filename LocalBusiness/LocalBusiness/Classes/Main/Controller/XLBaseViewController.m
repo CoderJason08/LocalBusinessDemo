@@ -12,7 +12,6 @@
 
 @interface XLBaseViewController ()
 @property (nonatomic, strong) UIBarButtonItem *loginButton;
-@property (nonatomic, strong) UIBarButtonItem *backButton;
 @end
 
 @implementation XLBaseViewController
@@ -23,7 +22,6 @@
 //    [self.view setBackgroundColor:Random_COLOR];
 //    [self.navigationItem setTitle:@"测试"];
     self.navigationItem.rightBarButtonItem = self.loginButton;
-    self.navigationItem.leftBarButtonItem = self.backButton;
 }
 
 
@@ -37,9 +35,7 @@
     [self.navigationController pushViewController:registerVc animated:YES];
 }
 
-- (void)backButtonDidClicked {
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 
 #pragma mark - Getter & Setter
@@ -54,16 +50,7 @@
     return _loginButton;
 }
 
-- (UIBarButtonItem *)backButton {
-    if (!_backButton) {
-        XLBarButton *button = [XLBarButton barButtonWithTitle:nil image:[UIImage imageNamed:@"nav_back"] type:XLBarButtonTypeNormal];
-        button.frame = CGRectMake(0, 0, 44, 44);
-        button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
-        [button addTarget:self action:@selector(backButtonDidClicked) forControlEvents:UIControlEventTouchUpInside];
-        self.backButton = [[UIBarButtonItem alloc] initWithCustomView:button];
-    }
-    return _backButton;
-}
+
 
 
 

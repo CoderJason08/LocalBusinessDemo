@@ -7,7 +7,7 @@
 //
 
 #import "XLHomeViewController.h"
-
+#import "XLNewtWorkManager.h"
 @interface XLHomeViewController ()
 
 @end
@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self requestData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +25,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)requestData {
+    /**
+     *  设置请求参数
+     */
+    NSMutableDictionary *para = [NSMutableDictionary dictionary];
+    [para setObject:@"120.38" forKey:@"lon"];
+    [para setObject:@"36.06" forKey:@"lat"];
+    [para setObject:[XLFunction getTimeStamp] forKey:@"time"];
+    NSArray *paraArray = @[APP_ID,para[@"lon"],para[@"lat"],para[@"time"],APP_KEY];
+    [para setObject:[XLFunction MD5SignWithParaArray:paraArray] forKey:@"sign"];
+    [para setObject:APP_ID forKey:@"app_id"];
+    
+    [XLNewtWorkManager XLGET:kIndexInfo parameters:para success:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+    } error:^(id error) {
+        NSLog(@"%@",error);
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
-*/
+
 
 @end
