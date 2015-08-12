@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    XLTabBarButtonTypeNormal,
-    XLTabBarButtonTypeRound,
-}XLTabBarButtonType;
+    XLBarButtonTypeNormal,
+    XLBarButtonTypeRound,
+}XLBarButtonType;
 
-@interface XLTabBarButton : UIButton
+@interface XLBarButton : UIButton
 + (instancetype)barButtonWithTitle:(NSString *)title
                              image:(UIImage *)image
-                              type:(XLTabBarButtonType)type;
+                              type:(XLBarButtonType)type;
 @end

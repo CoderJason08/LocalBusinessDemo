@@ -7,14 +7,14 @@
 //
 
 #import "XLTabPopBar.h"
-#import "XLTabBarButton.h"
+#import "XLBarButton.h"
 
 @interface XLTabPopBar ()
 @property (nonatomic, strong) UIImageView *bgView;
-@property (nonatomic, strong) XLTabBarButton *lifeButton;
-@property (nonatomic, strong) XLTabBarButton *communityButton;
-@property (nonatomic, strong) XLTabBarButton *aroundButton;
-@property (nonatomic, strong) XLTabBarButton *cancleButton;
+@property (nonatomic, strong) XLBarButton *lifeButton;
+@property (nonatomic, strong) XLBarButton *communityButton;
+@property (nonatomic, strong) XLBarButton *aroundButton;
+@property (nonatomic, strong) XLBarButton *cancleButton;
 @end
 
 @implementation XLTabPopBar
@@ -102,36 +102,36 @@
 }
 
 
-- (XLTabBarButton *)lifeButton{
+- (XLBarButton *)lifeButton{
     if (!_lifeButton) {
-        self.lifeButton = [XLTabBarButton barButtonWithTitle:@"关于" image:nil type:XLTabBarButtonTypeNormal];
+        self.lifeButton = [XLBarButton barButtonWithTitle:@"关于" image:nil type:XLBarButtonTypeNormal];
         [self.lifeButton addTarget:self action:@selector(popBarButtonDidClicked:) forControlEvents:UIControlEventTouchDown];
         self.lifeButton.tag = 5;
     }
     return _lifeButton;
 }
 
-- (XLTabBarButton *)communityButton {
+- (XLBarButton *)communityButton {
     if (!_communityButton) {
-        self.communityButton = [XLTabBarButton barButtonWithTitle:@"在线" image:nil type:XLTabBarButtonTypeNormal];
+        self.communityButton = [XLBarButton barButtonWithTitle:@"在线" image:nil type:XLBarButtonTypeNormal];
         [self.communityButton addTarget:self action:@selector(popBarButtonDidClicked:) forControlEvents:UIControlEventTouchDown];
         self.communityButton.tag = 6;
     }
     return _communityButton;
 }
 
-- (XLTabBarButton *)aroundButton {
+- (XLBarButton *)aroundButton {
     if (!_aroundButton) {
-        self.aroundButton = [XLTabBarButton barButtonWithTitle:@"摇一摇" image:nil type:XLTabBarButtonTypeNormal];
+        self.aroundButton = [XLBarButton barButtonWithTitle:@"摇一摇" image:nil type:XLBarButtonTypeNormal];
         [self.aroundButton addTarget:self action:@selector(popBarButtonDidClicked:) forControlEvents:UIControlEventTouchDown];
         self.aroundButton.tag = 7;
     }
     return _aroundButton;
 }
 
-- (XLTabBarButton *)cancleButton {
+- (XLBarButton *)cancleButton {
     if (!_cancleButton) {
-        self.cancleButton = [XLTabBarButton barButtonWithTitle:@"收起" image:nil type:XLTabBarButtonTypeNormal];
+        self.cancleButton = [XLBarButton barButtonWithTitle:@"收起" image:nil type:XLBarButtonTypeNormal];
         [self.cancleButton addTarget:self action:@selector(popBarButtonDidClicked:) forControlEvents:UIControlEventTouchDown];
         self.cancleButton.tag = 8;
         self.cancleButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 15);

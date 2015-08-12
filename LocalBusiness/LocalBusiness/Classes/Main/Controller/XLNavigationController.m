@@ -7,6 +7,7 @@
 //
 
 #import "XLNavigationController.h"
+#import "XLTabBarController.h"
 
 @interface XLNavigationController ()
 
@@ -29,7 +30,12 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [super pushViewController:viewController animated:animated];
+    XLTabBarController *tabBar = (XLTabBarController *)[[UIApplication sharedApplication].keyWindow rootViewController];
+    [tabBar setPopBarHidden:YES];
 }
 
 

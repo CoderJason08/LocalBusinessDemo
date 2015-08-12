@@ -58,13 +58,16 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.tabBar addSubview:self.bottomTabBar];
-    [self.view addSubview:self.popBar];
-//    [self.view bringSubviewToFront:self.popBar];
-    
+    [self.view addSubview:self.popBar];    
     [self.popBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.tabBar.mas_top);
-        make.size.equalTo(self.tabBar);
+        make.bottom.equalTo(self.view).offset(-TabBar_HEIGHT);
+        make.left.right.equalTo(self.view);
+        make.height.mas_equalTo(TabBar_HEIGHT);
     }];
+}
+
+- (void)setPopBarHidden:(BOOL)flag {
+    self.popBar.hidden = flag;
 }
 
 #pragma mark - Private Function
@@ -74,6 +77,8 @@
     XLNavigationController *navController = [[XLNavigationController alloc] initWithRootViewController:viewController];
     [self addChildViewController:navController];
 }
+
+
 
 #pragma mark - XLTabBarDelegate
 

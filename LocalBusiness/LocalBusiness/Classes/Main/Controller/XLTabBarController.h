@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface XLTabBarController : UITabBarController
-
+- (void)setPopBarHidden:(BOOL)flag;
 @end

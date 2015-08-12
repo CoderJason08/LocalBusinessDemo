@@ -7,7 +7,7 @@
 //
 
 #import "XLTabBar.h"
-#import "XLTabBarButton.h"
+#import "XLBarButton.h"
 
 
 
@@ -15,7 +15,7 @@
 /**
  *  当前选中的按钮
  */
-@property (nonatomic, weak) XLTabBarButton *currentSelectedButton;
+@property (nonatomic, weak) XLBarButton *currentSelectedButton;
 
 @end
 
@@ -49,7 +49,7 @@
 - (void)setupSubViews {
     static NSUInteger barButtonCount = 5;
     for (int index = 0; index < barButtonCount; index++) {
-        XLTabBarButton *button = [XLTabBarButton buttonWithType:UIButtonTypeCustom];
+        XLBarButton *button = [XLBarButton buttonWithType:UIButtonTypeCustom];
         NSString *normal = [NSString stringWithFormat:@"home_%d",index];
         NSString *selected = [NSString stringWithFormat:@"home_%d_pressed",index];
         [button setBackgroundImage:[UIImage imageNamed:normal] forState:UIControlStateNormal];
@@ -65,7 +65,7 @@
     }
 }
 
-- (void)tabBarButtonDidClicked:(XLTabBarButton *)button{
+- (void)tabBarButtonDidClicked:(XLBarButton *)button{
     self.currentSelectedButton.selected = NO;
     button.selected = YES;
     self.currentSelectedButton = button;

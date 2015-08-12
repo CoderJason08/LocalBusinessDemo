@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XLBaseViewController : UIViewController
+@interface XLBaseViewController : UITableViewController
 
 @end

@@ -6,17 +6,17 @@
 //  Copyright (c) 2015年 Jason. All rights reserved.
 //
 
-#import "XLTabBarButton.h"
+#import "XLBarButton.h"
 
-@implementation XLTabBarButton
+@implementation XLBarButton
 
 /**
  *  重写取消点击高亮效果
  */
 - (void)setHighlighted:(BOOL)highlighted {}
 
-+ (instancetype)barButtonWithTitle:(NSString *)title image:(UIImage *)image type:(XLTabBarButtonType)type {
-    XLTabBarButton *button = [[XLTabBarButton alloc] init];
++ (instancetype)barButtonWithTitle:(NSString *)title image:(UIImage *)image type:(XLBarButtonType)type {
+    XLBarButton *button = [[XLBarButton alloc] init];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont fontWithName:@"Menlo-Bold" size:18];
     if (title) {
@@ -25,8 +25,6 @@
     if (image) {
         [button setImage:image forState:UIControlStateNormal];
     }
-    button.backgroundColor = Random_COLOR;
-//    [button sizeToFit];
     return button;
 }
 

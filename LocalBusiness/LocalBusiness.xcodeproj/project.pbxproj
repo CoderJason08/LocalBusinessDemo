@@ -18,7 +18,7 @@
 		9605D7CE1B7905AE00FE2C37 /* XLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7721B7905AE00FE2C37 /* XLNavigationController.m */; };
 		9605D7CF1B7905AE00FE2C37 /* XLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7741B7905AE00FE2C37 /* XLTabBarController.m */; };
 		9605D7D01B7905AE00FE2C37 /* XLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7781B7905AE00FE2C37 /* XLTabBar.m */; };
-		9605D7D11B7905AE00FE2C37 /* XLTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D77A1B7905AE00FE2C37 /* XLTabBarButton.m */; };
+		9605D7D11B7905AE00FE2C37 /* XLBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D77A1B7905AE00FE2C37 /* XLBarButton.m */; };
 		9605D7D21B7905AE00FE2C37 /* XLTabPopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D77C1B7905AE00FE2C37 /* XLTabPopBar.m */; };
 		9605D7D31B7905AE00FE2C37 /* XLAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7811B7905AE00FE2C37 /* XLAboutViewController.m */; };
 		9605D7D41B7905AE00FE2C37 /* XLOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7871B7905AE00FE2C37 /* XLOnlineViewController.m */; };
@@ -41,6 +41,7 @@
 		9605D7E51B7905AE00FE2C37 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9605D7C31B7905AE00FE2C37 /* MBProgressHUD.bundle */; };
 		9605D7E61B7905AE00FE2C37 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7C51B7905AE00FE2C37 /* MBProgressHUD.m */; };
 		9605D7E71B7905AE00FE2C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7C61B7905AE00FE2C37 /* main.m */; };
+		9680D24C1B7BA14300A8EF08 /* XLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9680D24B1B7BA14300A8EF08 /* XLRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +78,8 @@
 		9605D7741B7905AE00FE2C37 /* XLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLTabBarController.m; sourceTree = "<group>"; };
 		9605D7771B7905AE00FE2C37 /* XLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLTabBar.h; sourceTree = "<group>"; };
 		9605D7781B7905AE00FE2C37 /* XLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLTabBar.m; sourceTree = "<group>"; };
-		9605D7791B7905AE00FE2C37 /* XLTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLTabBarButton.h; sourceTree = "<group>"; };
-		9605D77A1B7905AE00FE2C37 /* XLTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLTabBarButton.m; sourceTree = "<group>"; };
+		9605D7791B7905AE00FE2C37 /* XLBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLBarButton.h; sourceTree = "<group>"; };
+		9605D77A1B7905AE00FE2C37 /* XLBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBarButton.m; sourceTree = "<group>"; };
 		9605D77B1B7905AE00FE2C37 /* XLTabPopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLTabPopBar.h; sourceTree = "<group>"; };
 		9605D77C1B7905AE00FE2C37 /* XLTabPopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLTabPopBar.m; sourceTree = "<group>"; };
 		9605D7801B7905AE00FE2C37 /* XLAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLAboutViewController.h; sourceTree = "<group>"; };
@@ -123,6 +124,8 @@
 		9605D7C41B7905AE00FE2C37 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		9605D7C51B7905AE00FE2C37 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		9605D7C61B7905AE00FE2C37 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9680D24A1B7BA14300A8EF08 /* XLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRegisterViewController.h; sourceTree = "<group>"; };
+		9680D24B1B7BA14300A8EF08 /* XLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +265,7 @@
 		9605D7611B7905AE00FE2C37 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9680D2491B7BA0C500A8EF08 /* Register */,
 				9605D7621B7905AE00FE2C37 /* XLHomeViewController.h */,
 				9605D7631B7905AE00FE2C37 /* XLHomeViewController.m */,
 			);
@@ -318,19 +322,11 @@
 		9605D76C1B7905AE00FE2C37 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9605D76D1B7905AE00FE2C37 /* Common */,
 				9605D76E1B7905AE00FE2C37 /* Controller */,
 				9605D7751B7905AE00FE2C37 /* Model */,
 				9605D7761B7905AE00FE2C37 /* View */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		9605D76D1B7905AE00FE2C37 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		9605D76E1B7905AE00FE2C37 /* Controller */ = {
@@ -358,8 +354,8 @@
 			children = (
 				9605D7771B7905AE00FE2C37 /* XLTabBar.h */,
 				9605D7781B7905AE00FE2C37 /* XLTabBar.m */,
-				9605D7791B7905AE00FE2C37 /* XLTabBarButton.h */,
-				9605D77A1B7905AE00FE2C37 /* XLTabBarButton.m */,
+				9605D7791B7905AE00FE2C37 /* XLBarButton.h */,
+				9605D77A1B7905AE00FE2C37 /* XLBarButton.m */,
 				9605D77B1B7905AE00FE2C37 /* XLTabPopBar.h */,
 				9605D77C1B7905AE00FE2C37 /* XLTabPopBar.m */,
 			);
@@ -666,6 +662,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9680D2491B7BA0C500A8EF08 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9680D24A1B7BA14300A8EF08 /* XLRegisterViewController.h */,
+				9680D24B1B7BA14300A8EF08 /* XLRegisterViewController.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -770,9 +775,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9605D7CD1B7905AE00FE2C37 /* XLBaseViewController.m in Sources */,
+				9680D24C1B7BA14300A8EF08 /* XLRegisterViewController.m in Sources */,
 				9605D7CA1B7905AE00FE2C37 /* XLCircleViewController.m in Sources */,
 				9605D7D71B7905AE00FE2C37 /* XLNewsViewController.m in Sources */,
-				9605D7D11B7905AE00FE2C37 /* XLTabBarButton.m in Sources */,
+				9605D7D11B7905AE00FE2C37 /* XLBarButton.m in Sources */,
 				9605D7D31B7905AE00FE2C37 /* XLAboutViewController.m in Sources */,
 				9605D7DF1B7905AE00FE2C37 /* MASViewAttribute.m in Sources */,
 				9605D7DE1B7905AE00FE2C37 /* MASLayoutConstraint.m in Sources */,
@@ -992,6 +998,7 @@
 				9605D74C1B79057200FE2C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9605D74D1B79057200FE2C37 /* Build configuration list for PBXNativeTarget "LocalBusinessTests" */ = {
 			isa = XCConfigurationList;
@@ -1000,6 +1007,7 @@
 				9605D74F1B79057200FE2C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

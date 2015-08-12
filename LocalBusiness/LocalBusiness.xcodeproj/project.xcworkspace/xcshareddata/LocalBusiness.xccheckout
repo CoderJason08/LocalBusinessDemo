@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>57B7BCDF-4067-4EE1-B915-39171C769693</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>27BC6E2A9139E79C847A5A275288D661F346A7AE</key>
+		<string>https://github.com/CoderJason1992/LocalBusinessDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LocalBusiness/LocalBusiness.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>27BC6E2A9139E79C847A5A275288D661F346A7AE</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/CoderJason1992/LocalBusinessDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>27BC6E2A9139E79C847A5A275288D661F346A7AE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>27BC6E2A9139E79C847A5A275288D661F346A7AE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LocalBusinessDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
