@@ -7,6 +7,15 @@
 //
 
 #import "XLAdvertiseView.h"
+#import "UIImageView+AFNetworking.h"
+
+@interface XLAdvertiseView () <UIScrollViewDelegate>
+/**
+ *  轮播imageView数组
+ */
+@property (nonatomic, strong) NSMutableArray *imageViews;
+
+@end
 
 /**
  *  定义广告数量
@@ -34,15 +43,26 @@ static NSUInteger advertiseCount = 3;
  *  pageControl
  */
 @property (nonatomic, strong) UIPageControl *pageControl;
+/**
+ *  定时器
+ */
+@property (nonatomic, strong) NSTimer *timer;
+/**
+ *  当前页
+ */
+@property (nonatomic, assign) NSInteger currentPage;
 
 @end
 
 @implementation XLAdvertiseView
-
+/**
+ *  快速创建
+ */
 + (instancetype)advertiseView {
     return [[self alloc] init];
 }
 
+#pragma mark - Life Circle
 
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
@@ -62,18 +82,10 @@ static NSUInteger advertiseCount = 3;
     return self;
 }
 
-/**
- *  初始化子控件
- */
-- (void)setupSubviews {
-    [self addSubview:self.scrollView];
-    [self addSubview:self.bottomShadowView];
-    /**
-     *  将底部的descLabel和pageControl包装成到bottomView中
-     */
-    [self addSubview:self.bottomView];
-}
 
+- (void)dealloc {
+    [self.timer invalidate];
+}
 
 /**
  *  布局子控件
@@ -110,12 +122,73 @@ static NSUInteger advertiseCount = 3;
     
 }
 
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.currentPage = (NSInteger)self.scrollView.contentOffset.x / SCREEN_WIDTH;
+    self.pageControl.currentPage = self.currentPage;
+    FocusModel *foucus = self.list[self.currentPage];
+    self.descLabel.text = foucus.title;
+}
+
+#pragma mark - Private Function
+
+/**
+ *  设置广告数据
+ */
+- (void)loadData {
+    [self.imageViews enumerateObjectsUsingBlock:^(UIImageView *imageView, NSUInteger idx, BOOL *stop) {
+        FocusModel *foucus = self.list[idx];
+        [imageView setImageWithURL:[NSURL URLWithString:foucus.cover]];
+    }];
+    self.descLabel.text = [self.list[0] title];
+}
+
+/**
+ *  初始化子控件
+ */
+- (void)setupSubviews {
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    [self addSubview:self.scrollView];
+    [self addSubview:self.bottomShadowView];
+    /**
+     *  将底部的descLabel和pageControl包装成到bottomView中
+     */
+    [self addSubview:self.bottomView];
+}
+
+
+#warning 移动焦点图的方法
+- (void)moveScrollView {
+    
+}
+
 #pragma mark - Getter & Setter 
+
+- (void)setList:(NSArray *)list {
+    _list = list;
+    [self loadData];
+}
 
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
         self.scrollView = [[UIScrollView alloc] init];
-        self.scrollView.backgroundColor = [UIColor blueColor];
+        self.scrollView.delegate = self;
+//        self.scrollView.backgroundColor = [UIColor blueColor];
+        // 添加轮播imageView
+        for (int index = 0; index < advertiseCount; index++) {
+            UIImageView *imageView = [[UIImageView alloc] init];
+            [self.imageViews addObject:imageView];
+            imageView.backgroundColor = Random_COLOR;
+            imageView.frame = CGRectMake(index * SCREEN_WIDTH, 0, SCREEN_WIDTH, 353 * (SCREEN_HEIGHT / 568) / 2.0 );
+            [self.scrollView addSubview:imageView];
+        }
+        // 设置contentSize
+        self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * advertiseCount, 0);
+        // 设置滚动分页
+        self.scrollView.pagingEnabled = YES;
+        // 设置弹簧效果
+        self.scrollView.bounces = NO;
     }
     return _scrollView;
 }
@@ -141,9 +214,9 @@ static NSUInteger advertiseCount = 3;
 - (UILabel *)descLabel {
     if (!_descLabel) {
         self.descLabel = [[UILabel alloc] init];
-        self.descLabel.text = @"测试测试测试";
+//        self.descLabel.text = @"测试测试测试";
         self.descLabel.textColor = [UIColor whiteColor];
-        self.descLabel.font = FONT(16);
+        self.descLabel.font = FONT(14);
     }
     return _descLabel;
 }
@@ -155,6 +228,20 @@ static NSUInteger advertiseCount = 3;
         self.pageControl.currentPage = 0;
     }
     return _pageControl;
+}
+
+- (NSMutableArray *)imageViews{
+    if (!_imageViews) {
+        self.imageViews = [NSMutableArray array];
+    }
+    return _imageViews;
+}
+
+- (NSTimer *)timer {
+    if (!_timer) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(moveScrollView) userInfo:nil repeats:YES];
+    }
+    return _timer;
 }
 
 @end

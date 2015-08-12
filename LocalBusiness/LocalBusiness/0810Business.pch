@@ -18,10 +18,8 @@
 #import "XLNewtWorkManager.h"
 
 
-/**********  颜色  **********/
-/**
- *  导航栏颜色
- */
+
+/**********  导航栏颜色  **********/
 #define Nav_BAR_COLOR [UIColor colorWithRed:53/255.0 green:174/255.0  blue:243/255.0  alpha:1]
 
 /**********  随机色  **********/

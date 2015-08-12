@@ -9,6 +9,7 @@
 #import "XLHomeViewController.h"
 #import "XLNewtWorkManager.h"
 #import "XLAdvertiseView.h"
+#import "XLHomeModel.h"
 
 @interface XLHomeViewController ()
 /**
@@ -46,7 +47,12 @@
     [para setObject:APP_ID forKey:@"app_id"];
     
     [XLNewtWorkManager XLGET:kIndexInfo parameters:para success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
+        XLHomeModel *home = [[XLHomeModel alloc] initWithDictionary:responseObject error:NULL];
+        FocusListModel *foucusList = home.focus;
+        
+        self.advertiseView.list = foucusList.list;
+        
+        
     } error:^(id error) {
         NSLog(@"%@",error);
     } failure:^(NSError *error) {
@@ -60,7 +66,7 @@
 - (XLAdvertiseView *)advertiseView {
     if (!_advertiseView) {
         self.advertiseView = [XLAdvertiseView advertiseView];
-        CGFloat height = 353 / 2.0;
+        CGFloat height = 353 * (SCREEN_HEIGHT / 568) / 2.0 ;
         self.advertiseView.frame = CGRectMake(0, 0, SCREEN_WIDTH, height);
     }
     return _advertiseView;

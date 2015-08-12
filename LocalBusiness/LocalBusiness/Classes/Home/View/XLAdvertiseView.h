@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XLHomeModel.h"
 
 @interface XLAdvertiseView : UIView
+/**
+ *  广告模型数组
+ */
+@property (nonatomic, strong) NSArray *list;
+
 /**
  *  快速创建广告View
  */
