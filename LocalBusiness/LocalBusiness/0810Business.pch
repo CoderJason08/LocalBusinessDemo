@@ -17,9 +17,18 @@
 #import "XLFunction.h"
 #import "XLNewtWorkManager.h"
 
+
+/**********  颜色  **********/
+/**
+ *  导航栏颜色
+ */
+#define Nav_BAR_COLOR [UIColor colorWithRed:53/255.0 green:174/255.0  blue:243/255.0  alpha:1]
+
 /**********  随机色  **********/
 #define Random_COLOR [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0  blue:arc4random_uniform(256)/255.0  alpha:1]
 
+/**********  字体  **********/
+#define FONT(s) [UIFont fontWithName:@"Menlo-Bold" size:(s)]
 
 /**********  屏幕参数  **********/
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width

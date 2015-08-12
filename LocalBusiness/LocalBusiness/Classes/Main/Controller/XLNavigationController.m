@@ -16,7 +16,7 @@
 @implementation XLNavigationController
 
 + (void)initialize {
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
+    [[UINavigationBar appearance] setBarTintColor:Nav_BAR_COLOR];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     NSDictionary *titleAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont fontWithName:@"Menlo-Bold" size:22]};

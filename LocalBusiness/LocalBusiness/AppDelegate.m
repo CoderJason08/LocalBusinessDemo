@@ -9,10 +9,6 @@
 #import "AppDelegate.h"
 #import "XLTabBarController.h"
 #import "XLNavigationController.h"
-#import "XLHomeViewController.h"
-#import "XLNewsViewController.h"
-#import "XLCircleViewController.h"
-#import "XLToolsViewController.h"
 
 @interface AppDelegate ()
 

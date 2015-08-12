@@ -18,7 +18,7 @@
 + (instancetype)barButtonWithTitle:(NSString *)title image:(UIImage *)image type:(XLBarButtonType)type {
     XLBarButton *button = [[XLBarButton alloc] init];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont fontWithName:@"Menlo-Bold" size:18];
+    button.titleLabel.font = FONT(18);
     if (title) {
         [button setTitle:title forState:UIControlStateNormal];
     }

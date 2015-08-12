@@ -61,6 +61,8 @@
 		960F08B91B7BAF7F00DC0690 /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08A81B7BAF7F00DC0690 /* MD5.m */; };
 		960F08BE1B7BAF8A00DC0690 /* XLFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08BB1B7BAF8A00DC0690 /* XLFunction.m */; };
 		960F08BF1B7BAF8A00DC0690 /* XLNewtWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08BD1B7BAF8A00DC0690 /* XLNewtWorkManager.m */; };
+		960F08C61B7BBAB100DC0690 /* XLAdvertiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08C51B7BBAB100DC0690 /* XLAdvertiseView.m */; };
+		960F08C91B7BBABE00DC0690 /* XLCirclesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08C81B7BBABE00DC0690 /* XLCirclesView.m */; };
 		9680D24C1B7BA14300A8EF08 /* XLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9680D24B1B7BA14300A8EF08 /* XLRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +188,10 @@
 		960F08BB1B7BAF8A00DC0690 /* XLFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFunction.m; sourceTree = "<group>"; };
 		960F08BC1B7BAF8A00DC0690 /* XLNewtWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLNewtWorkManager.h; sourceTree = "<group>"; };
 		960F08BD1B7BAF8A00DC0690 /* XLNewtWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLNewtWorkManager.m; sourceTree = "<group>"; };
+		960F08C41B7BBAB100DC0690 /* XLAdvertiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLAdvertiseView.h; sourceTree = "<group>"; };
+		960F08C51B7BBAB100DC0690 /* XLAdvertiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLAdvertiseView.m; sourceTree = "<group>"; };
+		960F08C71B7BBABE00DC0690 /* XLCirclesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCirclesView.h; sourceTree = "<group>"; };
+		960F08C81B7BBABE00DC0690 /* XLCirclesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCirclesView.m; sourceTree = "<group>"; };
 		9680D24A1B7BA14300A8EF08 /* XLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRegisterViewController.h; sourceTree = "<group>"; };
 		9680D24B1B7BA14300A8EF08 /* XLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,7 +329,7 @@
 			children = (
 				9605D7611B7905AE00FE2C37 /* Controller */,
 				9605D7641B7905AE00FE2C37 /* Model */,
-				9605D7651B7905AE00FE2C37 /* View */,
+				960F08C31B7BBA9F00DC0690 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -343,13 +349,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		9605D7651B7905AE00FE2C37 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		9605D7661B7905AE00FE2C37 /* Login */ = {
@@ -798,6 +797,17 @@
 			path = MD5;
 			sourceTree = "<group>";
 		};
+		960F08C31B7BBA9F00DC0690 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				960F08C41B7BBAB100DC0690 /* XLAdvertiseView.h */,
+				960F08C51B7BBAB100DC0690 /* XLAdvertiseView.m */,
+				960F08C71B7BBABE00DC0690 /* XLCirclesView.h */,
+				960F08C81B7BBABE00DC0690 /* XLCirclesView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9680D2491B7BA0C500A8EF08 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -940,11 +950,13 @@
 				960F08B71B7BAF7F00DC0690 /* UIProgressView+AFNetworking.m in Sources */,
 				9605D7E71B7905AE00FE2C37 /* main.m in Sources */,
 				9605D7E41B7905AE00FE2C37 /* MBProgressHUD+PKX.m in Sources */,
+				960F08C91B7BBABE00DC0690 /* XLCirclesView.m in Sources */,
 				960F08AA1B7BAF7F00DC0690 /* AFHTTPRequestOperationManager.m in Sources */,
 				9605D7C71B7905AE00FE2C37 /* AppDelegate.m in Sources */,
 				9605D7DB1B7905AE00FE2C37 /* MASCompositeConstraint.m in Sources */,
 				960F08AB1B7BAF7F00DC0690 /* AFHTTPSessionManager.m in Sources */,
 				9605D7E11B7905AE00FE2C37 /* NSArray+MASAdditions.m in Sources */,
+				960F08C61B7BBAB100DC0690 /* XLAdvertiseView.m in Sources */,
 				9605D7D61B7905AE00FE2C37 /* XLShakeViewController.m in Sources */,
 				960F08AF1B7BAF7F00DC0690 /* AFURLRequestSerialization.m in Sources */,
 				960F08B11B7BAF7F00DC0690 /* AFURLSessionManager.m in Sources */,

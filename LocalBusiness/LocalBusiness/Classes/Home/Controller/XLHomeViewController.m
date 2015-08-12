@@ -8,8 +8,13 @@
 
 #import "XLHomeViewController.h"
 #import "XLNewtWorkManager.h"
-@interface XLHomeViewController ()
+#import "XLAdvertiseView.h"
 
+@interface XLHomeViewController ()
+/**
+ *  广告view
+ */
+@property (nonatomic, strong) XLAdvertiseView *advertiseView;
 @end
 
 @implementation XLHomeViewController
@@ -17,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tableView.tableHeaderView = self.advertiseView;
+    
     [self requestData];
 }
 
@@ -46,5 +54,16 @@
     }];
 }
 
+
+#pragma mark - Getter & Setter 
+
+- (XLAdvertiseView *)advertiseView {
+    if (!_advertiseView) {
+        self.advertiseView = [XLAdvertiseView advertiseView];
+        CGFloat height = 353 / 2.0;
+        self.advertiseView.frame = CGRectMake(0, 0, SCREEN_WIDTH, height);
+    }
+    return _advertiseView;
+}
 
 @end
