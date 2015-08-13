@@ -7,30 +7,103 @@
 //
 
 #import "JSONModel.h"
+@class FocusListModel;
+@class GroupListModel;
 
-
-@protocol FocusModel <NSObject>
-
-@end
-
-@interface FocusModel : JSONModel
-@property (nonatomic, assign) int id;
-@property (nonatomic, copy) NSString *cover;
-@property (nonatomic, copy) NSString *link;
-@property (nonatomic, assign) int res_id;
-@property (nonatomic, copy) NSString *res_name;
-@property (nonatomic, copy) NSString *title;
-@end
-
-@interface FocusListModel : JSONModel
-@property (nonatomic, strong) NSArray<FocusModel> *list;
-@end
 
 
 @interface XLHomeModel : JSONModel
+/**
+ *  首页焦点图模型
+ */
 @property (nonatomic, strong) FocusListModel *focus;
+/**
+ *  首页分组模型
+ */
+@property (nonatomic, strong) GroupListModel *group;
+
 @end
 
+/**********  首页焦点图模型  **********/
+
+@protocol FocusModel <NSObject>
+@end
+
+@interface FocusListModel : JSONModel
+/**
+ *  焦点图模型列表
+ */
+@property (nonatomic, strong) NSArray<FocusModel> *list;
+@end
+
+@interface FocusModel : JSONModel
+/**
+ *  焦点图id
+ */
+@property (nonatomic, assign) int id;
+/**
+ *  焦点图片地址
+ */
+@property (nonatomic, copy) NSString *cover;
+/**
+ *  焦点图点击链接
+ */
+@property (nonatomic, copy) NSString *link;
+/**
+ *  焦点图描述
+ */
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) int res_id;
+@property (nonatomic, copy) NSString *res_name;
+
+@end
+
+
+
+/**********  首页分组模型  **********/
+
+@protocol GroupModel <NSObject>
+@end
+
+@interface GroupListModel : JSONModel
+@property (nonatomic, strong) NSArray<GroupModel> *list;
+@end
+
+@interface GroupModel : JSONModel
+@property (nonatomic, copy) NSString *cover;
+@property (nonatomic, assign) int id;
+@property (nonatomic, copy) NSString *title;
+@end
+
+
+/*分组
+ group={
+ list=({
+ cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170523000000_1_2877_100.png";id=1;title="\U7f8e\U5bbf";
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170512000000_1_5772_92.png";id=2;title="\U5065\U5eb7";
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170424000000_1_3809_45.png";id=4;title="\U626b\U8d27";
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170340000000_1_7196_45.png";id=6;title="\U54c1\U724c";
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170451000000_1_4055_25.png";id=3;title="\U6c7d\U8f66";
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170311000000_1_4343_73.png";id=7;title="\U6559\U80b2";
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170245000000_1_2844_66.png";id=8;title="\U91d1\U878d";
+ },
+ {
+ cover="http://www.qd-life.com/images/m/icons/icon-more.png";id=0;title="\U66f4\U591a";
+ });
+ };
+ */
 
 
 /*焦点图
@@ -67,32 +140,7 @@
  
 
  
- group={
- list=({
- cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170523000000_1_2877_100.png";id=1;title="\U7f8e\U5bbf";
- },
- {
- cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170512000000_1_5772_92.png";id=2;title="\U5065\U5eb7";
- },
- {
- cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170424000000_1_3809_45.png";id=4;title="\U626b\U8d27";
- },
- {
- cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170340000000_1_7196_45.png";id=6;title="\U54c1\U724c";
- },
- {
- cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170451000000_1_4055_25.png";id=3;title="\U6c7d\U8f66";
- },
- {
- cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170311000000_1_4343_73.png";id=7;title="\U6559\U80b2";
- },
- {
- cover="http://www.qd-life.com/static/upload/2014/11/30/20141130170245000000_1_2844_66.png";id=8;title="\U91d1\U878d";
- },
- {
- cover="http://www.qd-life.com/images/m/icons/icon-more.png";id=0;title="\U66f4\U591a";
- });
- };guess={
+guess={
  list=({
  cover="http://www.qd-life.com/static/upload/2015/06/23/index_20150623103654000000_1_52741_43.jpg";id=217;intro="\U9ed1\U849c\U539f\U4ef7106\U5143/\U6876\Uff0c\U73b0\U4ef788\U5143/\U6876\U3002";price="88.00";title="\U65b0\U519c\U76df\U9ed1\U849c";
  },

@@ -14,4 +14,17 @@
     cell.backgroundColor = Random_COLOR;
     return cell;
 }
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupSubviews];
+    }
+    return self;
+}
+
+- (void)setupSubviews {
+    
+}
 @end

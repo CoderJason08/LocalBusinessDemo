@@ -50,13 +50,10 @@
     self.backgroundColor = [UIColor blueColor];
 }
 
-//- (void)layoutSubviews {
-//    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.size.equalTo(self);
-//        make.center.equalTo(self);
-//    }];
-//}
-
+- (void)setList:(GroupListModel *)list {
+    _list = list;
+    [self.collectionView reloadData];
+}
 
 #pragma mark - Getter & Setter 
 
@@ -101,6 +98,13 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     XLCirclesCell *cell = [XLCirclesCell circlesCellWith:collectionView indexPath:indexPath];
+    
+    if (indexPath.section == 0) {
+        cell.group = self.list.list[indexPath.row];
+    }else {
+        cell.group = self.list.list[indexPath.row + 4];
+    }
+    
     return cell;
 }
 

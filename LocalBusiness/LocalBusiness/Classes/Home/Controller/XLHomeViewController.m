@@ -22,6 +22,8 @@
  */
 @property (nonatomic, strong) XLAdvertiseView *advertiseView;
 
+@property (nonatomic, strong) XLHomeModel *homeModel;
+
 @end
 
 @implementation XLHomeViewController
@@ -62,11 +64,11 @@
         
 #warning 请求数据,待修改
         
-        XLHomeModel *home = [[XLHomeModel alloc] initWithDictionary:responseObject error:NULL];
-        FocusListModel *foucusList = home.focus;
-        
+        self.homeModel = [[XLHomeModel alloc] initWithDictionary:responseObject error:NULL];
+        FocusListModel *foucusList = self.homeModel.focus;
         self.advertiseView.list = foucusList.list;
         
+        [self.tableView reloadData];
         
     } error:^(id error) {
         NSLog(@"%@",error);
@@ -94,7 +96,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return [XLCirclesView circlesView];
+        XLCirclesView *circlesView = [XLCirclesView circlesView];
+        circlesView.list = self.homeModel.group;
+        NSLog(@"%@",self.homeModel.group);
+        return circlesView;
     }else if (indexPath.section == 1) {
         return [XLRecommendView recommendView];
     }else {

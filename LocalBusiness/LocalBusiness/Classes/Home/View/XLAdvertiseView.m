@@ -125,10 +125,12 @@ static NSUInteger advertiseCount = 3;
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
     self.currentPage = (NSInteger)self.scrollView.contentOffset.x / SCREEN_WIDTH;
     self.pageControl.currentPage = self.currentPage;
     FocusModel *foucus = self.list[self.currentPage];
     self.descLabel.text = foucus.title;
+
 }
 
 #pragma mark - Private Function
@@ -143,6 +145,25 @@ static NSUInteger advertiseCount = 3;
     }];
     self.descLabel.text = [self.list[0] title];
 }
+
+//- (void)reloadImage {
+//    NSInteger leftImageIndex, rightImageIndex;
+//    CGPoint offset = [self.scrollView contentOffset];
+//    
+//    if (offset.x == 2 * SCREEN_WIDTH) {
+//        self.currentPageIndex = (self.currentPageIndex + 1) % advertiseCount;
+//        self.pageControl.currentPage = (self.pageControl.currentPage + 1) % advertiseCount;
+//    }else if (offset.x == 0) {
+//        self.currentPageIndex = (self.currentPageIndex - 1) % advertiseCount;
+//        self.pageControl.currentPage = (self.pageControl.currentPage - 1) % advertiseCount;
+//
+//    }
+//    
+//    leftImageIndex = (self.currentPageIndex - 1) % advertiseCount;
+//    rightImageIndex = (self.currentPageIndex + 1) % advertiseCount;
+//    
+//    
+//}
 
 /**
  *  初始化子控件
@@ -174,9 +195,8 @@ static NSUInteger advertiseCount = 3;
     if (!_scrollView) {
         self.scrollView = [[UIScrollView alloc] init];
         self.scrollView.delegate = self;
-//        self.scrollView.backgroundColor = [UIColor blueColor];
         // 添加轮播imageView
-        for (int index = 0; index < advertiseCount; index++) {
+        for (int index = 0; index < 3; index++) {
             UIImageView *imageView = [[UIImageView alloc] init];
             [self.imageViews addObject:imageView];
             imageView.backgroundColor = Random_COLOR;

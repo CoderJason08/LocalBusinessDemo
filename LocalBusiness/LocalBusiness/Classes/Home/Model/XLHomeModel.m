@@ -9,14 +9,16 @@
 #import "XLHomeModel.h"
 
 @implementation XLHomeModel
-
 @end
 
-
 @implementation FocusListModel
-
 @end
 
 @implementation FocusModel
+@end
 
+@implementation GroupListModel
+@end
+
+@implementation GroupModel
 @end

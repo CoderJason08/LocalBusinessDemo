@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "XLHomeModel.h"
 @interface XLCirclesView : UITableViewCell
+@property (nonatomic, strong) GroupListModel *list;
 + (instancetype)circlesView;
 @end

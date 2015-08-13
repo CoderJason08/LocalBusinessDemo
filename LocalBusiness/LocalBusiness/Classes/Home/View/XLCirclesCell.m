@@ -7,6 +7,7 @@
 //
 
 #import "XLCirclesCell.h"
+#import "UIImageView+AFNetworking.h"
 
 
 @interface XLCirclesCell ()
@@ -86,6 +87,16 @@
     }];
 }
 
+
+/**
+ *  设置数据
+ */
+- (void)setGroup:(GroupModel *)group {
+    _group = group;
+    [self.imageView setImageWithURL:[NSURL URLWithString:group.cover]];
+    self.nameLabel.text = group.title;
+}
+
 #pragma mark - Private Function
 
 + (void)tapCell {
@@ -98,7 +109,7 @@
 - (UIImageView *)imageView {
     if (!_imageView) {
         self.imageView = [[UIImageView alloc] init];
-        self.imageView.backgroundColor = [UIColor orangeColor];
+//        self.imageView.backgroundColor = [UIColor orangeColor];
     }
     return _imageView;
 }
