@@ -14,9 +14,15 @@
 
 @implementation XLLoginViewController
 
+- (void)loadView {
+    self.view = [[UIView alloc] init];
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationItem setTitle:@"登录"];
 }
 
 - (void)didReceiveMemoryWarning {

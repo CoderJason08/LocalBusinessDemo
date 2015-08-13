@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XLCirclesView : UIView
-
+@interface XLCirclesView : UITableViewCell
++ (instancetype)circlesViews;
 @end

@@ -33,9 +33,16 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    [super pushViewController:viewController animated:animated];
+    
+    if (self.viewControllers.count > 0) {
     XLTabBarController *tabBar = (XLTabBarController *)[[UIApplication sharedApplication].keyWindow rootViewController];
     [tabBar setPopBarHidden:YES];
+    viewController.hidesBottomBarWhenPushed = YES;
+    }
+    
+    [super pushViewController:viewController animated:animated];
+    
+    
 }
 
 

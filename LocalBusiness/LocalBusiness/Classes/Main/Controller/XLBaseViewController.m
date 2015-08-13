@@ -7,10 +7,12 @@
 //
 
 #import "XLBaseViewController.h"
+#import "XLLoginViewController.h"
 #import "XLRegisterViewController.h"
 #import "XLBarButton.h"
+#import "XLNavRightButton.h"
 
-@interface XLBaseViewController ()
+@interface XLBaseViewController () <XLNavRightButtonDelegate>
 @property (nonatomic, strong) UIBarButtonItem *loginButton;
 @end
 
@@ -19,33 +21,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [self.view setBackgroundColor:Random_COLOR];
-//    [self.navigationItem setTitle:@"测试"];
     self.navigationItem.rightBarButtonItem = self.loginButton;
 }
 
 
 
 
-#pragma mark - Event Response
 
-- (void)loginButtonDidClicked:(UIButton *)button {
-    XLRegisterViewController *registerVc = [[XLRegisterViewController alloc] init];
-    registerVc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:registerVc animated:YES];
+
+
+#pragma mark - XLNavRightButtonDelegate
+
+- (void)navRightButtonDidClickWithType:(XLNavRightButtonType)type {
+    if (type == XLNavRightButtonTypeLogin) {
+        [self.navigationController pushViewController:[[XLLoginViewController alloc] init] animated:YES];
+    }else if (type == XLNavRightButtonTypeRegister) {
+        [self.navigationController pushViewController:[[XLRegisterViewController alloc] init]animated:YES];
+    }
 }
-
 
 
 
 #pragma mark - Getter & Setter
 
+
 - (UIBarButtonItem *)loginButton {
     if (!_loginButton) {
-        XLBarButton *button = [XLBarButton barButtonWithTitle:@"登录/注册" image:nil type:XLBarButtonTypeNormal];
-        [button sizeToFit];
-        [button addTarget:self action:@selector(loginButtonDidClicked:) forControlEvents:UIControlEventTouchDown];
-        self.loginButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+        XLNavRightButton *rightButton = [[[NSBundle mainBundle] loadNibNamed:@"XLNavRightButton" owner:nil options:nil] lastObject];
+        rightButton.delegate = self;
+        self.loginButton = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     }
     return _loginButton;
 }

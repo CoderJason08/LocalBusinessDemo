@@ -189,6 +189,8 @@ static NSUInteger advertiseCount = 3;
         self.scrollView.pagingEnabled = YES;
         // 设置弹簧效果
         self.scrollView.bounces = NO;
+        // 隐藏滚动条
+        self.scrollView.showsHorizontalScrollIndicator = NO;
     }
     return _scrollView;
 }

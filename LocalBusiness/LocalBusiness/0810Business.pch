@@ -22,6 +22,9 @@
 /**********  导航栏颜色  **********/
 #define Nav_BAR_COLOR [UIColor colorWithRed:53/255.0 green:174/255.0  blue:243/255.0  alpha:1]
 
+/**********  默认背景色  **********/
+#define Default_BG_COLOR [UIColor colorWithRed:238/255.0 green:238/255.0  blue:238/255.0  alpha:1]
+
 /**********  随机色  **********/
 #define Random_COLOR [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0  blue:arc4random_uniform(256)/255.0  alpha:1]
 

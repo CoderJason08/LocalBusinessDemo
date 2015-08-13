@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 Jason. All rights reserved.
 //
 
-#import "XLBaseViewController.h"
+#import "XLSubBaseViewController.h"
 
-@interface XLLoginViewController : XLBaseViewController
+@interface XLLoginViewController : XLSubBaseViewController
 
 @end

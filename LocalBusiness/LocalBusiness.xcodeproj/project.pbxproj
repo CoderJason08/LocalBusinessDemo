@@ -74,7 +74,10 @@
 		960F08EC1B7BCD1100DC0690 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08E11B7BCD1100DC0690 /* JSONKeyMapper.m */; };
 		960F08ED1B7BCD1100DC0690 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08E31B7BCD1100DC0690 /* JSONValueTransformer.m */; };
 		960F08F01B7BCD3800DC0690 /* XLHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08EF1B7BCD3800DC0690 /* XLHomeModel.m */; };
-		9680D24C1B7BA14300A8EF08 /* XLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9680D24B1B7BA14300A8EF08 /* XLRegisterViewController.m */; };
+		960F08F61B7C353600DC0690 /* XLNavRightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08F51B7C353600DC0690 /* XLNavRightButton.m */; };
+		960F08F81B7C354700DC0690 /* XLNavRightButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960F08F71B7C354700DC0690 /* XLNavRightButton.xib */; };
+		960F08FB1B7C3BC400DC0690 /* XLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08FA1B7C3BC400DC0690 /* XLRegisterViewController.m */; };
+		960F08FE1B7C581F00DC0690 /* XLCirclesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08FD1B7C581F00DC0690 /* XLCirclesCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,8 +229,13 @@
 		960F08E31B7BCD1100DC0690 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		960F08EE1B7BCD3800DC0690 /* XLHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLHomeModel.h; sourceTree = "<group>"; };
 		960F08EF1B7BCD3800DC0690 /* XLHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLHomeModel.m; sourceTree = "<group>"; };
-		9680D24A1B7BA14300A8EF08 /* XLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRegisterViewController.h; sourceTree = "<group>"; };
-		9680D24B1B7BA14300A8EF08 /* XLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRegisterViewController.m; sourceTree = "<group>"; };
+		960F08F41B7C353600DC0690 /* XLNavRightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLNavRightButton.h; sourceTree = "<group>"; };
+		960F08F51B7C353600DC0690 /* XLNavRightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLNavRightButton.m; sourceTree = "<group>"; };
+		960F08F71B7C354700DC0690 /* XLNavRightButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLNavRightButton.xib; sourceTree = "<group>"; };
+		960F08F91B7C3BC400DC0690 /* XLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRegisterViewController.h; sourceTree = "<group>"; };
+		960F08FA1B7C3BC400DC0690 /* XLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRegisterViewController.m; sourceTree = "<group>"; };
+		960F08FC1B7C581F00DC0690 /* XLCirclesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCirclesCell.h; sourceTree = "<group>"; };
+		960F08FD1B7C581F00DC0690 /* XLCirclesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCirclesCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,7 +379,6 @@
 		9605D7611B7905AE00FE2C37 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9680D2491B7BA0C500A8EF08 /* Register */,
 				9605D7621B7905AE00FE2C37 /* XLHomeViewController.h */,
 				9605D7631B7905AE00FE2C37 /* XLHomeViewController.m */,
 			);
@@ -402,6 +409,8 @@
 			children = (
 				9605D7681B7905AE00FE2C37 /* XLLoginViewController.h */,
 				9605D7691B7905AE00FE2C37 /* XLLoginViewController.m */,
+				960F08F91B7C3BC400DC0690 /* XLRegisterViewController.h */,
+				960F08FA1B7C3BC400DC0690 /* XLRegisterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,6 +450,9 @@
 				9605D7721B7905AE00FE2C37 /* XLNavigationController.m */,
 				9605D7731B7905AE00FE2C37 /* XLTabBarController.h */,
 				9605D7741B7905AE00FE2C37 /* XLTabBarController.m */,
+				960F08F41B7C353600DC0690 /* XLNavRightButton.h */,
+				960F08F51B7C353600DC0690 /* XLNavRightButton.m */,
+				960F08F71B7C354700DC0690 /* XLNavRightButton.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -837,10 +849,9 @@
 		960F08C31B7BBA9F00DC0690 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				960F08FF1B7C582500DC0690 /* Circles */,
 				960F08C41B7BBAB100DC0690 /* XLAdvertiseView.h */,
 				960F08C51B7BBAB100DC0690 /* XLAdvertiseView.m */,
-				960F08C71B7BBABE00DC0690 /* XLCirclesView.h */,
-				960F08C81B7BBABE00DC0690 /* XLCirclesView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -905,13 +916,15 @@
 			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
-		9680D2491B7BA0C500A8EF08 /* Register */ = {
+		960F08FF1B7C582500DC0690 /* Circles */ = {
 			isa = PBXGroup;
 			children = (
-				9680D24A1B7BA14300A8EF08 /* XLRegisterViewController.h */,
-				9680D24B1B7BA14300A8EF08 /* XLRegisterViewController.m */,
+				960F08C71B7BBABE00DC0690 /* XLCirclesView.h */,
+				960F08C81B7BBABE00DC0690 /* XLCirclesView.m */,
+				960F08FC1B7C581F00DC0690 /* XLCirclesCell.h */,
+				960F08FD1B7C581F00DC0690 /* XLCirclesCell.m */,
 			);
-			name = Register;
+			name = Circles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -996,6 +1009,7 @@
 			files = (
 				9605D7D91B7905AE00FE2C37 /* Info.plist in Resources */,
 				9605D7D81B7905AE00FE2C37 /* Images.xcassets in Resources */,
+				960F08F81B7C354700DC0690 /* XLNavRightButton.xib in Resources */,
 				9605D7C81B7905AE00FE2C37 /* LaunchScreen.xib in Resources */,
 				9605D7DA1B7905AE00FE2C37 /* Info.plist in Resources */,
 				9605D7C91B7905AE00FE2C37 /* Main.storyboard in Resources */,
@@ -1020,7 +1034,6 @@
 				960F08E91B7BCD1100DC0690 /* JSONAPI.m in Sources */,
 				9605D7CD1B7905AE00FE2C37 /* XLBaseViewController.m in Sources */,
 				960F08EC1B7BCD1100DC0690 /* JSONKeyMapper.m in Sources */,
-				9680D24C1B7BA14300A8EF08 /* XLRegisterViewController.m in Sources */,
 				960F08E61B7BCD1100DC0690 /* JSONModelClassProperty.m in Sources */,
 				960F08BE1B7BAF8A00DC0690 /* XLFunction.m in Sources */,
 				960F08B81B7BAF7F00DC0690 /* UIWebView+AFNetworking.m in Sources */,
@@ -1039,6 +1052,7 @@
 				9605D7DD1B7905AE00FE2C37 /* MASConstraintMaker.m in Sources */,
 				9605D7E61B7905AE00FE2C37 /* MBProgressHUD.m in Sources */,
 				9605D7CB1B7905AE00FE2C37 /* XLHomeViewController.m in Sources */,
+				960F08FE1B7C581F00DC0690 /* XLCirclesCell.m in Sources */,
 				960F08A91B7BAF7F00DC0690 /* AFHTTPRequestOperation.m in Sources */,
 				960F08ED1B7BCD1100DC0690 /* JSONValueTransformer.m in Sources */,
 				9605D7CC1B7905AE00FE2C37 /* XLLoginViewController.m in Sources */,
@@ -1065,6 +1079,7 @@
 				960F08F01B7BCD3800DC0690 /* XLHomeModel.m in Sources */,
 				9605D7D61B7905AE00FE2C37 /* XLShakeViewController.m in Sources */,
 				960F08AF1B7BAF7F00DC0690 /* AFURLRequestSerialization.m in Sources */,
+				960F08FB1B7C3BC400DC0690 /* XLRegisterViewController.m in Sources */,
 				960F08B11B7BAF7F00DC0690 /* AFURLSessionManager.m in Sources */,
 				960F08AD1B7BAF7F00DC0690 /* AFSecurityPolicy.m in Sources */,
 				9605D7CE1B7905AE00FE2C37 /* XLNavigationController.m in Sources */,
@@ -1077,6 +1092,7 @@
 				960F08E81B7BCD1100DC0690 /* NSArray+JSONModel.m in Sources */,
 				960F08AC1B7BAF7F00DC0690 /* AFNetworkReachabilityManager.m in Sources */,
 				960F08BF1B7BAF8A00DC0690 /* XLNewtWorkManager.m in Sources */,
+				960F08F61B7C353600DC0690 /* XLNavRightButton.m in Sources */,
 				9605D7D51B7905AE00FE2C37 /* XLToolsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

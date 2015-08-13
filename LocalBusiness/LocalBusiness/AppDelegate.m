@@ -22,26 +22,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window makeKeyAndVisible];
-    
-//    XLHomeViewController *home = [[XLHomeViewController alloc] init];
-//    XLNavigationController *homeNav = [[XLNavigationController alloc] initWithRootViewController:home];
-//    
-//    XLNewsViewController *news = [[XLNewsViewController alloc] init];
-//    XLNavigationController *newsNav = [[XLNavigationController alloc] initWithRootViewController:news];
-//    
-//    XLCircleViewController *circle = [[XLCircleViewController alloc] init];
-//    XLNavigationController *circleNav = [[XLNavigationController alloc] initWithRootViewController:circle];
-//
-//    XLOursViewController *ours = [[XLOursViewController alloc] init];
-//    XLNavigationController *oursNav = [[XLNavigationController alloc] initWithRootViewController:ours];
-//    
-//    // 占位导航控制器，没有效果，为了让tabBar的按钮数量和自定义的相同。
-//    XLNavigationController *blankNav = [[XLNavigationController alloc]initWithRootViewController:[[UIViewController alloc] init]];
+
     
     XLTabBarController *tabBar = [[XLTabBarController alloc] init];
-//    tabBar.viewControllers = @[homeNav,newsNav,circleNav,oursNav,blankNav];
-    
     [self.window setRootViewController:tabBar];
+    
     return YES;
 }
 
