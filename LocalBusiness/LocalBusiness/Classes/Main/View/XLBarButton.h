@@ -11,6 +11,7 @@
 typedef enum {
     XLBarButtonTypeNormal,
     XLBarButtonTypeRound,
+    XLBarButtonTypeCircle,
 }XLBarButtonType;
 
 @interface XLBarButton : UIButton

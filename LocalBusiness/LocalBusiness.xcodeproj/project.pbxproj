@@ -78,6 +78,9 @@
 		960F08F81B7C354700DC0690 /* XLNavRightButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960F08F71B7C354700DC0690 /* XLNavRightButton.xib */; };
 		960F08FB1B7C3BC400DC0690 /* XLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08FA1B7C3BC400DC0690 /* XLRegisterViewController.m */; };
 		960F08FE1B7C581F00DC0690 /* XLCirclesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08FD1B7C581F00DC0690 /* XLCirclesCell.m */; };
+		960F093B1B7CBAD500DC0690 /* XLHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F093A1B7CBAD500DC0690 /* XLHeaderView.m */; };
+		960F093E1B7CC25000DC0690 /* XLRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F093D1B7CC25000DC0690 /* XLRecommendView.m */; };
+		960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F09401B7CC26C00DC0690 /* XLRecommendCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +239,12 @@
 		960F08FA1B7C3BC400DC0690 /* XLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRegisterViewController.m; sourceTree = "<group>"; };
 		960F08FC1B7C581F00DC0690 /* XLCirclesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCirclesCell.h; sourceTree = "<group>"; };
 		960F08FD1B7C581F00DC0690 /* XLCirclesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCirclesCell.m; sourceTree = "<group>"; };
+		960F09391B7CBAD500DC0690 /* XLHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLHeaderView.h; sourceTree = "<group>"; };
+		960F093A1B7CBAD500DC0690 /* XLHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLHeaderView.m; sourceTree = "<group>"; };
+		960F093C1B7CC25000DC0690 /* XLRecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRecommendView.h; sourceTree = "<group>"; };
+		960F093D1B7CC25000DC0690 /* XLRecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRecommendView.m; sourceTree = "<group>"; };
+		960F093F1B7CC26C00DC0690 /* XLRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRecommendCell.h; sourceTree = "<group>"; };
+		960F09401B7CC26C00DC0690 /* XLRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRecommendCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -849,9 +858,11 @@
 		960F08C31B7BBA9F00DC0690 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				960F09391B7CBAD500DC0690 /* XLHeaderView.h */,
+				960F093A1B7CBAD500DC0690 /* XLHeaderView.m */,
+				960F09371B7CB86D00DC0690 /* Advertise */,
 				960F08FF1B7C582500DC0690 /* Circles */,
-				960F08C41B7BBAB100DC0690 /* XLAdvertiseView.h */,
-				960F08C51B7BBAB100DC0690 /* XLAdvertiseView.m */,
+				960F09381B7CB87700DC0690 /* Recommend */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -925,6 +936,26 @@
 				960F08FD1B7C581F00DC0690 /* XLCirclesCell.m */,
 			);
 			name = Circles;
+			sourceTree = "<group>";
+		};
+		960F09371B7CB86D00DC0690 /* Advertise */ = {
+			isa = PBXGroup;
+			children = (
+				960F08C41B7BBAB100DC0690 /* XLAdvertiseView.h */,
+				960F08C51B7BBAB100DC0690 /* XLAdvertiseView.m */,
+			);
+			name = Advertise;
+			sourceTree = "<group>";
+		};
+		960F09381B7CB87700DC0690 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				960F093C1B7CC25000DC0690 /* XLRecommendView.h */,
+				960F093D1B7CC25000DC0690 /* XLRecommendView.m */,
+				960F093F1B7CC26C00DC0690 /* XLRecommendCell.h */,
+				960F09401B7CC26C00DC0690 /* XLRecommendCell.m */,
+			);
+			name = Recommend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1035,6 +1066,7 @@
 				9605D7CD1B7905AE00FE2C37 /* XLBaseViewController.m in Sources */,
 				960F08EC1B7BCD1100DC0690 /* JSONKeyMapper.m in Sources */,
 				960F08E61B7BCD1100DC0690 /* JSONModelClassProperty.m in Sources */,
+				960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */,
 				960F08BE1B7BAF8A00DC0690 /* XLFunction.m in Sources */,
 				960F08B81B7BAF7F00DC0690 /* UIWebView+AFNetworking.m in Sources */,
 				960F08B51B7BAF7F00DC0690 /* UIButton+AFNetworking.m in Sources */,
@@ -1080,6 +1112,8 @@
 				9605D7D61B7905AE00FE2C37 /* XLShakeViewController.m in Sources */,
 				960F08AF1B7BAF7F00DC0690 /* AFURLRequestSerialization.m in Sources */,
 				960F08FB1B7C3BC400DC0690 /* XLRegisterViewController.m in Sources */,
+				960F093B1B7CBAD500DC0690 /* XLHeaderView.m in Sources */,
+				960F093E1B7CC25000DC0690 /* XLRecommendView.m in Sources */,
 				960F08B11B7BAF7F00DC0690 /* AFURLSessionManager.m in Sources */,
 				960F08AD1B7BAF7F00DC0690 /* AFSecurityPolicy.m in Sources */,
 				9605D7CE1B7905AE00FE2C37 /* XLNavigationController.m in Sources */,

@@ -17,12 +17,20 @@
 - (void)loadView {
     self.view = [[UIView alloc] init];
     self.view.backgroundColor = [UIColor whiteColor];
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /**
+     *  设置导航栏title
+     */
     [self.navigationItem setTitle:@"登录"];
+    /**
+     *  隐藏导航栏右边按钮
+     */
+    self.navigationItem.rightBarButtonItem = nil;
 }
 
 - (void)didReceiveMemoryWarning {

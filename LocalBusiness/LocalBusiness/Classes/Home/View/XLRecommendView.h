@@ -1,5 +1,5 @@
 //
-//  XLCirclesView.h
+//  XLRecommendView.h
 //  LocalBusiness
 //
 //  Created by Jason on 15/8/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XLCirclesView : UITableViewCell
-+ (instancetype)circlesView;
+@interface XLRecommendView : UITableViewCell
++ (instancetype)recommendView;
 @end

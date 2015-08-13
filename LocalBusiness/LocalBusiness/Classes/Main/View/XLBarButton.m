@@ -25,6 +25,15 @@
     if (image) {
         [button setImage:image forState:UIControlStateNormal];
     }
+    
+    switch (type) {
+        case XLBarButtonTypeRound:
+            button.layer.cornerRadius = 5;
+            break;
+        default:
+            break;
+    }
+    button.layer.masksToBounds = YES;
     return button;
 }
 

@@ -98,7 +98,7 @@
 - (UIImageView *)imageView {
     if (!_imageView) {
         self.imageView = [[UIImageView alloc] init];
-        self.imageView.backgroundColor = [UIColor blackColor];
+        self.imageView.backgroundColor = [UIColor orangeColor];
     }
     return _imageView;
 }
@@ -107,11 +107,11 @@
     if (!_nameLabel) {
         self.nameLabel = [[UILabel alloc] init];
         self.nameLabel.font = FONT(14);
-        self.nameLabel.textColor = [UIColor blackColor];
+//        self.nameLabel.textColor = [UIColor blackColor];
         self.nameLabel.textAlignment = NSTextAlignmentCenter;
         
         self.nameLabel.text = @"测试测试";
-        self.nameLabel.backgroundColor = [UIColor greenColor];
+//        self.nameLabel.backgroundColor = [UIColor greenColor];
         
         [self.nameLabel sizeToFit];
     }

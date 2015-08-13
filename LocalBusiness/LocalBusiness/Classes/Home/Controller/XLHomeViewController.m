@@ -11,12 +11,17 @@
 #import "XLAdvertiseView.h"
 #import "XLHomeModel.h"
 #import "XLCirclesView.h"
+#import "XLRecommendView.h"
+#import "XLHeaderView.h"
 
-@interface XLHomeViewController () <UITableViewDataSource>
+
+@interface XLHomeViewController () <UITableViewDataSource,UITableViewDelegate>
+
 /**
  *  广告view
  */
 @property (nonatomic, strong) XLAdvertiseView *advertiseView;
+
 @end
 
 @implementation XLHomeViewController
@@ -54,6 +59,9 @@
     [para setObject:APP_ID forKey:@"app_id"];
     
     [XLNewtWorkManager XLGET:kIndexInfo parameters:para success:^(id responseObject) {
+        
+#warning 请求数据,待修改
+        
         XLHomeModel *home = [[XLHomeModel alloc] initWithDictionary:responseObject error:NULL];
         FocusListModel *foucusList = home.focus;
         
@@ -74,24 +82,54 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
+    if (section == 0) { // 第0组,圈子
         return 1;
+    }else if (section == 1) { // 第1组,名店推荐
+        return 1;
+    }else {
+        return 10;
     }
-    return 0;
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return [XLCirclesView circlesViews];
+        return [XLCirclesView circlesView];
+    }else if (indexPath.section == 1) {
+        return [XLRecommendView recommendView];
+    }else {
+        UITableViewCell *cell = [[UITableViewCell alloc] init];
+        cell.backgroundColor = Random_COLOR;
+        return cell;
     }
-    return [[UITableViewCell alloc] init];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         return 353 * (SCREEN_WIDTH / 320) / 2.0;
+    }else if (indexPath.section == 1) {
+        return 400 * (SCREEN_WIDTH / 320) / 2.0;
+    }else {
+        return 100;
+    }
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 1 || section == 2) {
+        return 40;
     }
     return 0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+
+    if (section == 1) { // 名店推荐
+        return [XLHeaderView headerViewWithTitle:@"推荐" color:COLOR_RGBA(241, 97, 100, 1)];
+    }else if (section == 2) { // 猜你喜欢
+        return [XLHeaderView headerViewWithTitle:@"猜你喜欢" color:COLOR_RGBA(240, 112, 171, 1)];
+    }
+    return nil;
 }
 
 
