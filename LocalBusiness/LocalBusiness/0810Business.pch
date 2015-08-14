@@ -16,6 +16,7 @@
 #import "MBProgressHUD+PKX.h"
 #import "XLFunction.h"
 #import "XLNewtWorkManager.h"
+#import "XLLocationManager.h"
 
 /**********  颜色  **********/
 #define COLOR_RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:(a)]

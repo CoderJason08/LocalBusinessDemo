@@ -8,17 +8,32 @@
 
 #import "XLHomeModel.h"
 
+
+
 @implementation XLHomeModel
 @end
 
+
+/********** 焦点图   **********/
 @implementation FocusListModel
 @end
 
 @implementation FocusModel
 @end
 
+/**********  分组  **********/
+
 @implementation GroupListModel
 @end
 
 @implementation GroupModel
 @end
+
+/**********  推荐  **********/
+
+@implementation FamousListModel
+@end
+
+@implementation FamousModel
+@end
+

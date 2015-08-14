@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XLHomeModel.h"
 
 static NSString *reuseIdentifier = @"XLRecommendCell";
 
 @interface XLRecommendCell : UICollectionViewCell
+
+@property (nonatomic, strong) FamousModel *famous;
+
 + (instancetype)recommendCell:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath;
 @end

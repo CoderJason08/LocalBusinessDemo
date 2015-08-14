@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XLHomeModel.h"
 
 @interface XLRecommendView : UITableViewCell
+
+@property (nonatomic, strong) FamousListModel *famousList;
+
+/**
+ *  快速创建推荐View
+ */
 + (instancetype)recommendView;
 @end

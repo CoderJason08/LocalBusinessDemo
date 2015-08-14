@@ -91,6 +91,7 @@ static NSUInteger advertiseCount = 3;
  *  布局子控件
  */
 - (void)layoutSubviews {
+    [super layoutSubviews];
     
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(self);

@@ -9,7 +9,7 @@
 #import "JSONModel.h"
 @class FocusListModel;
 @class GroupListModel;
-
+@class FamousListModel;
 
 
 @interface XLHomeModel : JSONModel
@@ -21,6 +21,10 @@
  *  首页分组模型
  */
 @property (nonatomic, strong) GroupListModel *group;
+/**
+ *  名店推荐模型
+ */
+@property (nonatomic, strong) FamousListModel *famous;
 
 @end
 
@@ -70,11 +74,76 @@
 @end
 
 @interface GroupModel : JSONModel
+/**
+ *  图片地址
+ */
 @property (nonatomic, copy) NSString *cover;
+/**
+ *  id
+ */
 @property (nonatomic, assign) int id;
+/**
+ *  标题
+ */
 @property (nonatomic, copy) NSString *title;
 @end
 
+
+/**********  名店推荐模型  **********/
+
+@protocol FamousModel <NSObject>
+@end
+
+@interface FamousListModel : JSONModel
+@property (nonatomic, strong) NSArray<FamousModel> *list;
+@end
+
+@interface FamousModel : JSONModel
+/**
+ *  id
+ */
+@property (nonatomic, assign) int id;
+/**
+ *  距离
+ */
+@property (nonatomic, assign) int distance;
+/**
+ *  图片地址
+ */
+@property (nonatomic, copy) NSString *cover;
+/**
+ *  名称
+ */
+@property (nonatomic, copy) NSString *name;
+/**
+ *  介绍
+ */
+@property (nonatomic, copy) NSString *intro;
+/**
+ *  打分
+ */
+@property (nonatomic, assign) int score;
+
+@end
+
+
+/*推荐
+ {
+ famous={
+ list=({
+ cover="http://www.qd-life.com/static/upload/2015/04/09/index_20150409153830000000_1_92289_57.jpg";distance=21km;id=3225;intro="\U4e00\U5bb6\U7279\U8272\U70d8\U7119\U8fde\U9501\U4f01\U4e1a\Uff0c\U4e3b\U8425\U4e1a\U52a1...";name="\U9ea6\U4e50\U6ecb\U86cb\U7cd5\U5e97";score=0;
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2015/04/08/index_20150408153820000000_1_98894_50.jpg";distance=38km;id=3169;intro="\U5e97\U5185\U73af\U5883\U5e72\U51c0\U6574\U6d01\Uff0c\U4ef7\U683c\U5b9e\U60e0\Uff0c\U5473...";name="\U857e\U68ee\U5c45\U7f8e\U98df\U57ce";score=0;
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2015/04/03/index_20150403135622000000_1_109155_62.jpg";distance=38km;id=3083;intro="\U4ee5\U5241\U8fa3\U6912\U7684\U201c\U54b8\U201d\U548c\U201c\U8fa3\U201d\U6c81\U5165\U9c7c...";name="\U6e14\U7c73\U4e4b\U6e58\U65b0\U6982";score=0;
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2014/12/26/index_20141226104752000000_1_895455_62.jpg";distance=5km;id=46;intro="\U4e3b\U8981\U7ecf\U8425\U7279\U8272\U79d8\U5236\U70e4\U8089\Uff0c\U72ec\U5bb6\U79d8\U65b9...";name="\U96c5\U535a\U6e21\U8089\U4e32\U738b";score=0;
+ });
+ };
+ */
 
 /*分组
  group={
@@ -122,21 +191,7 @@
 
 
 /*
- {
- famous={
- list=({
- cover="http://www.qd-life.com/static/upload/2015/04/09/index_20150409153830000000_1_92289_57.jpg";distance=21km;id=3225;intro="\U4e00\U5bb6\U7279\U8272\U70d8\U7119\U8fde\U9501\U4f01\U4e1a\Uff0c\U4e3b\U8425\U4e1a\U52a1...";name="\U9ea6\U4e50\U6ecb\U86cb\U7cd5\U5e97";score=0;
- },
- {
- cover="http://www.qd-life.com/static/upload/2015/04/08/index_20150408153820000000_1_98894_50.jpg";distance=38km;id=3169;intro="\U5e97\U5185\U73af\U5883\U5e72\U51c0\U6574\U6d01\Uff0c\U4ef7\U683c\U5b9e\U60e0\Uff0c\U5473...";name="\U857e\U68ee\U5c45\U7f8e\U98df\U57ce";score=0;
- },
- {
- cover="http://www.qd-life.com/static/upload/2015/04/03/index_20150403135622000000_1_109155_62.jpg";distance=38km;id=3083;intro="\U4ee5\U5241\U8fa3\U6912\U7684\U201c\U54b8\U201d\U548c\U201c\U8fa3\U201d\U6c81\U5165\U9c7c...";name="\U6e14\U7c73\U4e4b\U6e58\U65b0\U6982";score=0;
- },
- {
- cover="http://www.qd-life.com/static/upload/2014/12/26/index_20141226104752000000_1_895455_62.jpg";distance=5km;id=46;intro="\U4e3b\U8981\U7ecf\U8425\U7279\U8272\U79d8\U5236\U70e4\U8089\Uff0c\U72ec\U5bb6\U79d8\U65b9...";name="\U96c5\U535a\U6e21\U8089\U4e32\U738b";score=0;
- });
- };
+
  
 
  

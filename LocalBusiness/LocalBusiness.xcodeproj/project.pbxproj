@@ -81,6 +81,8 @@
 		960F093B1B7CBAD500DC0690 /* XLHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F093A1B7CBAD500DC0690 /* XLHeaderView.m */; };
 		960F093E1B7CC25000DC0690 /* XLRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F093D1B7CC25000DC0690 /* XLRecommendView.m */; };
 		960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F09401B7CC26C00DC0690 /* XLRecommendCell.m */; };
+		96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B538221B7E35DC002C06BC /* XLLocationManager.m */; };
+		96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385A1B7E6425002C06BC /* XLGuessCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +247,10 @@
 		960F093D1B7CC25000DC0690 /* XLRecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRecommendView.m; sourceTree = "<group>"; };
 		960F093F1B7CC26C00DC0690 /* XLRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRecommendCell.h; sourceTree = "<group>"; };
 		960F09401B7CC26C00DC0690 /* XLRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRecommendCell.m; sourceTree = "<group>"; };
+		96B538211B7E35DC002C06BC /* XLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLocationManager.h; sourceTree = "<group>"; };
+		96B538221B7E35DC002C06BC /* XLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLocationManager.m; sourceTree = "<group>"; };
+		96B538591B7E6425002C06BC /* XLGuessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGuessCell.h; sourceTree = "<group>"; };
+		96B5385A1B7E6425002C06BC /* XLGuessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGuessCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +377,8 @@
 				960F08BB1B7BAF8A00DC0690 /* XLFunction.m */,
 				960F08BC1B7BAF8A00DC0690 /* XLNewtWorkManager.h */,
 				960F08BD1B7BAF8A00DC0690 /* XLNewtWorkManager.m */,
+				96B538211B7E35DC002C06BC /* XLLocationManager.h */,
+				96B538221B7E35DC002C06BC /* XLLocationManager.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -863,6 +871,7 @@
 				960F09371B7CB86D00DC0690 /* Advertise */,
 				960F08FF1B7C582500DC0690 /* Circles */,
 				960F09381B7CB87700DC0690 /* Recommend */,
+				96B538581B7E63FA002C06BC /* Guess */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -956,6 +965,15 @@
 				960F09401B7CC26C00DC0690 /* XLRecommendCell.m */,
 			);
 			name = Recommend;
+			sourceTree = "<group>";
+		};
+		96B538581B7E63FA002C06BC /* Guess */ = {
+			isa = PBXGroup;
+			children = (
+				96B538591B7E6425002C06BC /* XLGuessCell.h */,
+				96B5385A1B7E6425002C06BC /* XLGuessCell.m */,
+			);
+			name = Guess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1069,6 +1087,7 @@
 				960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */,
 				960F08BE1B7BAF8A00DC0690 /* XLFunction.m in Sources */,
 				960F08B81B7BAF7F00DC0690 /* UIWebView+AFNetworking.m in Sources */,
+				96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */,
 				960F08B51B7BAF7F00DC0690 /* UIButton+AFNetworking.m in Sources */,
 				9605D7CA1B7905AE00FE2C37 /* XLCircleViewController.m in Sources */,
 				9605D7D71B7905AE00FE2C37 /* XLNewsViewController.m in Sources */,
@@ -1088,6 +1107,7 @@
 				960F08A91B7BAF7F00DC0690 /* AFHTTPRequestOperation.m in Sources */,
 				960F08ED1B7BCD1100DC0690 /* JSONValueTransformer.m in Sources */,
 				9605D7CC1B7905AE00FE2C37 /* XLLoginViewController.m in Sources */,
+				96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */,
 				960F08AE1B7BAF7F00DC0690 /* AFURLConnectionOperation.m in Sources */,
 				9605D7D21B7905AE00FE2C37 /* XLTabPopBar.m in Sources */,
 				9605D7D41B7905AE00FE2C37 /* XLOnlineViewController.m in Sources */,

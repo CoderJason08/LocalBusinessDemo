@@ -14,7 +14,6 @@
 #import "XLRecommendView.h"
 #import "XLHeaderView.h"
 
-
 @interface XLHomeViewController () <UITableViewDataSource,UITableViewDelegate>
 
 /**
@@ -23,6 +22,8 @@
 @property (nonatomic, strong) XLAdvertiseView *advertiseView;
 
 @property (nonatomic, strong) XLHomeModel *homeModel;
+
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
 @end
 
@@ -35,12 +36,20 @@
     
     // 禁用系统分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    // 禁用滚动条
+    self.tableView.showsVerticalScrollIndicator = NO;
     
     // 设置HeaderView
     self.tableView.tableHeaderView = self.advertiseView;
     
-    
-    [self requestData];
+    [XLLocationManager getLocationSuccess:^(CLLocationCoordinate2D coordinate) {
+        self.coordinate = coordinate;
+        [self requestData];
+    } error:^(NSError *error) {
+        // 为地理位置设置默认值
+        self.coordinate = CLLocationCoordinate2DMake(36.06, 120.38);
+        [self requestData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,27 +62,29 @@
      *  设置请求参数
      */
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
-    [para setObject:@"120.38" forKey:@"lon"];
-    [para setObject:@"36.06" forKey:@"lat"];
+    [para setObject:[NSString stringWithFormat:@"%lf",self.coordinate.longitude] forKey:@"lon"];
+    [para setObject:[NSString stringWithFormat:@"%lf",self.coordinate.latitude] forKey:@"lat"];
     [para setObject:[XLFunction getTimeStamp] forKey:@"time"];
     NSArray *paraArray = @[APP_ID,para[@"lon"],para[@"lat"],para[@"time"],APP_KEY];
     [para setObject:[XLFunction MD5SignWithParaArray:paraArray] forKey:@"sign"];
     [para setObject:APP_ID forKey:@"app_id"];
     
+    /**
+     *  请求数据
+     */
     [XLNewtWorkManager XLGET:kIndexInfo parameters:para success:^(id responseObject) {
-        
-#warning 请求数据,待修改
-        
+
+        /**
+         * 数据请求成功,设置模型数据
+         */
         self.homeModel = [[XLHomeModel alloc] initWithDictionary:responseObject error:NULL];
         FocusListModel *foucusList = self.homeModel.focus;
         self.advertiseView.list = foucusList.list;
-        
         [self.tableView reloadData];
-        
     } error:^(id error) {
-        NSLog(@"%@",error);
+        
     } failure:^(NSError *error) {
-        NSLog(@"%@",error);
+        
     }];
 }
 
@@ -98,10 +109,11 @@
     if (indexPath.section == 0) {
         XLCirclesView *circlesView = [XLCirclesView circlesView];
         circlesView.list = self.homeModel.group;
-        NSLog(@"%@",self.homeModel.group);
         return circlesView;
     }else if (indexPath.section == 1) {
-        return [XLRecommendView recommendView];
+        XLRecommendView *recommendView = [XLRecommendView recommendView];
+        recommendView.famousList = self.homeModel.famous;
+        return recommendView;
     }else {
         UITableViewCell *cell = [[UITableViewCell alloc] init];
         cell.backgroundColor = Random_COLOR;
@@ -130,7 +142,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
     if (section == 1) { // 名店推荐
-        return [XLHeaderView headerViewWithTitle:@"推荐" color:COLOR_RGBA(241, 97, 100, 1)];
+        return [XLHeaderView headerViewWithTitle:@"名店推荐" color:COLOR_RGBA(241, 97, 100, 1)];
     }else if (section == 2) { // 猜你喜欢
         return [XLHeaderView headerViewWithTitle:@"猜你喜欢" color:COLOR_RGBA(240, 112, 171, 1)];
     }

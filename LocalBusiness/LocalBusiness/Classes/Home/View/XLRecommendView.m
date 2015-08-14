@@ -41,6 +41,11 @@
     return self;
 }
 
+- (void)setFamousList:(FamousListModel *)famousList {
+    _famousList = famousList;
+    [self.collectionView reloadData];
+}
+
 /**
  *  设置子控件
  */
@@ -73,6 +78,9 @@
  *  设置cell的布局
  */
 - (void)layoutSubviews {
+    
+    [super layoutSubviews];
+    
     // 设置collectionView布局参数
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(self.frame.size.width / 2, self.frame.size.height / 2);
@@ -93,6 +101,11 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     XLRecommendCell *cell = [XLRecommendCell recommendCell:collectionView indexPath:indexPath];
+    if (indexPath.section == 0) {
+        cell.famous = self.famousList.list[indexPath.row];
+    }else if (indexPath.section == 1) {
+        cell.famous = self.famousList.list[indexPath.row + 2];
+    }
     return cell;
 }
 

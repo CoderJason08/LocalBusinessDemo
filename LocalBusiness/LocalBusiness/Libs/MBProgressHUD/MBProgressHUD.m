@@ -505,6 +505,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 #pragma mark - Layout
 
 - (void)layoutSubviews {
+    [super layoutSubviews];
 	
 	// Entirely cover the parent view
 	UIView *parent = self.superview;

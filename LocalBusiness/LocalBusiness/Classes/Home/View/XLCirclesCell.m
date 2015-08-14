@@ -74,7 +74,8 @@
  *  布局子控件
  */
 - (void)layoutSubviews {
-   
+    [super layoutSubviews];
+    
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self);
     }];
@@ -109,6 +110,7 @@
 - (UIImageView *)imageView {
     if (!_imageView) {
         self.imageView = [[UIImageView alloc] init];
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
 //        self.imageView.backgroundColor = [UIColor orangeColor];
     }
     return _imageView;

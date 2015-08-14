@@ -60,6 +60,8 @@
 
 - (void)layoutSubviews {
     
+    [super layoutSubviews];
+    
     [self.seprateView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self);
         make.height.mas_equalTo(6);

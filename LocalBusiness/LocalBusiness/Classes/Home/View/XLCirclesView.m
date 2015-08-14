@@ -78,6 +78,9 @@
  *  设置cell的布局
  */
 - (void)layoutSubviews {
+    
+    [super layoutSubviews];
+    
     // 设置collectionView布局参数
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(self.frame.size.width / 4, self.frame.size.height / 2);
