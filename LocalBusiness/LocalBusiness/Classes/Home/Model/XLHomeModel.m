@@ -11,6 +11,31 @@
 
 
 @implementation XLHomeModel
+
+
+/**
+ *  归档方法
+ */
+- (void)encodeWithCoder:(NSCoder *)enCoder {
+    [enCoder encodeObject:_focus forKey:@"focus"];
+    [enCoder encodeObject:_group forKey:@"group"];
+    [enCoder encodeObject:_famous forKey:@"famous"];
+    [enCoder encodeObject:_guess forKey:@"guess"];
+}
+
+/**
+ *  解档方法
+ */
+- (id)initWithCoder:(NSCoder *)deCoder {
+    if (self = [super init]) {
+        self.focus = [deCoder decodeObjectForKey:@"focus"];
+        self.group = [deCoder decodeObjectForKey:@"group"];
+        self.famous = [deCoder decodeObjectForKey:@"famous"];
+        self.guess = [deCoder decodeObjectForKey:@"guess"];
+    }
+    return self;
+}
+
 @end
 
 

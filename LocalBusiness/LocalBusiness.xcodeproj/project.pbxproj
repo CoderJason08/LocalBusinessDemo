@@ -81,9 +81,14 @@
 		960F093B1B7CBAD500DC0690 /* XLHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F093A1B7CBAD500DC0690 /* XLHeaderView.m */; };
 		960F093E1B7CC25000DC0690 /* XLRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F093D1B7CC25000DC0690 /* XLRecommendView.m */; };
 		960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F09401B7CC26C00DC0690 /* XLRecommendCell.m */; };
+		9644DEA91B7F2B14007FDFB4 /* XLGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEA81B7F2B14007FDFB4 /* XLGoodsViewController.m */; };
+		9644DEAC1B7F2BCF007FDFB4 /* XLShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEAB1B7F2BCF007FDFB4 /* XLShopViewController.m */; };
+		9644DEE51B7F5338007FDFB4 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEE41B7F5338007FDFB4 /* UIView+Toast.m */; };
+		9644DEE81B7F5A46007FDFB4 /* XLGoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEE71B7F5A46007FDFB4 /* XLGoodModel.m */; };
 		96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B538221B7E35DC002C06BC /* XLLocationManager.m */; };
 		96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385A1B7E6425002C06BC /* XLGuessCell.m */; };
 		96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */; };
+		96EEC77F1B7FA1210035F6EF /* XLShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EEC77E1B7FA1210035F6EF /* XLShopModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,12 +253,22 @@
 		960F093D1B7CC25000DC0690 /* XLRecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRecommendView.m; sourceTree = "<group>"; };
 		960F093F1B7CC26C00DC0690 /* XLRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRecommendCell.h; sourceTree = "<group>"; };
 		960F09401B7CC26C00DC0690 /* XLRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRecommendCell.m; sourceTree = "<group>"; };
+		9644DEA71B7F2B14007FDFB4 /* XLGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGoodsViewController.h; sourceTree = "<group>"; };
+		9644DEA81B7F2B14007FDFB4 /* XLGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGoodsViewController.m; sourceTree = "<group>"; };
+		9644DEAA1B7F2BCF007FDFB4 /* XLShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopViewController.h; sourceTree = "<group>"; };
+		9644DEAB1B7F2BCF007FDFB4 /* XLShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopViewController.m; sourceTree = "<group>"; };
+		9644DEE31B7F5338007FDFB4 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		9644DEE41B7F5338007FDFB4 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		9644DEE61B7F5A46007FDFB4 /* XLGoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGoodModel.h; sourceTree = "<group>"; };
+		9644DEE71B7F5A46007FDFB4 /* XLGoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGoodModel.m; sourceTree = "<group>"; };
 		96B538211B7E35DC002C06BC /* XLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLocationManager.h; sourceTree = "<group>"; };
 		96B538221B7E35DC002C06BC /* XLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLocationManager.m; sourceTree = "<group>"; };
 		96B538591B7E6425002C06BC /* XLGuessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGuessCell.h; sourceTree = "<group>"; };
 		96B5385A1B7E6425002C06BC /* XLGuessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGuessCell.m; sourceTree = "<group>"; };
 		96B5385D1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		96EEC77D1B7FA1210035F6EF /* XLShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopModel.h; sourceTree = "<group>"; };
+		96EEC77E1B7FA1210035F6EF /* XLShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +416,10 @@
 			children = (
 				9605D7621B7905AE00FE2C37 /* XLHomeViewController.h */,
 				9605D7631B7905AE00FE2C37 /* XLHomeViewController.m */,
+				9644DEAA1B7F2BCF007FDFB4 /* XLShopViewController.h */,
+				9644DEAB1B7F2BCF007FDFB4 /* XLShopViewController.m */,
+				9644DEA71B7F2B14007FDFB4 /* XLGoodsViewController.h */,
+				9644DEA81B7F2B14007FDFB4 /* XLGoodsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +429,10 @@
 			children = (
 				960F08EE1B7BCD3800DC0690 /* XLHomeModel.h */,
 				960F08EF1B7BCD3800DC0690 /* XLHomeModel.m */,
+				9644DEE61B7F5A46007FDFB4 /* XLGoodModel.h */,
+				9644DEE71B7F5A46007FDFB4 /* XLGoodModel.m */,
+				96EEC77D1B7FA1210035F6EF /* XLShopModel.h */,
+				96EEC77E1B7FA1210035F6EF /* XLShopModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -739,6 +762,7 @@
 		9605D7A61B7905AE00FE2C37 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9644DEE21B7F5338007FDFB4 /* Toast */,
 				96B5385C1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell */,
 				960F08CA1B7BCD1100DC0690 /* JSONModel */,
 				960F08811B7BAF7F00DC0690 /* AFNetworking */,
@@ -872,10 +896,12 @@
 			children = (
 				960F09391B7CBAD500DC0690 /* XLHeaderView.h */,
 				960F093A1B7CBAD500DC0690 /* XLHeaderView.m */,
-				960F09371B7CB86D00DC0690 /* Advertise */,
-				960F08FF1B7C582500DC0690 /* Circles */,
-				960F09381B7CB87700DC0690 /* Recommend */,
-				96B538581B7E63FA002C06BC /* Guess */,
+				960F09371B7CB86D00DC0690 /* Advertise(广告) */,
+				960F08FF1B7C582500DC0690 /* Circles(生活圈分组) */,
+				960F09381B7CB87700DC0690 /* Recommend(名店推荐) */,
+				96B538581B7E63FA002C06BC /* Guess(猜你喜欢) */,
+				96EEC77C1B7F99690035F6EF /* GoodDetail(商品详情) */,
+				96EEC7801B7FA6270035F6EF /* ShopDetail(商家详情) */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -940,7 +966,7 @@
 			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
-		960F08FF1B7C582500DC0690 /* Circles */ = {
+		960F08FF1B7C582500DC0690 /* Circles(生活圈分组) */ = {
 			isa = PBXGroup;
 			children = (
 				960F08C71B7BBABE00DC0690 /* XLCirclesView.h */,
@@ -948,19 +974,19 @@
 				960F08FC1B7C581F00DC0690 /* XLCirclesCell.h */,
 				960F08FD1B7C581F00DC0690 /* XLCirclesCell.m */,
 			);
-			name = Circles;
+			name = "Circles(生活圈分组)";
 			sourceTree = "<group>";
 		};
-		960F09371B7CB86D00DC0690 /* Advertise */ = {
+		960F09371B7CB86D00DC0690 /* Advertise(广告) */ = {
 			isa = PBXGroup;
 			children = (
 				960F08C41B7BBAB100DC0690 /* XLAdvertiseView.h */,
 				960F08C51B7BBAB100DC0690 /* XLAdvertiseView.m */,
 			);
-			name = Advertise;
+			name = "Advertise(广告)";
 			sourceTree = "<group>";
 		};
-		960F09381B7CB87700DC0690 /* Recommend */ = {
+		960F09381B7CB87700DC0690 /* Recommend(名店推荐) */ = {
 			isa = PBXGroup;
 			children = (
 				960F093C1B7CC25000DC0690 /* XLRecommendView.h */,
@@ -968,16 +994,25 @@
 				960F093F1B7CC26C00DC0690 /* XLRecommendCell.h */,
 				960F09401B7CC26C00DC0690 /* XLRecommendCell.m */,
 			);
-			name = Recommend;
+			name = "Recommend(名店推荐)";
 			sourceTree = "<group>";
 		};
-		96B538581B7E63FA002C06BC /* Guess */ = {
+		9644DEE21B7F5338007FDFB4 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				9644DEE31B7F5338007FDFB4 /* UIView+Toast.h */,
+				9644DEE41B7F5338007FDFB4 /* UIView+Toast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		96B538581B7E63FA002C06BC /* Guess(猜你喜欢) */ = {
 			isa = PBXGroup;
 			children = (
 				96B538591B7E6425002C06BC /* XLGuessCell.h */,
 				96B5385A1B7E6425002C06BC /* XLGuessCell.m */,
 			);
-			name = Guess;
+			name = "Guess(猜你喜欢)";
 			sourceTree = "<group>";
 		};
 		96B5385C1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell */ = {
@@ -987,6 +1022,20 @@
 				96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */,
 			);
 			path = "UITableView+FDTemplateLayoutCell";
+			sourceTree = "<group>";
+		};
+		96EEC77C1B7F99690035F6EF /* GoodDetail(商品详情) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "GoodDetail(商品详情)";
+			sourceTree = "<group>";
+		};
+		96EEC7801B7FA6270035F6EF /* ShopDetail(商家详情) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "ShopDetail(商家详情)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1093,6 +1142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9644DEE51B7F5338007FDFB4 /* UIView+Toast.m in Sources */,
 				960F08E91B7BCD1100DC0690 /* JSONAPI.m in Sources */,
 				9605D7CD1B7905AE00FE2C37 /* XLBaseViewController.m in Sources */,
 				960F08EC1B7BCD1100DC0690 /* JSONKeyMapper.m in Sources */,
@@ -1113,6 +1163,7 @@
 				9605D7DF1B7905AE00FE2C37 /* MASViewAttribute.m in Sources */,
 				9605D7DE1B7905AE00FE2C37 /* MASLayoutConstraint.m in Sources */,
 				960F08B01B7BAF7F00DC0690 /* AFURLResponseSerialization.m in Sources */,
+				96EEC77F1B7FA1210035F6EF /* XLShopModel.m in Sources */,
 				9605D7E21B7905AE00FE2C37 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				9605D7DD1B7905AE00FE2C37 /* MASConstraintMaker.m in Sources */,
 				9605D7E61B7905AE00FE2C37 /* MBProgressHUD.m in Sources */,
@@ -1131,6 +1182,7 @@
 				960F08B61B7BAF7F00DC0690 /* UIImageView+AFNetworking.m in Sources */,
 				960F08EA1B7BCD1100DC0690 /* JSONHTTPClient.m in Sources */,
 				960F08EB1B7BCD1100DC0690 /* JSONModel+networking.m in Sources */,
+				9644DEAC1B7F2BCF007FDFB4 /* XLShopViewController.m in Sources */,
 				960F08B71B7BAF7F00DC0690 /* UIProgressView+AFNetworking.m in Sources */,
 				9605D7E71B7905AE00FE2C37 /* main.m in Sources */,
 				9605D7E41B7905AE00FE2C37 /* MBProgressHUD+PKX.m in Sources */,
@@ -1154,10 +1206,12 @@
 				9605D7E31B7905AE00FE2C37 /* View+MASAdditions.m in Sources */,
 				960F08801B7BAE1300DC0690 /* XLSubBaseViewController.m in Sources */,
 				9605D7E01B7905AE00FE2C37 /* MASViewConstraint.m in Sources */,
+				9644DEA91B7F2B14007FDFB4 /* XLGoodsViewController.m in Sources */,
 				960F08E71B7BCD1100DC0690 /* JSONModelError.m in Sources */,
 				960F08B21B7BAF7F00DC0690 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9605D7DC1B7905AE00FE2C37 /* MASConstraint.m in Sources */,
 				960F08E81B7BCD1100DC0690 /* NSArray+JSONModel.m in Sources */,
+				9644DEE81B7F5A46007FDFB4 /* XLGoodModel.m in Sources */,
 				960F08AC1B7BAF7F00DC0690 /* AFNetworkReachabilityManager.m in Sources */,
 				960F08BF1B7BAF8A00DC0690 /* XLNewtWorkManager.m in Sources */,
 				960F08F61B7C353600DC0690 /* XLNavRightButton.m in Sources */,

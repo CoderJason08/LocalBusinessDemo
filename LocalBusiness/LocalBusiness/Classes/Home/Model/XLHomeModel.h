@@ -13,7 +13,7 @@
 @class GuessListModel;
 
 
-@interface XLHomeModel : JSONModel
+@interface XLHomeModel : JSONModel <NSCoding>
 /**
  *  首页焦点图模型
  */
@@ -105,7 +105,7 @@
 
 @interface FamousModel : JSONModel
 /**
- *  id
+ *  shop_id
  */
 @property (nonatomic, assign) int id;
 /**
@@ -149,7 +149,7 @@
 @interface GuessModel : JSONModel
 
 /**
- *  id
+ *  goods_id
  */
 @property (nonatomic, assign) int id;
 /**

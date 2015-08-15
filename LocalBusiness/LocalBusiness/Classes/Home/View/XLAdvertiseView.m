@@ -129,7 +129,7 @@ static NSUInteger advertiseCount = 3;
     
     self.currentPage = (NSInteger)self.scrollView.contentOffset.x / SCREEN_WIDTH;
     self.pageControl.currentPage = self.currentPage;
-    FocusModel *foucus = self.list[self.currentPage];
+    FocusModel *foucus = self.list.list[self.currentPage];
     self.descLabel.text = foucus.title;
 
 }
@@ -141,30 +141,13 @@ static NSUInteger advertiseCount = 3;
  */
 - (void)loadData {
     [self.imageViews enumerateObjectsUsingBlock:^(UIImageView *imageView, NSUInteger idx, BOOL *stop) {
-        FocusModel *foucus = self.list[idx];
+        FocusModel *foucus = self.list.list[idx];
         [imageView setImageWithURL:[NSURL URLWithString:foucus.cover]];
     }];
-    self.descLabel.text = [self.list[0] title];
+    self.descLabel.text = [self.list.list[0] title];
 }
 
-//- (void)reloadImage {
-//    NSInteger leftImageIndex, rightImageIndex;
-//    CGPoint offset = [self.scrollView contentOffset];
-//    
-//    if (offset.x == 2 * SCREEN_WIDTH) {
-//        self.currentPageIndex = (self.currentPageIndex + 1) % advertiseCount;
-//        self.pageControl.currentPage = (self.pageControl.currentPage + 1) % advertiseCount;
-//    }else if (offset.x == 0) {
-//        self.currentPageIndex = (self.currentPageIndex - 1) % advertiseCount;
-//        self.pageControl.currentPage = (self.pageControl.currentPage - 1) % advertiseCount;
-//
-//    }
-//    
-//    leftImageIndex = (self.currentPageIndex - 1) % advertiseCount;
-//    rightImageIndex = (self.currentPageIndex + 1) % advertiseCount;
-//    
-//    
-//}
+
 
 /**
  *  初始化子控件
@@ -187,7 +170,7 @@ static NSUInteger advertiseCount = 3;
 
 #pragma mark - Getter & Setter 
 
-- (void)setList:(NSArray *)list {
+- (void)setList:(FocusListModel *)list {
     _list = list;
     [self loadData];
 }

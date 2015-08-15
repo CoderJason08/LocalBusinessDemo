@@ -13,7 +13,6 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 /**********  全局头文件  **********/
 #import "Masonry.h"
-#import "MBProgressHUD+PKX.h"
 #import "XLFunction.h"
 #import "XLNewtWorkManager.h"
 #import "XLLocationManager.h"
@@ -66,5 +65,15 @@
  *  获取首页数据
  */
 #define kIndexInfo @"?anu=api/1/index/get_index_info"
+
+/**
+ *  获取商品详情
+ */
+#define kGoodsInfo @"api/1/shop/get_good_info"
+
+/**
+ *  获取商家详情
+ */
+#define kShopInfo @"api/1/shop/get_shop_info"
 
 #endif

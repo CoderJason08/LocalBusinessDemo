@@ -13,7 +13,7 @@
 /**
  *  广告模型数组
  */
-@property (nonatomic, strong) NSArray *list;
+@property (nonatomic, strong) FocusListModel *list;
 
 /**
  *  快速创建广告View

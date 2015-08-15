@@ -89,9 +89,10 @@
     [self addSubview:self.nameLabel];
     [self addSubview:self.starImageView];
     [self addSubview:self.iconImageView];
+    
+#warning 约束和子控件的添加顺序的关系
     [self addSubview:self.distanceButton];
     [self addSubview:self.introLabel];
-    
     
     // 添加分割线
     [self addSubview:self.topSepLine];
@@ -104,33 +105,32 @@
  */
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
+    // 标题约束
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(self).offset(10);
     }];
-    
+    // 评分约束
     [self.starImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.nameLabel);
         make.top.mas_equalTo(self.nameLabel.mas_bottom).offset(5);
         make.size.mas_equalTo(CGSizeMake(60, 12));
     }];
-    
+    // 图片约束
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(10);
         make.right.equalTo(self).offset(-5);
         make.size.mas_equalTo(CGSizeMake(53, 53));
     }];
-    
+    // 距离约束
     [self.distanceButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self).offset(-10);
         make.right.equalTo(self.iconImageView);
     }];
-    
+    // Label约束
     [self.introLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.starImageView);
         make.top.mas_equalTo(self.starImageView.mas_bottom).offset(6);
         make.right.mas_equalTo(self.distanceButton.mas_left).offset(-5);
-//        make.height.mas_equalTo(50);
         make.bottom.equalTo(self);
     }];
     
@@ -166,11 +166,6 @@
         self.nameLabel = [[UILabel alloc] init];
         self.nameLabel.font = FONT(18);
         self.nameLabel.textColor = [UIColor blackColor];
-        
-        self.nameLabel.text = @"味多美糕点";
-//        self.nameLabel.backgroundColor = Random_COLOR;
-        
-        [self.nameLabel sizeToFit];
     }
     return _nameLabel;
 }
@@ -178,8 +173,6 @@
 - (UIImageView *)starImageView {
     if (!_starImageView) {
         self.starImageView = [[UIImageView alloc] init];
-        
-//        self.starImageView.image = [UIImage imageNamed:@"star_5"];
     }
     return _starImageView;
 }
@@ -191,9 +184,6 @@
         self.introLabel.font = FONT(16);
         self.introLabel.numberOfLines = 0;
         self.introLabel.adjustsFontSizeToFitWidth = YES;
-        
-//        self.introLabel.text = @"来自青岛的五星级商业酒店来自青岛的五星级商业酒店";
-//        self.introLabel.backgroundColor = Random_COLOR;
     }
     return _introLabel;
 }

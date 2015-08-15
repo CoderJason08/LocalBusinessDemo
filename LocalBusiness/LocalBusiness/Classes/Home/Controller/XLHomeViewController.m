@@ -14,7 +14,12 @@
 #import "XLRecommendView.h"
 #import "XLHeaderView.h"
 #import "XLGuessCell.h"
+#import "XLShopViewController.h"
+#import "XLGoodsViewController.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+
+
+#define HomeModelPath [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"homeModel.data"]
 
 @interface XLHomeViewController () <UITableViewDataSource,UITableViewDelegate,XLCirclesViewDelegate,XLRecommendViewDelegate>
 
@@ -37,7 +42,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
     // 禁用系统分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 禁用滚动条
@@ -48,6 +52,11 @@
     
     // 使用FDTemplateLayoutCell必须注册cell
     [self.tableView registerClass:[XLGuessCell class] forCellReuseIdentifier:@"XLGuessCell"];
+    
+//  无法解档 已解决,在initWithCoder方法中,调用父类的init方法;
+    // 解档保存的模型数据
+    self.homeModel = [NSKeyedUnarchiver unarchiveObjectWithFile:HomeModelPath];
+    
     
     [XLLocationManager getLocationSuccess:^(CLLocationCoordinate2D coordinate) {
         self.coordinate = coordinate;
@@ -64,6 +73,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)setHomeModel:(XLHomeModel *)homeModel {
+    _homeModel = homeModel;
+    self.advertiseView.list = self.homeModel.focus;
+    [self.tableView reloadData];
+}
+
 #pragma mark - 数据请求
 
 - (void)requestHomeData {
@@ -78,23 +94,30 @@
     [para setObject:[XLFunction MD5SignWithParaArray:paraArray] forKey:@"sign"];
     [para setObject:APP_ID forKey:@"app_id"];
     
+    // 显示菊花
+    [self showActivityHUD];
     /**
      *  请求数据
      */
     [XLNewtWorkManager XLGET:kIndexInfo parameters:para success:^(id responseObject) {
-
+        
+        [self hideActivityHUD];
         /**
          * 数据请求成功,设置模型数据
          */
         self.homeModel = [[XLHomeModel alloc] initWithDictionary:responseObject error:NULL];
-        FocusListModel *foucusList = self.homeModel.focus;
-        self.advertiseView.list = foucusList.list;
         [self.tableView reloadData];
+        // 归档数据
+        [NSKeyedArchiver archiveRootObject:self.homeModel toFile:HomeModelPath];
         
     } error:^(id error) {
-        
+        [self hideActivityHUD];
+        // 处理错误
+        // ...
     } failure:^(NSError *error) {
-        
+        [self hideActivityHUD];
+        // 处理失败
+        // ...
     }];
 }
 
@@ -145,9 +168,6 @@
     }else {
 #warning fd有问题
         return 120;
-        return [tableView fd_heightForCellWithIdentifier:@"XLGuessCell" configuration:^(XLGuessCell *cell) {
-            cell.model = self.homeModel.guess.list[indexPath.row % 3];
-        }];
     }
 }
 
@@ -172,8 +192,21 @@
 
 #pragma mark - UITableViewCellDelegate
 
+/**
+ *  点击猜你喜欢cell,跳转至对应的商品详情控制器
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 2) {
+        GuessModel *model = self.homeModel.guess.list[indexPath.row % 3];
+        XLGoodsViewController *vc = [[XLGoodsViewController alloc] init];
+        
+        // 传递参数
+        [vc.parameter setObject:[NSString stringWithFormat:@"%d",model.id] forKey:@"good_id"];
+        [vc.parameter setObject:[NSString stringWithFormat:@"%lf",self.coordinate.latitude] forKey:@"lat"];
+        [vc.parameter setObject:[NSString stringWithFormat:@"%lf",self.coordinate.longitude] forKey:@"lon"];
+        // push控制器
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 
@@ -183,6 +216,7 @@
  *  点击圈子item之后push一个控制器
  */
 - (void)circlesView:(XLCirclesView *)circlesView didSelectedItemWith:(GroupModel *)model {
+
     XLSubBaseViewController *vc = [[XLSubBaseViewController alloc] init];
     [vc.navigationItem setTitle:model.title];
     [self.navigationController pushViewController:vc animated:YES];
@@ -191,11 +225,12 @@
 #pragma mark - XLRecommendViewDelegate
 
 /**
- *  点击推荐item之后push一个控制器
+ *  点击名店推荐cell之后,push对应的商家详情控制器
  */
 - (void)recommendView:(XLRecommendView *)recommendView didSelectedItemWith:(FamousModel *)model {
-    XLSubBaseViewController *vc = [[XLSubBaseViewController alloc] init];
-    [vc.navigationItem setTitle:model.name];
+    
+    XLShopViewController *vc = [[XLShopViewController alloc] init];
+    [vc.parameter setObject:[NSString stringWithFormat:@"%d",model.id] forKey:@"shop_id"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

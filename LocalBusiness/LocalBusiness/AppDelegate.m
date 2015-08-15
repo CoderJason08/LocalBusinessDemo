@@ -22,7 +22,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window makeKeyAndVisible];
-
     
     XLTabBarController *tabBar = [[XLTabBarController alloc] init];
     [self.window setRootViewController:tabBar];

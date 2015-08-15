@@ -34,6 +34,7 @@
             break;
     }
     button.layer.masksToBounds = YES;
+    [button sizeToFit];
     return button;
 }
 

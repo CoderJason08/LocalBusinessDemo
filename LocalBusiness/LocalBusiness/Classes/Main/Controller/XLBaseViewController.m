@@ -24,26 +24,46 @@
     self.navigationItem.rightBarButtonItem = self.loginButton;
 }
 
-
-#pragma mark - XLNavRightButtonDelegate
-
-- (void)navRightButtonDidClickWithType:(XLNavRightButtonType)type {
-    if (type == XLNavRightButtonTypeLogin) {
-        [self.navigationController pushViewController:[[XLLoginViewController alloc] init] animated:YES];
-    }else if (type == XLNavRightButtonTypeRegister) {
-        [self.navigationController pushViewController:[[XLRegisterViewController alloc] init]animated:YES];
-    }
+- (void)showActivityHUD {
+    [self.view makeToastActivity];
 }
 
+- (void)hideActivityHUD {
+    [self.view hideToastActivity];
+}
 
+- (void)showSuccessMessage:(NSString *)message {
+    [MBProgressHUD showSuccess:message];
+}
+
+- (void)showErrorMessage:(NSString *)message {
+    [MBProgressHUD showError:message];
+}
+
+//#pragma mark - XLNavRightButtonDelegate
+//
+//- (void)navRightButtonDidClickWithType:(XLNavRightButtonType)type {
+//    if (type == XLNavRightButtonTypeLogin) {
+//        [self.navigationController pushViewController:[[XLLoginViewController alloc] init] animated:YES];
+//    }else if (type == XLNavRightButtonTypeRegister) {
+//        [self.navigationController pushViewController:[[XLRegisterViewController alloc] init]animated:YES];
+//    }
+//}
+
+#pragma mark - Event Response
+
+- (void)loginButtonDidClicked:(XLBarButton *)button {
+    [self.navigationController pushViewController:[[XLLoginViewController alloc] init] animated:YES];
+}
 
 #pragma mark - Getter & Setter
 
-
 - (UIBarButtonItem *)loginButton {
     if (!_loginButton) {
-        XLNavRightButton *rightButton = [[[NSBundle mainBundle] loadNibNamed:@"XLNavRightButton" owner:nil options:nil] lastObject];
-        rightButton.delegate = self;
+        
+        XLBarButton *rightButton = [XLBarButton barButtonWithTitle:@"登陆/注册" image:nil type:XLBarButtonTypeNormal];
+//        rightButton.backgroundColor = Random_COLOR;
+        [rightButton addTarget:self action:@selector(loginButtonDidClicked:) forControlEvents:UIControlEventTouchDown];
         self.loginButton = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     }
     return _loginButton;

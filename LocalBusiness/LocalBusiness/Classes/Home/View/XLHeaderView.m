@@ -54,8 +54,6 @@
 - (void)setupSubviews {
     [self addSubview:self.seprateView];
     [self addSubview:self.titleLabel];
-    
-    
 }
 
 - (void)layoutSubviews {
@@ -73,7 +71,6 @@
         make.left.equalTo(self).offset(15);
     }];
 }
-
 
 #pragma mark - Getter & Setter 
 

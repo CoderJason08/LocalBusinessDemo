@@ -16,20 +16,13 @@
 
 @implementation XLSubBaseViewController
 
-/**
- *  覆盖self.view为UIView
- */
-- (void)loadView {
-    self.view = [[UIView alloc] init];
-    self.view.backgroundColor = [UIColor whiteColor];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.navigationItem.leftBarButtonItem = self.backButton;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -40,7 +33,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+/**
+ *  后退按钮方法
+ */
 - (UIBarButtonItem *)backButton {
     if (!_backButton) {
         XLBarButton *button = [XLBarButton barButtonWithTitle:nil image:[UIImage imageNamed:@"nav_back"] type:XLBarButtonTypeNormal];
@@ -52,6 +47,14 @@
     return _backButton;
 }
 
+#pragma mark - Getter & Setter 
+
+-  (NSMutableDictionary *)parameter{
+    if (!_parameter) {
+        self.parameter = [NSMutableDictionary dictionary];
+    }
+    return _parameter;
+}
 
 /*
 #pragma mark - Navigation
