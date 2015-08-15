@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XLHomeModel.h"
 
 @interface XLGuessCell : UITableViewCell
+
+@property (nonatomic, strong) GuessModel *model;
+
++ (instancetype)guessCellWithTableView:(UITableView *)tableView;
 
 @end

@@ -25,11 +25,6 @@
 }
 
 
-
-
-
-
-
 #pragma mark - XLNavRightButtonDelegate
 
 - (void)navRightButtonDidClickWithType:(XLNavRightButtonType)type {

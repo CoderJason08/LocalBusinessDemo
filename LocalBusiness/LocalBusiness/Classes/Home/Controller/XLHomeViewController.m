@@ -13,6 +13,8 @@
 #import "XLCirclesView.h"
 #import "XLRecommendView.h"
 #import "XLHeaderView.h"
+#import "XLGuessCell.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 
 @interface XLHomeViewController () <UITableViewDataSource,UITableViewDelegate,XLCirclesViewDelegate,XLRecommendViewDelegate>
 
@@ -29,6 +31,8 @@
 
 @implementation XLHomeViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -42,13 +46,16 @@
     // 设置HeaderView
     self.tableView.tableHeaderView = self.advertiseView;
     
+    // 使用FDTemplateLayoutCell必须注册cell
+    [self.tableView registerClass:[XLGuessCell class] forCellReuseIdentifier:@"XLGuessCell"];
+    
     [XLLocationManager getLocationSuccess:^(CLLocationCoordinate2D coordinate) {
         self.coordinate = coordinate;
-        [self requestData];
+        [self requestHomeData];
     } error:^(NSError *error) {
         // 为地理位置设置默认值
         self.coordinate = CLLocationCoordinate2DMake(36.06, 120.38);
-        [self requestData];
+        [self requestHomeData];
     }];
 }
 
@@ -57,7 +64,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)requestData {
+#pragma mark - 数据请求
+
+- (void)requestHomeData {
     /**
      *  设置请求参数
      */
@@ -81,12 +90,15 @@
         FocusListModel *foucusList = self.homeModel.focus;
         self.advertiseView.list = foucusList.list;
         [self.tableView reloadData];
+        
     } error:^(id error) {
         
     } failure:^(NSError *error) {
         
     }];
 }
+
+
 
 #pragma mark - UITableViewDataSource
 
@@ -100,7 +112,9 @@
     }else if (section == 1) { // 第1组,名店推荐
         return 1;
     }else {
+#warning 多加几组数据测试
         return 10;
+//        return self.homeModel.guess.list.count;
     }
     
 }
@@ -116,23 +130,27 @@
         recommendView.delegate = self;
         recommendView.famousList = self.homeModel.famous;
         return recommendView;
-    }else { // 第2组
-        UITableViewCell *cell = [[UITableViewCell alloc] init];
-        cell.backgroundColor = Random_COLOR;
+    }else { // 第2组 猜你喜欢
+        XLGuessCell *cell = [XLGuessCell guessCellWithTableView:tableView];
+        cell.model = self.homeModel.guess.list[indexPath.row % 3];
         return cell;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 353 * (SCREEN_WIDTH / 320) / 2.0;
+        return Home_Group_Height;
     }else if (indexPath.section == 1) {
-        return 400 * (SCREEN_WIDTH / 320) / 2.0;
+        return Home_Recommend_Height;
     }else {
-        return 100;
+#warning fd有问题
+        return 120;
+        return [tableView fd_heightForCellWithIdentifier:@"XLGuessCell" configuration:^(XLGuessCell *cell) {
+            cell.model = self.homeModel.guess.list[indexPath.row % 3];
+        }];
     }
-    
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 1 || section == 2) {
@@ -149,6 +167,13 @@
         return [XLHeaderView headerViewWithTitle:@"猜你喜欢" color:COLOR_RGBA(240, 112, 171, 1)];
     }
     return nil;
+}
+
+
+#pragma mark - UITableViewCellDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

@@ -75,7 +75,8 @@
     [super layoutSubviews];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self);
+        make.left.right.equalTo(self);
+        make.bottom.equalTo(self).offset(-5);
     }];
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {

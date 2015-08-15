@@ -40,6 +40,11 @@
 #define Button_WIDTH ([UIScreen mainScreen].bounds.size.width / 5)
 #define TabBar_HEIGHT 49
 
+/**********  尺寸  **********/
+#define Home_Group_Height 353 * (SCREEN_WIDTH / 320) / 2.0
+#define Home_Recommend_Height 400 * (SCREEN_WIDTH / 320) / 2.0
+
+
 /**********  网络请求  **********/
 
 /**

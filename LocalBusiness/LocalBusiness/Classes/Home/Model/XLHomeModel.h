@@ -10,6 +10,7 @@
 @class FocusListModel;
 @class GroupListModel;
 @class FamousListModel;
+@class GuessListModel;
 
 
 @interface XLHomeModel : JSONModel
@@ -25,6 +26,10 @@
  *  名店推荐模型
  */
 @property (nonatomic, strong) FamousListModel *famous;
+/**
+ *  猜你喜欢模型
+ */
+@property (nonatomic, strong) GuessListModel *guess;
 
 @end
 
@@ -127,6 +132,59 @@
 @end
 
 
+/**********  猜你喜欢模型  **********/
+
+@protocol GuessModel <NSObject>
+
+@end
+
+@interface GuessListModel : JSONModel
+/**
+ *  猜你喜欢数组
+ */
+@property (nonatomic, strong) NSArray<GuessModel> *list;
+
+@end
+
+@interface GuessModel : JSONModel
+
+/**
+ *  id
+ */
+@property (nonatomic, assign) int id;
+/**
+ *  简介
+ */
+@property (nonatomic, copy) NSString *intro;
+/**
+ *  价格
+ */
+@property (nonatomic, assign) double price;
+/**
+ *  标题
+ */
+@property (nonatomic, copy) NSString *title;
+/**
+ *  图片地址
+ */
+@property (nonatomic, copy) NSString *cover;
+
+@end
+
+/*猜你喜欢
+ guess={
+ list=({
+ cover="http://www.qd-life.com/static/upload/2015/06/23/index_20150623103654000000_1_52741_43.jpg";id=217;intro="\U9ed1\U849c\U539f\U4ef7106\U5143/\U6876\Uff0c\U73b0\U4ef788\U5143/\U6876\U3002";price="88.00";title="\U65b0\U519c\U76df\U9ed1\U849c";
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2015/05/07/index_20150507124255000000_1_55342_99.jpg";id=170;intro="\U539f\U4ef742\U5143/200g\Uff0c\U73b0\U4ef7\U53ea\U970014.8\U5143\Uff0c\U8fd8\U7b49\U4ec0\U4e48\Uff0c\U901f\U901f\U62a2\U8d2d\U5427\Uff01";price="14.80";title="\U70ad\U70e4\U9c7f\U9c7c\U8db3\U7247";
+ },
+ {
+ cover="http://www.qd-life.com/static/upload/2015/03/17/index_20150317110153000000_1_51555_49.jpg";id=89;intro="\U56e2\U8d2d\U4ef7\U683c\Uff1a300\U5143/\U7bb1\Uff08\U6bcf\U7bb130\U4e2a\Uff09 ";price="300.00";title="\U83f2\U7f8e\U679c\U56ed-\U725b\U6cb9\U679c";
+ });
+ 
+ */
+
 /*推荐
  {
  famous={
@@ -195,15 +253,6 @@
  
 
  
-guess={
- list=({
- cover="http://www.qd-life.com/static/upload/2015/06/23/index_20150623103654000000_1_52741_43.jpg";id=217;intro="\U9ed1\U849c\U539f\U4ef7106\U5143/\U6876\Uff0c\U73b0\U4ef788\U5143/\U6876\U3002";price="88.00";title="\U65b0\U519c\U76df\U9ed1\U849c";
- },
- {
- cover="http://www.qd-life.com/static/upload/2015/05/07/index_20150507124255000000_1_55342_99.jpg";id=170;intro="\U539f\U4ef742\U5143/200g\Uff0c\U73b0\U4ef7\U53ea\U970014.8\U5143\Uff0c\U8fd8\U7b49\U4ec0\U4e48\Uff0c\U901f\U901f\U62a2\U8d2d\U5427\Uff01";price="14.80";title="\U70ad\U70e4\U9c7f\U9c7c\U8db3\U7247";
- },
- {
- cover="http://www.qd-life.com/static/upload/2015/03/17/index_20150317110153000000_1_51555_49.jpg";id=89;intro="\U56e2\U8d2d\U4ef7\U683c\Uff1a300\U5143/\U7bb1\Uff08\U6bcf\U7bb130\U4e2a\Uff09 ";price="300.00";title="\U83f2\U7f8e\U679c\U56ed-\U725b\U6cb9\U679c";
- });
+
  };status=success;
  } */

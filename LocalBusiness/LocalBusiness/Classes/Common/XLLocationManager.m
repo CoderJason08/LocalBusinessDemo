@@ -8,6 +8,7 @@
 
 #import "XLLocationManager.h"
 
+
 @interface XLLocationManager () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *manager;
@@ -32,6 +33,7 @@
     });
     return localManager;
 }
+
 
 - (instancetype)init {
     if (self = [super init]) {

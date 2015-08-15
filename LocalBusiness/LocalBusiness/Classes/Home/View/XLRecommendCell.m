@@ -88,9 +88,11 @@
 - (void)setupSubviews {
     [self addSubview:self.nameLabel];
     [self addSubview:self.starImageView];
-    [self addSubview:self.introLabel];
     [self addSubview:self.iconImageView];
     [self addSubview:self.distanceButton];
+    [self addSubview:self.introLabel];
+    
+    
     // 添加分割线
     [self addSubview:self.topSepLine];
     [self addSubview:self.leftSepLine];
@@ -119,17 +121,19 @@
         make.size.mas_equalTo(CGSizeMake(53, 53));
     }];
     
-    [self.introLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.starImageView);
-        make.top.mas_equalTo(self.starImageView.mas_bottom).offset(6);
-        make.right.mas_equalTo(self.iconImageView.mas_left).offset(-15);
-        make.height.mas_equalTo(50);
-    }];
-    
     [self.distanceButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self).offset(-10);
         make.right.equalTo(self.iconImageView);
     }];
+    
+    [self.introLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.starImageView);
+        make.top.mas_equalTo(self.starImageView.mas_bottom).offset(6);
+        make.right.mas_equalTo(self.distanceButton.mas_left).offset(-5);
+//        make.height.mas_equalTo(50);
+        make.bottom.equalTo(self);
+    }];
+    
     
     /**
      *  设置分隔线约束
@@ -175,7 +179,7 @@
     if (!_starImageView) {
         self.starImageView = [[UIImageView alloc] init];
         
-        self.starImageView.image = [UIImage imageNamed:@"star_5"];
+//        self.starImageView.image = [UIImage imageNamed:@"star_5"];
     }
     return _starImageView;
 }
@@ -188,7 +192,7 @@
         self.introLabel.numberOfLines = 0;
         self.introLabel.adjustsFontSizeToFitWidth = YES;
         
-        self.introLabel.text = @"来自青岛的五星级商业酒店来自青岛的五星级商业酒店";
+//        self.introLabel.text = @"来自青岛的五星级商业酒店来自青岛的五星级商业酒店";
 //        self.introLabel.backgroundColor = Random_COLOR;
     }
     return _introLabel;
@@ -198,7 +202,7 @@
     if (!_iconImageView) {
         self.iconImageView = [[UIImageView alloc] init];
         
-        self.iconImageView.backgroundColor = [UIColor greenColor];
+//        self.iconImageView.backgroundColor = [UIColor greenColor];
     }
     return _iconImageView;
 }
@@ -211,11 +215,14 @@
         self.distanceButton.titleLabel.font = FONT(10);
         self.distanceButton.enabled = NO;
         
-        [self.distanceButton setTitle:@"距离xxx米" forState:UIControlStateNormal];
+//        [self.distanceButton setTitle:@"距离xxx米" forState:UIControlStateNormal];
 //        self.distanceButton.backgroundColor = Random_COLOR;
+//        [self.distanceButton sizeToFit];
     }
     return _distanceButton;
 }
+
+/**********  分隔线  **********/
 
 - (UIView *)topSepLine {
     if (!_topSepLine) {

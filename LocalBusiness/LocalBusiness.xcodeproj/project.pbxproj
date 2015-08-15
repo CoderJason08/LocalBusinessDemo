@@ -83,6 +83,7 @@
 		960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F09401B7CC26C00DC0690 /* XLRecommendCell.m */; };
 		96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B538221B7E35DC002C06BC /* XLLocationManager.m */; };
 		96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385A1B7E6425002C06BC /* XLGuessCell.m */; };
+		96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +252,8 @@
 		96B538221B7E35DC002C06BC /* XLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLocationManager.m; sourceTree = "<group>"; };
 		96B538591B7E6425002C06BC /* XLGuessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGuessCell.h; sourceTree = "<group>"; };
 		96B5385A1B7E6425002C06BC /* XLGuessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGuessCell.m; sourceTree = "<group>"; };
+		96B5385D1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -736,6 +739,7 @@
 		9605D7A61B7905AE00FE2C37 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				96B5385C1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell */,
 				960F08CA1B7BCD1100DC0690 /* JSONModel */,
 				960F08811B7BAF7F00DC0690 /* AFNetworking */,
 				960F08A61B7BAF7F00DC0690 /* MD5 */,
@@ -976,6 +980,15 @@
 			name = Guess;
 			sourceTree = "<group>";
 		};
+		96B5385C1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				96B5385D1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.h */,
+				96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */,
+			);
+			path = "UITableView+FDTemplateLayoutCell";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1092,6 +1105,7 @@
 				9605D7CA1B7905AE00FE2C37 /* XLCircleViewController.m in Sources */,
 				9605D7D71B7905AE00FE2C37 /* XLNewsViewController.m in Sources */,
 				9605D7D11B7905AE00FE2C37 /* XLBarButton.m in Sources */,
+				96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				9605D7D31B7905AE00FE2C37 /* XLAboutViewController.m in Sources */,
 				960F08B31B7BAF7F00DC0690 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				960F08B41B7BAF7F00DC0690 /* UIAlertView+AFNetworking.m in Sources */,
