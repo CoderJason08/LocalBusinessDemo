@@ -16,6 +16,14 @@
 
 @implementation XLSubBaseViewController
 
+/**
+ *  覆盖self.view为UIView
+ */
+- (void)loadView {
+    self.view = [[UIView alloc] init];
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

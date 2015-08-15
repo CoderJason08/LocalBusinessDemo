@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "XLHomeModel.h"
 
+
+
 static NSString *reuseIdentifier = @"XLCirclesCell";
 
 @interface XLCirclesCell : UICollectionViewCell

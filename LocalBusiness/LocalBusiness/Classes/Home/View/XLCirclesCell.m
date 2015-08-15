@@ -34,8 +34,7 @@
     XLCirclesCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 //    cell.backgroundColor = Random_COLOR;
     // 为cell添加点击事件
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapCell)];
-    [cell addGestureRecognizer:tap];
+    
     return cell;
 }
 
@@ -64,7 +63,6 @@
  *  设置子控件
  */
 - (void)setupSubviews {
-    
     [self addSubview:self.imageView];
     [self addSubview:self.nameLabel];
 }
@@ -100,9 +98,6 @@
 
 #pragma mark - Private Function
 
-+ (void)tapCell {
-    NSLog(@"tapCell");
-}
 
 
 #pragma mark - Getter & Setter 

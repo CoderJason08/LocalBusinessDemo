@@ -14,10 +14,7 @@
 
 @implementation XLRegisterViewController
 
-- (void)loadView {
-    self.view = [[UIView alloc] init];
-    self.view.backgroundColor = [UIColor whiteColor];
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

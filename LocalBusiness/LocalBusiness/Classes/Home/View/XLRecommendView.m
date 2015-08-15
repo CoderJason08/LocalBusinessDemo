@@ -89,24 +89,32 @@
     [self.collectionView setCollectionViewLayout:layout];
 }
 
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return 4;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     XLRecommendCell *cell = [XLRecommendCell recommendCell:collectionView indexPath:indexPath];
-    if (indexPath.section == 0) {
-        cell.famous = self.famousList.list[indexPath.row];
-    }else if (indexPath.section == 1) {
-        cell.famous = self.famousList.list[indexPath.row + 2];
-    }
+    cell.famous = self.famousList.list[indexPath.row];
+
     return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(recommendView:didSelectedItemWith:)]) {
+        // 取出对应的模型
+        GroupModel *model = self.famousList.list[indexPath.row];
+        [self.delegate recommendView:self didSelectedItemWith:model];
+    }
 }
 
 

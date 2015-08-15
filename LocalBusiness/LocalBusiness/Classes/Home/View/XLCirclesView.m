@@ -90,12 +90,15 @@
 }
 
 
+#pragma mark - UICollectionViewDataSource
+
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    return 8;
 }
 
 
@@ -104,13 +107,19 @@
     
     if (indexPath.section == 0) {
         cell.group = self.list.list[indexPath.row];
-    }else {
-        cell.group = self.list.list[indexPath.row + 4];
     }
-    
     return cell;
 }
 
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(circlesView:didSelectedItemWith:)]) {
+        // 取出对应的模型
+        GroupModel *model = self.list.list[indexPath.row];
+        [self.delegate circlesView:self didSelectedItemWith:model];
+    }
+}
 
 @end
 

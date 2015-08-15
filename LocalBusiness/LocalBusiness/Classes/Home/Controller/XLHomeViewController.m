@@ -14,7 +14,7 @@
 #import "XLRecommendView.h"
 #import "XLHeaderView.h"
 
-@interface XLHomeViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface XLHomeViewController () <UITableViewDataSource,UITableViewDelegate,XLCirclesViewDelegate,XLRecommendViewDelegate>
 
 /**
  *  广告view
@@ -106,15 +106,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0) { // 第0组,创建圈子View
         XLCirclesView *circlesView = [XLCirclesView circlesView];
+        circlesView.delegate = self;
         circlesView.list = self.homeModel.group;
         return circlesView;
-    }else if (indexPath.section == 1) {
+    }else if (indexPath.section == 1) { // 第1组,创建推荐view
         XLRecommendView *recommendView = [XLRecommendView recommendView];
+        recommendView.delegate = self;
         recommendView.famousList = self.homeModel.famous;
         return recommendView;
-    }else {
+    }else { // 第2组
         UITableViewCell *cell = [[UITableViewCell alloc] init];
         cell.backgroundColor = Random_COLOR;
         return cell;
@@ -149,6 +151,28 @@
     return nil;
 }
 
+
+#pragma mark - XLCirclesViewDelegate
+
+/**
+ *  点击圈子item之后push一个控制器
+ */
+- (void)circlesView:(XLCirclesView *)circlesView didSelectedItemWith:(GroupModel *)model {
+    XLSubBaseViewController *vc = [[XLSubBaseViewController alloc] init];
+    [vc.navigationItem setTitle:model.title];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - XLRecommendViewDelegate
+
+/**
+ *  点击推荐item之后push一个控制器
+ */
+- (void)recommendView:(XLRecommendView *)recommendView didSelectedItemWith:(FamousModel *)model {
+    XLSubBaseViewController *vc = [[XLSubBaseViewController alloc] init];
+    [vc.navigationItem setTitle:model.name];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark - Getter & Setter 
 
