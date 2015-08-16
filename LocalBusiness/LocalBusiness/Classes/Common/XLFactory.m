@@ -12,8 +12,8 @@
 
 + (XLBarButton *)buttonWithTitle:(NSString *)title image:(UIImage *)image type:(XLButtonType)type {
     XLBarButton *button = [[XLBarButton alloc] init];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    button.titleLabel.font = FONT(18);
+//    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.font = FONT(16);
     if (title) {
         [button setTitle:title forState:UIControlStateNormal];
     }
@@ -29,7 +29,6 @@
             break;
     }
     button.layer.masksToBounds = YES;
-    [button sizeToFit];
     return button;
 }
 

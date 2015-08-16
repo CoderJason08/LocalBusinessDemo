@@ -55,7 +55,7 @@
     
 //  无法解档 已解决,在initWithCoder方法中,调用父类的init方法;
     // 解档保存的模型数据
-    self.homeModel = [NSKeyedUnarchiver unarchiveObjectWithFile:HomeModelPath];
+//    self.homeModel = [NSKeyedUnarchiver unarchiveObjectWithFile:HomeModelPath];
     
     
     [XLLocationManager getLocationSuccess:^(CLLocationCoordinate2D coordinate) {
@@ -166,7 +166,6 @@
     }else if (indexPath.section == 1) {
         return Home_Recommend_Height;
     }else {
-#warning fd有问题
         return 120;
     }
 }

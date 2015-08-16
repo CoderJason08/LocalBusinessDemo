@@ -88,6 +88,12 @@
 		96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B538221B7E35DC002C06BC /* XLLocationManager.m */; };
 		96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385A1B7E6425002C06BC /* XLGuessCell.m */; };
 		96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */; };
+		96EA1C451B8030990016B2EF /* UIImageView+XLWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EA1C441B8030990016B2EF /* UIImageView+XLWebImage.m */; };
+		96EA1C481B8031130016B2EF /* UIButton+XLWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EA1C471B8031130016B2EF /* UIButton+XLWebImage.m */; };
+		96EA1C4F1B8039250016B2EF /* XLShopCommentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EA1C4A1B8039250016B2EF /* XLShopCommentViewCell.m */; };
+		96EA1C501B8039250016B2EF /* XLShopCommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EA1C4B1B8039250016B2EF /* XLShopCommentViewCell.xib */; };
+		96EA1C511B8039250016B2EF /* XLShopGoodsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EA1C4D1B8039250016B2EF /* XLShopGoodsViewCell.m */; };
+		96EA1C521B8039250016B2EF /* XLShopGoodsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EA1C4E1B8039250016B2EF /* XLShopGoodsViewCell.xib */; };
 		96EEC77F1B7FA1210035F6EF /* XLShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EEC77E1B7FA1210035F6EF /* XLShopModel.m */; };
 		96EEC7831B7FA6C80035F6EF /* XLShopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EEC7821B7FA6C80035F6EF /* XLShopHeaderView.m */; };
 		96EEC7891B7FAA260035F6EF /* XLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EEC7881B7FAA260035F6EF /* XLFactory.m */; };
@@ -269,6 +275,16 @@
 		96B5385A1B7E6425002C06BC /* XLGuessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGuessCell.m; sourceTree = "<group>"; };
 		96B5385D1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		96EA1C431B8030990016B2EF /* UIImageView+XLWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XLWebImage.h"; sourceTree = "<group>"; };
+		96EA1C441B8030990016B2EF /* UIImageView+XLWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XLWebImage.m"; sourceTree = "<group>"; };
+		96EA1C461B8031130016B2EF /* UIButton+XLWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XLWebImage.h"; sourceTree = "<group>"; };
+		96EA1C471B8031130016B2EF /* UIButton+XLWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XLWebImage.m"; sourceTree = "<group>"; };
+		96EA1C491B8039250016B2EF /* XLShopCommentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopCommentViewCell.h; sourceTree = "<group>"; };
+		96EA1C4A1B8039250016B2EF /* XLShopCommentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopCommentViewCell.m; sourceTree = "<group>"; };
+		96EA1C4B1B8039250016B2EF /* XLShopCommentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLShopCommentViewCell.xib; sourceTree = "<group>"; };
+		96EA1C4C1B8039250016B2EF /* XLShopGoodsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopGoodsViewCell.h; sourceTree = "<group>"; };
+		96EA1C4D1B8039250016B2EF /* XLShopGoodsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopGoodsViewCell.m; sourceTree = "<group>"; };
+		96EA1C4E1B8039250016B2EF /* XLShopGoodsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLShopGoodsViewCell.xib; sourceTree = "<group>"; };
 		96EEC77D1B7FA1210035F6EF /* XLShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopModel.h; sourceTree = "<group>"; };
 		96EEC77E1B7FA1210035F6EF /* XLShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopModel.m; sourceTree = "<group>"; };
 		96EEC7811B7FA6C80035F6EF /* XLShopHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopHeaderView.h; sourceTree = "<group>"; };
@@ -405,6 +421,10 @@
 				96B538221B7E35DC002C06BC /* XLLocationManager.m */,
 				96EEC7871B7FAA260035F6EF /* XLFactory.h */,
 				96EEC7881B7FAA260035F6EF /* XLFactory.m */,
+				96EA1C431B8030990016B2EF /* UIImageView+XLWebImage.h */,
+				96EA1C441B8030990016B2EF /* UIImageView+XLWebImage.m */,
+				96EA1C461B8031130016B2EF /* UIButton+XLWebImage.h */,
+				96EA1C471B8031130016B2EF /* UIButton+XLWebImage.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1044,6 +1064,12 @@
 			children = (
 				96EEC7811B7FA6C80035F6EF /* XLShopHeaderView.h */,
 				96EEC7821B7FA6C80035F6EF /* XLShopHeaderView.m */,
+				96EA1C491B8039250016B2EF /* XLShopCommentViewCell.h */,
+				96EA1C4A1B8039250016B2EF /* XLShopCommentViewCell.m */,
+				96EA1C4B1B8039250016B2EF /* XLShopCommentViewCell.xib */,
+				96EA1C4C1B8039250016B2EF /* XLShopGoodsViewCell.h */,
+				96EA1C4D1B8039250016B2EF /* XLShopGoodsViewCell.m */,
+				96EA1C4E1B8039250016B2EF /* XLShopGoodsViewCell.xib */,
 			);
 			name = "ShopDetail(商家详情)";
 			sourceTree = "<group>";
@@ -1128,12 +1154,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EA1C521B8039250016B2EF /* XLShopGoodsViewCell.xib in Resources */,
 				9605D7D91B7905AE00FE2C37 /* Info.plist in Resources */,
 				9605D7D81B7905AE00FE2C37 /* Images.xcassets in Resources */,
 				960F08F81B7C354700DC0690 /* XLNavRightButton.xib in Resources */,
 				9605D7C81B7905AE00FE2C37 /* LaunchScreen.xib in Resources */,
 				9605D7DA1B7905AE00FE2C37 /* Info.plist in Resources */,
 				9605D7C91B7905AE00FE2C37 /* Main.storyboard in Resources */,
+				96EA1C501B8039250016B2EF /* XLShopCommentViewCell.xib in Resources */,
 				9605D7E51B7905AE00FE2C37 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1164,13 +1192,16 @@
 				960F08B51B7BAF7F00DC0690 /* UIButton+AFNetworking.m in Sources */,
 				9605D7CA1B7905AE00FE2C37 /* XLCircleViewController.m in Sources */,
 				9605D7D71B7905AE00FE2C37 /* XLNewsViewController.m in Sources */,
+				96EA1C481B8031130016B2EF /* UIButton+XLWebImage.m in Sources */,
 				9605D7D11B7905AE00FE2C37 /* XLBarButton.m in Sources */,
 				96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				9605D7D31B7905AE00FE2C37 /* XLAboutViewController.m in Sources */,
+				96EA1C451B8030990016B2EF /* UIImageView+XLWebImage.m in Sources */,
 				960F08B31B7BAF7F00DC0690 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				960F08B41B7BAF7F00DC0690 /* UIAlertView+AFNetworking.m in Sources */,
 				960F08B91B7BAF7F00DC0690 /* MD5.m in Sources */,
 				9605D7DF1B7905AE00FE2C37 /* MASViewAttribute.m in Sources */,
+				96EA1C511B8039250016B2EF /* XLShopGoodsViewCell.m in Sources */,
 				9605D7DE1B7905AE00FE2C37 /* MASLayoutConstraint.m in Sources */,
 				960F08B01B7BAF7F00DC0690 /* AFURLResponseSerialization.m in Sources */,
 				96EEC77F1B7FA1210035F6EF /* XLShopModel.m in Sources */,
@@ -1224,6 +1255,7 @@
 				960F08E81B7BCD1100DC0690 /* NSArray+JSONModel.m in Sources */,
 				9644DEE81B7F5A46007FDFB4 /* XLGoodModel.m in Sources */,
 				960F08AC1B7BAF7F00DC0690 /* AFNetworkReachabilityManager.m in Sources */,
+				96EA1C4F1B8039250016B2EF /* XLShopCommentViewCell.m in Sources */,
 				960F08BF1B7BAF8A00DC0690 /* XLNewtWorkManager.m in Sources */,
 				960F08F61B7C353600DC0690 /* XLNavRightButton.m in Sources */,
 				9605D7D51B7905AE00FE2C37 /* XLToolsViewController.m in Sources */,

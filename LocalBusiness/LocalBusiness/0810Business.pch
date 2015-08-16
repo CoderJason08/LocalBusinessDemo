@@ -18,6 +18,8 @@
 #import "XLLocationManager.h"
 #import "XLSubBaseViewController.h"
 #import "XLFactory.h"
+#import "UIImageView+XLWebImage.h"
+#import "UIButton+XLWebImage.h"
 
 /**********  颜色  **********/
 #define COLOR_RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:(a)]
@@ -28,8 +30,11 @@
 /**********  默认背景色  **********/
 #define Default_BG_COLOR [UIColor colorWithRed:238/255.0 green:238/255.0  blue:238/255.0  alpha:1]
 
-/**********  统一黄色  **********/
+/**********  黄色  **********/
 #define kYellowColor COLOR_RGBA(245, 173, 39, 1)
+
+/**********  橙色  **********/
+#define kOrangeColor COLOR_RGBA(255, 183, 0, 1)
 
 /**********  随机色  **********/
 #define Random_COLOR [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0  blue:arc4random_uniform(256)/255.0  alpha:1]

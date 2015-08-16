@@ -65,7 +65,6 @@
         // 设置数据源和代理
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
-        
         // 注册cell
         [self.collectionView registerClass:[XLRecommendCell class] forCellWithReuseIdentifier:reuseIdentifier];
         
@@ -73,6 +72,7 @@
     }
     return _collectionView;
 }
+
 
 /**
  *  设置cell的布局

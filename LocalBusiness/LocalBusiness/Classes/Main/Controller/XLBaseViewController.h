@@ -13,6 +13,10 @@
 @interface XLBaseViewController : UITableViewController
 
 /**
+ *  遮罩
+ */
+@property (nonatomic, strong) UIView *coverView;
+/**
  *  显示成功信息
  */
 - (void)showSuccessMessage:(NSString *)message;
