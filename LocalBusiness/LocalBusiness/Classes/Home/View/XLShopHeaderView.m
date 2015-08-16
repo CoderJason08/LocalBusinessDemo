@@ -220,6 +220,17 @@
 }
 
 
+
+#pragma mark - Action
+
+- (void)locationButtonDidClick {
+    if ([self.delegate respondsToSelector:@selector(shopHeaderView:locationButtonDidClickWithModel:)]) {
+        [self.delegate shopHeaderView:self locationButtonDidClickWithModel:self.shopModel];
+    }
+}
+
+
+
 #pragma mark - Getter & Setter 
 
 #warning 设置测试数据
@@ -300,6 +311,7 @@
         self.locationButton = [XLFactory buttonWithTitle:nil image:[UIImage imageNamed:@"home_location_big"] type:XLButtonTypeNormal];
         [self.locationButton setTitleColor:kYellowColor forState:UIControlStateNormal];
         
+        [self.locationButton addTarget:self action:@selector(locationButtonDidClick) forControlEvents:UIControlEventTouchDown];
 //        self.locationButton.backgroundColor = Random_COLOR;
     }
     return _locationButton;

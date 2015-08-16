@@ -34,6 +34,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     _more.layer.cornerRadius = 5;
     [_more.layer masksToBounds];
     _more.titleLabel.font = FONT(16);

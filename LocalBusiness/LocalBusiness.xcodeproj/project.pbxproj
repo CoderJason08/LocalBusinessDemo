@@ -81,6 +81,20 @@
 		960F093B1B7CBAD500DC0690 /* XLHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F093A1B7CBAD500DC0690 /* XLHeaderView.m */; };
 		960F093E1B7CC25000DC0690 /* XLRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F093D1B7CC25000DC0690 /* XLRecommendView.m */; };
 		960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F09401B7CC26C00DC0690 /* XLRecommendCell.m */; };
+		963D165E1B806B1100156A93 /* XLShopFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D165D1B806B1100156A93 /* XLShopFooterView.m */; };
+		963D16641B80723100156A93 /* XLShopLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16631B80723100156A93 /* XLShopLocationViewController.m */; };
+		963D16671B80769600156A93 /* XLAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16661B80769600156A93 /* XLAnnotation.m */; };
+		963D16B61B80A44F00156A93 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 963D16A01B80A44F00156A93 /* IQKeyboardManager.bundle */; };
+		963D16B71B80A44F00156A93 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16A21B80A44F00156A93 /* IQKeyboardManager.m */; };
+		963D16B81B80A44F00156A93 /* IQSegmentedNextPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16A61B80A44F00156A93 /* IQSegmentedNextPrevious.m */; };
+		963D16B91B80A44F00156A93 /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16A81B80A44F00156A93 /* IQTextView.m */; };
+		963D16BA1B80A44F00156A93 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16AA1B80A44F00156A93 /* IQTitleBarButtonItem.m */; };
+		963D16BB1B80A44F00156A93 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16AC1B80A44F00156A93 /* IQToolbar.m */; };
+		963D16BC1B80A44F00156A93 /* NSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16AF1B80A44F00156A93 /* NSArray+Sort.m */; };
+		963D16BD1B80A44F00156A93 /* UIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16B11B80A44F00156A93 /* UIView+Hierarchy.m */; };
+		963D16BE1B80A44F00156A93 /* UIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16B31B80A44F00156A93 /* UIView+IQKeyboardToolbar.m */; };
+		963D16BF1B80A44F00156A93 /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16B51B80A44F00156A93 /* UIWindow+Hierarchy.m */; };
+		963D16DE1B80B57E00156A93 /* LDXScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D16DD1B80B57E00156A93 /* LDXScore.m */; };
 		9644DEA91B7F2B14007FDFB4 /* XLGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEA81B7F2B14007FDFB4 /* XLGoodsViewController.m */; };
 		9644DEAC1B7F2BCF007FDFB4 /* XLShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEAB1B7F2BCF007FDFB4 /* XLShopViewController.m */; };
 		9644DEE51B7F5338007FDFB4 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEE41B7F5338007FDFB4 /* UIView+Toast.m */; };
@@ -261,6 +275,36 @@
 		960F093D1B7CC25000DC0690 /* XLRecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRecommendView.m; sourceTree = "<group>"; };
 		960F093F1B7CC26C00DC0690 /* XLRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRecommendCell.h; sourceTree = "<group>"; };
 		960F09401B7CC26C00DC0690 /* XLRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRecommendCell.m; sourceTree = "<group>"; };
+		963D165C1B806B1100156A93 /* XLShopFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopFooterView.h; sourceTree = "<group>"; };
+		963D165D1B806B1100156A93 /* XLShopFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopFooterView.m; sourceTree = "<group>"; };
+		963D16621B80723100156A93 /* XLShopLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopLocationViewController.h; sourceTree = "<group>"; };
+		963D16631B80723100156A93 /* XLShopLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopLocationViewController.m; sourceTree = "<group>"; };
+		963D16651B80769600156A93 /* XLAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLAnnotation.h; sourceTree = "<group>"; };
+		963D16661B80769600156A93 /* XLAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLAnnotation.m; sourceTree = "<group>"; };
+		963D16A01B80A44F00156A93 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		963D16A11B80A44F00156A93 /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		963D16A21B80A44F00156A93 /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		963D16A31B80A44F00156A93 /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		963D16A41B80A44F00156A93 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		963D16A51B80A44F00156A93 /* IQSegmentedNextPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQSegmentedNextPrevious.h; sourceTree = "<group>"; };
+		963D16A61B80A44F00156A93 /* IQSegmentedNextPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQSegmentedNextPrevious.m; sourceTree = "<group>"; };
+		963D16A71B80A44F00156A93 /* IQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTextView.h; sourceTree = "<group>"; };
+		963D16A81B80A44F00156A93 /* IQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
+		963D16A91B80A44F00156A93 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		963D16AA1B80A44F00156A93 /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		963D16AB1B80A44F00156A93 /* IQToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQToolbar.h; sourceTree = "<group>"; };
+		963D16AC1B80A44F00156A93 /* IQToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQToolbar.m; sourceTree = "<group>"; };
+		963D16AD1B80A44F00156A93 /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		963D16AE1B80A44F00156A93 /* NSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Sort.h"; sourceTree = "<group>"; };
+		963D16AF1B80A44F00156A93 /* NSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Sort.m"; sourceTree = "<group>"; };
+		963D16B01B80A44F00156A93 /* UIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Hierarchy.h"; sourceTree = "<group>"; };
+		963D16B11B80A44F00156A93 /* UIView+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Hierarchy.m"; sourceTree = "<group>"; };
+		963D16B21B80A44F00156A93 /* UIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		963D16B31B80A44F00156A93 /* UIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		963D16B41B80A44F00156A93 /* UIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		963D16B51B80A44F00156A93 /* UIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		963D16DC1B80B57E00156A93 /* LDXScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDXScore.h; sourceTree = "<group>"; };
+		963D16DD1B80B57E00156A93 /* LDXScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDXScore.m; sourceTree = "<group>"; };
 		9644DEA71B7F2B14007FDFB4 /* XLGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGoodsViewController.h; sourceTree = "<group>"; };
 		9644DEA81B7F2B14007FDFB4 /* XLGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGoodsViewController.m; sourceTree = "<group>"; };
 		9644DEAA1B7F2BCF007FDFB4 /* XLShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopViewController.h; sourceTree = "<group>"; };
@@ -448,6 +492,8 @@
 				9644DEAB1B7F2BCF007FDFB4 /* XLShopViewController.m */,
 				9644DEA71B7F2B14007FDFB4 /* XLGoodsViewController.h */,
 				9644DEA81B7F2B14007FDFB4 /* XLGoodsViewController.m */,
+				963D16621B80723100156A93 /* XLShopLocationViewController.h */,
+				963D16631B80723100156A93 /* XLShopLocationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -455,6 +501,8 @@
 		9605D7641B7905AE00FE2C37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				963D16651B80769600156A93 /* XLAnnotation.h */,
+				963D16661B80769600156A93 /* XLAnnotation.m */,
 				960F08EE1B7BCD3800DC0690 /* XLHomeModel.h */,
 				960F08EF1B7BCD3800DC0690 /* XLHomeModel.m */,
 				9644DEE61B7F5A46007FDFB4 /* XLGoodModel.h */,
@@ -538,6 +586,7 @@
 		9605D7761B7905AE00FE2C37 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				963D16DB1B80B38C00156A93 /* 评分 */,
 				9605D7771B7905AE00FE2C37 /* XLTabBar.h */,
 				9605D7781B7905AE00FE2C37 /* XLTabBar.m */,
 				9605D7791B7905AE00FE2C37 /* XLBarButton.h */,
@@ -790,6 +839,7 @@
 		9605D7A61B7905AE00FE2C37 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				963D169F1B80A44F00156A93 /* IQKeyBoardManager */,
 				9644DEE21B7F5338007FDFB4 /* Toast */,
 				96B5385C1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell */,
 				960F08CA1B7BCD1100DC0690 /* JSONModel */,
@@ -1025,6 +1075,44 @@
 			name = "Recommend(名店推荐)";
 			sourceTree = "<group>";
 		};
+		963D169F1B80A44F00156A93 /* IQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				963D16A01B80A44F00156A93 /* IQKeyboardManager.bundle */,
+				963D16A11B80A44F00156A93 /* IQKeyboardManager.h */,
+				963D16A21B80A44F00156A93 /* IQKeyboardManager.m */,
+				963D16A31B80A44F00156A93 /* IQKeyboardManagerConstants.h */,
+				963D16A41B80A44F00156A93 /* IQKeyboardManagerConstantsInternal.h */,
+				963D16A51B80A44F00156A93 /* IQSegmentedNextPrevious.h */,
+				963D16A61B80A44F00156A93 /* IQSegmentedNextPrevious.m */,
+				963D16A71B80A44F00156A93 /* IQTextView.h */,
+				963D16A81B80A44F00156A93 /* IQTextView.m */,
+				963D16A91B80A44F00156A93 /* IQTitleBarButtonItem.h */,
+				963D16AA1B80A44F00156A93 /* IQTitleBarButtonItem.m */,
+				963D16AB1B80A44F00156A93 /* IQToolbar.h */,
+				963D16AC1B80A44F00156A93 /* IQToolbar.m */,
+				963D16AD1B80A44F00156A93 /* KeyboardManager.h */,
+				963D16AE1B80A44F00156A93 /* NSArray+Sort.h */,
+				963D16AF1B80A44F00156A93 /* NSArray+Sort.m */,
+				963D16B01B80A44F00156A93 /* UIView+Hierarchy.h */,
+				963D16B11B80A44F00156A93 /* UIView+Hierarchy.m */,
+				963D16B21B80A44F00156A93 /* UIView+IQKeyboardToolbar.h */,
+				963D16B31B80A44F00156A93 /* UIView+IQKeyboardToolbar.m */,
+				963D16B41B80A44F00156A93 /* UIWindow+Hierarchy.h */,
+				963D16B51B80A44F00156A93 /* UIWindow+Hierarchy.m */,
+			);
+			path = IQKeyBoardManager;
+			sourceTree = "<group>";
+		};
+		963D16DB1B80B38C00156A93 /* 评分 */ = {
+			isa = PBXGroup;
+			children = (
+				963D16DC1B80B57E00156A93 /* LDXScore.h */,
+				963D16DD1B80B57E00156A93 /* LDXScore.m */,
+			);
+			name = "评分";
+			sourceTree = "<group>";
+		};
 		9644DEE21B7F5338007FDFB4 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -1070,6 +1158,8 @@
 				96EA1C4C1B8039250016B2EF /* XLShopGoodsViewCell.h */,
 				96EA1C4D1B8039250016B2EF /* XLShopGoodsViewCell.m */,
 				96EA1C4E1B8039250016B2EF /* XLShopGoodsViewCell.xib */,
+				963D165C1B806B1100156A93 /* XLShopFooterView.h */,
+				963D165D1B806B1100156A93 /* XLShopFooterView.m */,
 			);
 			name = "ShopDetail(商家详情)";
 			sourceTree = "<group>";
@@ -1154,6 +1244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963D16B61B80A44F00156A93 /* IQKeyboardManager.bundle in Resources */,
 				96EA1C521B8039250016B2EF /* XLShopGoodsViewCell.xib in Resources */,
 				9605D7D91B7905AE00FE2C37 /* Info.plist in Resources */,
 				9605D7D81B7905AE00FE2C37 /* Images.xcassets in Resources */,
@@ -1183,10 +1274,13 @@
 				9644DEE51B7F5338007FDFB4 /* UIView+Toast.m in Sources */,
 				960F08E91B7BCD1100DC0690 /* JSONAPI.m in Sources */,
 				9605D7CD1B7905AE00FE2C37 /* XLBaseViewController.m in Sources */,
+				963D16BF1B80A44F00156A93 /* UIWindow+Hierarchy.m in Sources */,
+				963D16BB1B80A44F00156A93 /* IQToolbar.m in Sources */,
 				960F08EC1B7BCD1100DC0690 /* JSONKeyMapper.m in Sources */,
 				960F08E61B7BCD1100DC0690 /* JSONModelClassProperty.m in Sources */,
 				960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */,
 				960F08BE1B7BAF8A00DC0690 /* XLFunction.m in Sources */,
+				963D16B91B80A44F00156A93 /* IQTextView.m in Sources */,
 				960F08B81B7BAF7F00DC0690 /* UIWebView+AFNetworking.m in Sources */,
 				96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */,
 				960F08B51B7BAF7F00DC0690 /* UIButton+AFNetworking.m in Sources */,
@@ -1198,6 +1292,7 @@
 				9605D7D31B7905AE00FE2C37 /* XLAboutViewController.m in Sources */,
 				96EA1C451B8030990016B2EF /* UIImageView+XLWebImage.m in Sources */,
 				960F08B31B7BAF7F00DC0690 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				963D16B81B80A44F00156A93 /* IQSegmentedNextPrevious.m in Sources */,
 				960F08B41B7BAF7F00DC0690 /* UIAlertView+AFNetworking.m in Sources */,
 				960F08B91B7BAF7F00DC0690 /* MD5.m in Sources */,
 				9605D7DF1B7905AE00FE2C37 /* MASViewAttribute.m in Sources */,
@@ -1214,8 +1309,11 @@
 				960F08ED1B7BCD1100DC0690 /* JSONValueTransformer.m in Sources */,
 				9605D7CC1B7905AE00FE2C37 /* XLLoginViewController.m in Sources */,
 				96EEC7891B7FAA260035F6EF /* XLFactory.m in Sources */,
+				963D16671B80769600156A93 /* XLAnnotation.m in Sources */,
 				96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */,
+				963D16B71B80A44F00156A93 /* IQKeyboardManager.m in Sources */,
 				960F08AE1B7BAF7F00DC0690 /* AFURLConnectionOperation.m in Sources */,
+				963D16BA1B80A44F00156A93 /* IQTitleBarButtonItem.m in Sources */,
 				9605D7D21B7905AE00FE2C37 /* XLTabPopBar.m in Sources */,
 				9605D7D41B7905AE00FE2C37 /* XLOnlineViewController.m in Sources */,
 				9605D7CF1B7905AE00FE2C37 /* XLTabBarController.m in Sources */,
@@ -1233,12 +1331,17 @@
 				9605D7C71B7905AE00FE2C37 /* AppDelegate.m in Sources */,
 				960F08E41B7BCD1100DC0690 /* JSONModel.m in Sources */,
 				9605D7DB1B7905AE00FE2C37 /* MASCompositeConstraint.m in Sources */,
+				963D16641B80723100156A93 /* XLShopLocationViewController.m in Sources */,
 				960F08AB1B7BAF7F00DC0690 /* AFHTTPSessionManager.m in Sources */,
+				963D16DE1B80B57E00156A93 /* LDXScore.m in Sources */,
 				9605D7E11B7905AE00FE2C37 /* NSArray+MASAdditions.m in Sources */,
+				963D165E1B806B1100156A93 /* XLShopFooterView.m in Sources */,
 				960F08C61B7BBAB100DC0690 /* XLAdvertiseView.m in Sources */,
+				963D16BD1B80A44F00156A93 /* UIView+Hierarchy.m in Sources */,
 				960F08F01B7BCD3800DC0690 /* XLHomeModel.m in Sources */,
 				9605D7D61B7905AE00FE2C37 /* XLShakeViewController.m in Sources */,
 				960F08AF1B7BAF7F00DC0690 /* AFURLRequestSerialization.m in Sources */,
+				963D16BC1B80A44F00156A93 /* NSArray+Sort.m in Sources */,
 				960F08FB1B7C3BC400DC0690 /* XLRegisterViewController.m in Sources */,
 				960F093B1B7CBAD500DC0690 /* XLHeaderView.m in Sources */,
 				960F093E1B7CC25000DC0690 /* XLRecommendView.m in Sources */,
@@ -1249,6 +1352,7 @@
 				960F08801B7BAE1300DC0690 /* XLSubBaseViewController.m in Sources */,
 				9605D7E01B7905AE00FE2C37 /* MASViewConstraint.m in Sources */,
 				9644DEA91B7F2B14007FDFB4 /* XLGoodsViewController.m in Sources */,
+				963D16BE1B80A44F00156A93 /* UIView+IQKeyboardToolbar.m in Sources */,
 				960F08E71B7BCD1100DC0690 /* JSONModelError.m in Sources */,
 				960F08B21B7BAF7F00DC0690 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9605D7DC1B7905AE00FE2C37 /* MASConstraint.m in Sources */,

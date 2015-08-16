@@ -8,13 +8,14 @@
 
 #import "XLShopViewController.h"
 #import "XLShopHeaderView.h"
+#import "XLShopFooterView.h"
 #import "XLShopGoodsViewCell.h"
 #import "XLShopCommentViewCell.h"
 #import "XLHeaderView.h"
 #import "XLShopModel.h"
-#import "UITableView+FDTemplateLayoutCell.h"
+#import "XLShopLocationViewController.h"
 
-@interface XLShopViewController () <UITableViewDataSource>
+@interface XLShopViewController () <UITableViewDataSource,XLShopHeaderViewDelegate>
 /**
  *  商家模型
  */
@@ -23,6 +24,11 @@
  *  tableView头
  */
 @property (nonatomic, strong) XLShopHeaderView *headerView;
+/**
+ *  tableViewFooter
+ */
+@property (nonatomic, strong) XLShopFooterView *footerView;
+
 @end
 
 @implementation XLShopViewController
@@ -35,10 +41,10 @@
     
     // 设置tableView HeaderView
     self.tableView.tableHeaderView = self.headerView;
+    // 设置tableview FooterView
+    self.tableView.tableFooterView = self.footerView;
     // 禁用系统分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +53,18 @@
 }
 
 
+#pragma mark - XLShopHeaderViewDelegate
+
+- (void)shopHeaderView:(XLShopHeaderView *)headerView locationButtonDidClickWithModel:(XLShopModel *)shopModel {
+    XLShopLocationViewController *vc = [[XLShopLocationViewController alloc] init];
+    [vc.parameter setValue:[NSString stringWithFormat:@"%lf",shopModel.lat] forKey:@"lat"];
+    [vc.parameter setValue:[NSString stringWithFormat:@"%lf",shopModel.lon] forKey:@"lon"];
+    [vc.parameter setObject:shopModel.address forKey:@"address"];
+    [vc.parameter setObject:shopModel.name forKey:@"name"];
+    
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 #pragma mark - UITableViewDatasource
@@ -57,6 +75,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
+
 
 /**
  *  返回分组对应的行数
@@ -229,9 +248,17 @@
 - (XLShopHeaderView *)headerView {
     if (!_headerView) {
         self.headerView = [XLShopHeaderView shopHeaderView];
-//        self.headerView.backgroundColor = Random_COLOR;
+        self.headerView.delegate = self;
     }
     return _headerView;
+}
+
+- (XLShopFooterView *)footerView {
+    if (!_footerView) {
+        self.footerView = [XLShopFooterView shopFooterView];
+        self.footerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
+    }
+    return _footerView;
 }
 
 @end

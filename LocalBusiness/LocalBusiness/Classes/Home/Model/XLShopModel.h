@@ -9,7 +9,6 @@
 #import "JSONModel.h"
 
 @protocol ShopCommentModel <NSObject>
-
 @end
 
 /**********  商家模型  **********/
@@ -109,6 +108,7 @@
  {
  address = "\U9752\U5c9b\U5e02\U9ec4\U5c9b\U533a\U7075\U5c71\U8def10\U53f7";
  "comment_list" =     (
+    ...
  );
  "comment_totalPage" = 4;
  cover = "http://www.qd-life.com/static/upload/2015/04/03/info_20150403135622000000_1_109155_62.jpg";
@@ -128,6 +128,7 @@
  */
 
 /*
+ (
  {
  avatar = "http://www.qd-life.com/images/default/general.gif";
  content = "\U8fd8\U6709\U7684";
@@ -146,5 +147,5 @@
  score = 5;
  "user_id" = 101;
  }
- );
+ )
  */
