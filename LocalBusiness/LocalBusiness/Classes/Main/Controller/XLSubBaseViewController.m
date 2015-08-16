@@ -38,7 +38,7 @@
  */
 - (UIBarButtonItem *)backButton {
     if (!_backButton) {
-        XLBarButton *button = [XLBarButton barButtonWithTitle:nil image:[UIImage imageNamed:@"nav_back"] type:XLBarButtonTypeNormal];
+        XLBarButton *button = [XLFactory buttonWithTitle:nil image:[UIImage imageNamed:@"nav_back"] type:XLButtonTypeNormal];
         button.frame = CGRectMake(0, 0, 44, 44);
         button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         [button addTarget:self action:@selector(backButtonDidClicked) forControlEvents:UIControlEventTouchUpInside];

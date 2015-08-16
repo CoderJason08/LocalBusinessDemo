@@ -89,6 +89,8 @@
 		96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385A1B7E6425002C06BC /* XLGuessCell.m */; };
 		96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */; };
 		96EEC77F1B7FA1210035F6EF /* XLShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EEC77E1B7FA1210035F6EF /* XLShopModel.m */; };
+		96EEC7831B7FA6C80035F6EF /* XLShopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EEC7821B7FA6C80035F6EF /* XLShopHeaderView.m */; };
+		96EEC7891B7FAA260035F6EF /* XLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EEC7881B7FAA260035F6EF /* XLFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +271,10 @@
 		96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
 		96EEC77D1B7FA1210035F6EF /* XLShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopModel.h; sourceTree = "<group>"; };
 		96EEC77E1B7FA1210035F6EF /* XLShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopModel.m; sourceTree = "<group>"; };
+		96EEC7811B7FA6C80035F6EF /* XLShopHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopHeaderView.h; sourceTree = "<group>"; };
+		96EEC7821B7FA6C80035F6EF /* XLShopHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopHeaderView.m; sourceTree = "<group>"; };
+		96EEC7871B7FAA260035F6EF /* XLFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFactory.h; sourceTree = "<group>"; };
+		96EEC7881B7FAA260035F6EF /* XLFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +403,8 @@
 				960F08BD1B7BAF8A00DC0690 /* XLNewtWorkManager.m */,
 				96B538211B7E35DC002C06BC /* XLLocationManager.h */,
 				96B538221B7E35DC002C06BC /* XLLocationManager.m */,
+				96EEC7871B7FAA260035F6EF /* XLFactory.h */,
+				96EEC7881B7FAA260035F6EF /* XLFactory.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1034,6 +1042,8 @@
 		96EEC7801B7FA6270035F6EF /* ShopDetail(商家详情) */ = {
 			isa = PBXGroup;
 			children = (
+				96EEC7811B7FA6C80035F6EF /* XLShopHeaderView.h */,
+				96EEC7821B7FA6C80035F6EF /* XLShopHeaderView.m */,
 			);
 			name = "ShopDetail(商家详情)";
 			sourceTree = "<group>";
@@ -1172,6 +1182,7 @@
 				960F08A91B7BAF7F00DC0690 /* AFHTTPRequestOperation.m in Sources */,
 				960F08ED1B7BCD1100DC0690 /* JSONValueTransformer.m in Sources */,
 				9605D7CC1B7905AE00FE2C37 /* XLLoginViewController.m in Sources */,
+				96EEC7891B7FAA260035F6EF /* XLFactory.m in Sources */,
 				96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */,
 				960F08AE1B7BAF7F00DC0690 /* AFURLConnectionOperation.m in Sources */,
 				9605D7D21B7905AE00FE2C37 /* XLTabPopBar.m in Sources */,
@@ -1216,6 +1227,7 @@
 				960F08BF1B7BAF8A00DC0690 /* XLNewtWorkManager.m in Sources */,
 				960F08F61B7C353600DC0690 /* XLNavRightButton.m in Sources */,
 				9605D7D51B7905AE00FE2C37 /* XLToolsViewController.m in Sources */,
+				96EEC7831B7FA6C80035F6EF /* XLShopHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

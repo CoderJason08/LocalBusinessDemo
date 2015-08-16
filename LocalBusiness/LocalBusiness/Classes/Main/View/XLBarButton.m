@@ -15,28 +15,6 @@
  */
 - (void)setHighlighted:(BOOL)highlighted {}
 
-+ (instancetype)barButtonWithTitle:(NSString *)title image:(UIImage *)image type:(XLBarButtonType)type {
-    XLBarButton *button = [[XLBarButton alloc] init];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    button.titleLabel.font = FONT(18);
-    if (title) {
-        [button setTitle:title forState:UIControlStateNormal];
-    }
-    if (image) {
-        [button setImage:image forState:UIControlStateNormal];
-    }
-    
-    switch (type) {
-        case XLBarButtonTypeRound:
-            button.layer.cornerRadius = 5;
-            break;
-        default:
-            break;
-    }
-    button.layer.masksToBounds = YES;
-    [button sizeToFit];
-    return button;
-}
 
 /*
 // Only override drawRect: if you perform custom drawing.

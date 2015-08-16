@@ -61,7 +61,7 @@
 - (UIBarButtonItem *)loginButton {
     if (!_loginButton) {
         
-        XLBarButton *rightButton = [XLBarButton barButtonWithTitle:@"登陆/注册" image:nil type:XLBarButtonTypeNormal];
+        UIButton *rightButton = [XLFactory buttonWithTitle:@"登陆/注册" image:nil type:XLButtonTypeNormal];
 //        rightButton.backgroundColor = Random_COLOR;
         [rightButton addTarget:self action:@selector(loginButtonDidClicked:) forControlEvents:UIControlEventTouchDown];
         self.loginButton = [[UIBarButtonItem alloc] initWithCustomView:rightButton];

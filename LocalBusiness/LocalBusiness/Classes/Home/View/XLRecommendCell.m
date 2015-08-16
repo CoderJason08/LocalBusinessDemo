@@ -200,7 +200,7 @@
 - (UIButton *)distanceButton {
     if (!_distanceButton) {
         self.distanceButton = [[UIButton alloc] init];
-        [self.distanceButton setTitleColor:COLOR_RGBA(245, 173, 39, 1) forState:UIControlStateNormal];
+        [self.distanceButton setTitleColor:kYellowColor forState:UIControlStateNormal];
         [self.distanceButton setImage:[UIImage imageNamed:@"home_location"] forState:UIControlStateNormal];
         self.distanceButton.titleLabel.font = FONT(10);
         self.distanceButton.enabled = NO;

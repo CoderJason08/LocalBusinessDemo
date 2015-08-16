@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum {
-    XLBarButtonTypeNormal,
-    XLBarButtonTypeRound,
-    XLBarButtonTypeCircle,
-}XLBarButtonType;
+//
+//typedef enum {
+//    XLBarButtonTypeNormal,
+//    XLBarButtonTypeRound,
+//    XLBarButtonTypeCircle,
+//}XLBarButtonType;
 
 @interface XLBarButton : UIButton
-+ (instancetype)barButtonWithTitle:(NSString *)title
-                             image:(UIImage *)image
-                              type:(XLBarButtonType)type;
+
 @end

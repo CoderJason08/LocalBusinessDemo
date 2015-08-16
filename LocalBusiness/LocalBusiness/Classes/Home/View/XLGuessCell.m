@@ -146,7 +146,7 @@
 - (UILabel *)priceLabel {
     if (!_priceLabel) {
         self.priceLabel = [[UILabel alloc] init];
-        self.priceLabel.textColor = COLOR_RGBA(245, 173, 39, 1);
+        self.priceLabel.textColor = kYellowColor;
         self.priceLabel.font = FONT(14);
         
 //        self.priceLabel.text = @"价格:123元";
