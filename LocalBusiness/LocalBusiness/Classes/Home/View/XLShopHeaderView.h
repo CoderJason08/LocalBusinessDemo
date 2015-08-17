@@ -14,6 +14,7 @@
 @optional
 - (void)shopHeaderView:(XLShopHeaderView *)headerView locationButtonDidClickWithModel:(XLShopModel *)shopModel;
 - (void)shopHeaderView:(XLShopHeaderView *)headerView phoneButtonDidClickWithModel:(XLShopModel *)shopModel;
+- (void)shopHeaderView:(XLShopHeaderView *)headerView shareButtonDidClickWithModel:(XLShopModel *)shopModel;
 @end
 
 

@@ -64,17 +64,10 @@
 
 @implementation XLShopHeaderView
 
-/**
- *  初始化一个商品详情的顶部视图
- */
-//+ (XLShopHeaderView *)shopHeaderWithTableView:(UITableView *)tableView {
-//    XLShopHeaderView *cell = [tableView dequeueReusableCellWithIdentifier:@"XLShopHeaderView"];
-//    if (!cell) {
-//        cell = [[XLShopHeaderView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"XLShopHeaderView"];
-//    }
-//    return cell;
-//}
 
+/**
+ *  return headerView
+ */
 + (XLShopHeaderView *)shopHeaderView {
     return [[self alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
 }
@@ -88,6 +81,8 @@
     return self;
 }
 
+#pragma mark - initialize
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -100,7 +95,7 @@
 - (void)setShopModel:(XLShopModel *)shopModel {
     _shopModel = shopModel;
     /**
-     *  设置图片
+     *  set model
      */
     [self.iconImageButton xlSetImageWithURL:shopModel.cover];
     [self.titleLabel setText:shopModel.name];
@@ -113,7 +108,7 @@
 }
 
 /**
- *  添加子控件
+ *  add subViews
  */
 - (void)setupSubviews {
     [self addSubview:self.iconImageButton];
@@ -131,7 +126,7 @@
 }
 
 /**
- *  布局子控件
+ *  layout subViews
  */
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -173,7 +168,6 @@
         make.height.mas_equalTo(1);
     }];
     
-    
     [self.phoneButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.topSepLine).offset(1);
         make.right.equalTo(self).offset(-5);
@@ -182,8 +176,8 @@
     }];
     
     [self.verticleSepLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.topSepLine).offset(2);
-        make.bottom.equalTo(self.phoneButton).offset(-2);
+        make.top.equalTo(self.topSepLine).offset(4);
+        make.bottom.equalTo(self.phoneButton).offset(-4);
         make.right.mas_equalTo(self.phoneButton.mas_left).offset(-2);
         make.width.mas_equalTo(0.5);
     }];
@@ -209,7 +203,7 @@
 }
 
 /**
- *  更新高度
+ *  update HeaderView Frame
  */
 - (CGRect)updateFrame {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -219,8 +213,6 @@
     return CGRectMake(0, 0, SCREEN_WIDTH, 140 + size.height);
 }
 
-
-
 #pragma mark - Action
 
 - (void)locationButtonDidClick {
@@ -229,11 +221,19 @@
     }
 }
 
+- (void)shareButtonClicked {
+    if ([self.delegate respondsToSelector:@selector(shopHeaderView:shareButtonDidClickWithModel:)]) {
+        [self.delegate shopHeaderView:self shareButtonDidClickWithModel:self.shopModel];
+    }
+}
 
+- (void)phoneButtonClicked {
+    if ([self.delegate respondsToSelector:@selector(shopHeaderView:phoneButtonDidClickWithModel:)]) {
+        [self.delegate shopHeaderView:self phoneButtonDidClickWithModel:self.shopModel];
+    }
+}
 
-#pragma mark - Getter & Setter 
-
-#warning 设置测试数据
+#pragma mark - Getter & Setter
 
 - (UIButton *)iconImageButton {
     if (!_iconImageButton) {
@@ -249,10 +249,6 @@
         self.titleLabel = [[UILabel alloc] init];
         self.titleLabel.font = FONT(19);
         self.titleLabel.textColor = COLOR_RGBA(40, 40, 40, 1);
-        
-        
-//        self.titleLabel.text = @"云水谣(xxxxx)";/
-//        self.titleLabel.backgroundColor = Random_COLOR;
     }
     return _titleLabel;
 }
@@ -260,8 +256,6 @@
 - (UIImageView *)starImageView {
     if (!_starImageView) {
         self.starImageView = [[UIImageView alloc] init];
-        
-//        self.starImageView.image = [UIImage imageNamed:@"star_4"];
     }
     return _starImageView;
 }
@@ -271,8 +265,6 @@
         self.starLabel = [[UILabel alloc] init];
         self.starLabel.font = FONT(16);
         self.starLabel.textColor = kOrangeColor;
-        
-//        self.starLabel.text = @"4分";
     }
     return _starLabel;
 }
@@ -282,8 +274,6 @@
         self.serverLabel = [[UILabel alloc] init];
         self.serverLabel.textColor = COLOR_RGBA(135, 135, 135, 1);
         self.serverLabel.font = FONT(12);
-        
-//        self.serverLabel.text = @"大保健";
     }
     return _serverLabel;
 }
@@ -294,6 +284,7 @@
         self.shareButton = [XLFactory buttonWithTitle:@"分享" image:nil type:XLButtonTypeRound];
         self.shareButton.tintColor = [UIColor whiteColor];
         self.shareButton.backgroundColor = Nav_BAR_COLOR;
+        [self.shareButton addTarget:self action:@selector(shareButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     }
     return _shareButton;
 }
@@ -310,7 +301,7 @@
     if (!_locationButton) {
         self.locationButton = [XLFactory buttonWithTitle:nil image:[UIImage imageNamed:@"home_location_big"] type:XLButtonTypeNormal];
         [self.locationButton setTitleColor:kYellowColor forState:UIControlStateNormal];
-        
+        self.locationButton.titleLabel.font = FONT(14);
         [self.locationButton addTarget:self action:@selector(locationButtonDidClick) forControlEvents:UIControlEventTouchDown];
 //        self.locationButton.backgroundColor = Random_COLOR;
     }
@@ -320,7 +311,8 @@
 - (XLBarButton *)phoneButton {
     if (!_phoneButton) {
         self.phoneButton = [XLFactory buttonWithTitle:nil image:[UIImage imageNamed:@"home_phone"] type:XLButtonTypeNormal];
-        
+        self.phoneButton.titleLabel.font = FONT(14);
+        [self.phoneButton addTarget:self action:@selector(phoneButtonClicked) forControlEvents:UIControlEventTouchUpInside];
         [self.phoneButton setTitleColor:kOrangeColor forState:UIControlStateNormal];
         [self.phoneButton sizeToFit];
 //        self.phoneButton.backgroundColor = Random_COLOR;

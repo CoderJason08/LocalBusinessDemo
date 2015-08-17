@@ -85,4 +85,8 @@
  */
 #define kShopInfo @"api/1/shop/get_shop_info"
 
+
+#define UMEN_APP_KEY @"55d1900567e58e1781000ee3"
+
+
 #endif

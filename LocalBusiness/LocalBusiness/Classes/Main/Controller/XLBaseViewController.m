@@ -12,6 +12,7 @@
 #import "XLBarButton.h"
 #import "XLNavRightButton.h"
 #import "XLShopGoodsViewCell.h"
+#import "IQKeyboardManager.h"
 
 @interface XLBaseViewController () <XLNavRightButtonDelegate>
 
@@ -28,7 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // 添加右边注册按钮
     self.navigationItem.rightBarButtonItem = self.loginButton;
+    // 设置IQKeyBoard
+    // 可以点击外界退出键盘
+    [[IQKeyboardManager sharedManager] setShouldResignOnTouchOutside:YES];
     
 }
 
@@ -36,17 +41,14 @@
  *  显示加载进度时,添加白色view遮罩
  */
 - (void)showActivityHUD {
-    [self.view addSubview:self.coverView];
-    [self.view bringSubviewToFront:self.coverView];
-    [self.coverView makeToastActivity];
+    [[UIApplication sharedApplication].keyWindow makeToastActivity];
 }
 
 /**
  *  移除遮罩
  */
 - (void)hideActivityHUD {
-    [self.coverView hideToastActivity];
-    [self.coverView removeFromSuperview];
+    [[UIApplication sharedApplication].keyWindow hideToastActivity];
 }
 
 - (void)showSuccessMessage:(NSString *)message {
@@ -88,13 +90,6 @@
 }
 
 
-- (UIView *)coverView {
-    if (!_coverView) {
-        self.coverView = [[UIView alloc] initWithFrame:self.view.bounds];
-        self.coverView.backgroundColor = [UIColor whiteColor];
-    }
-    return _coverView;
-}
 
 
 

@@ -36,10 +36,9 @@
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-rc-YhN">
-                        <rect key="frame" x="9" y="38" width="248" height="17"/>
+                        <rect key="frame" x="9" y="38" width="247" height="17"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="248" id="OUJ-bn-Pse"/>
                             <constraint firstAttribute="height" constant="17" id="q6H-4g-864"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -83,6 +82,7 @@
                     <constraint firstAttribute="centerY" secondItem="dzM-rc-YhN" secondAttribute="centerY" id="gzX-bv-OBh"/>
                     <constraint firstAttribute="trailing" secondItem="Eye-lZ-jbE" secondAttribute="trailing" id="h10-5j-baq"/>
                     <constraint firstAttribute="trailing" secondItem="6gu-9c-8Vv" secondAttribute="trailing" id="lzi-QV-ZTJ"/>
+                    <constraint firstItem="VjU-hF-i8i" firstAttribute="leading" secondItem="dzM-rc-YhN" secondAttribute="trailing" constant="10" id="sld-Ik-ZJr"/>
                     <constraint firstItem="dzM-rc-YhN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="tOX-Cz-kRH"/>
                     <constraint firstItem="8ay-b2-oor" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="tcx-lj-gT5"/>
                     <constraint firstAttribute="trailing" secondItem="VjU-hF-i8i" secondAttribute="trailing" constant="10" id="te7-yh-q9s"/>

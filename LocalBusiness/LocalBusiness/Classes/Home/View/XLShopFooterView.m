@@ -85,6 +85,37 @@
     }];
 }
 
+#pragma mark - Action
+
+/**
+ *  发送评论
+ */
+- (void)sendComment {
+    if (self.inputView.text.length == 0) {
+        [MBProgressHUD showError:@"请输入内容"];
+        return;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(shopFooter:sendCommentButtonDidClickWith:)]) {
+        // 创建评论模型
+        ShopCommentModel *commentModel = [[ShopCommentModel alloc] init];
+        NSDateFormatter *fmr = [[NSDateFormatter alloc] init];
+        fmr.dateFormat = @"MM-dd HH:mm";
+        commentModel.date = [fmr stringFromDate:[NSDate date]];
+        commentModel.content = self.inputView.text;
+        commentModel.score = (int)self.chooseStarView.show_star > 5 ? 5 : (int)self.chooseStarView.show_star;
+#warning fakeData
+        commentModel.id = 796;
+        commentModel.user_id = 632;
+        commentModel.avatar = @"http://www.qd-life.com/images/default/general.gif";
+        commentModel.name = @"游客";
+        
+        NSLog(@"%@",commentModel);
+        [self.delegate shopFooter:self sendCommentButtonDidClickWith:commentModel];
+    }
+}
+
+
 #pragma mark - Getter & Setter 
 
 - (UILabel *)judgeLabel {
@@ -120,7 +151,6 @@
         self.chooseStarView.isSelect = YES;
         self.chooseStarView.normalImg = [UIImage imageNamed:@"btn_star_evaluation_normal"];
         self.chooseStarView.highlightImg = [UIImage imageNamed:@"btn_star_evaluation_press"];
-        
     }
     return _chooseStarView;
 }
@@ -129,6 +159,7 @@
     if (!_sendButton) {
         self.sendButton = [XLFactory buttonWithTitle:@"发表评论" image:nil type:XLButtonTypeRound];
         [self.sendButton setBackgroundColor:Nav_BAR_COLOR];
+        [self.sendButton addTarget:self action:@selector(sendComment) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sendButton;
 }

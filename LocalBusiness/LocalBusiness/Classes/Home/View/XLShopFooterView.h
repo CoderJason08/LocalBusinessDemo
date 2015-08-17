@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XLShopModel.h"
+@class XLShopFooterView;
 
+@protocol XLShopFooterViewDelegate <NSObject>
+@optional
+- (void)shopFooter:(XLShopFooterView *)shopFooterView sendCommentButtonDidClickWith:(ShopCommentModel *)commentModel;
+@end
 @interface XLShopFooterView : UIView
 
+@property (nonatomic, weak) id<XLShopFooterViewDelegate> delegate;
+
+/**
+ *  初始化FooterView
+ */
 + (XLShopFooterView *)shopFooterView;
 
 @end

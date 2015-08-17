@@ -112,7 +112,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.delegate respondsToSelector:@selector(recommendView:didSelectedItemWith:)]) {
         // 取出对应的模型
-        GroupModel *model = self.famousList.list[indexPath.row];
+        FamousModel *model = self.famousList.list[indexPath.row];
         [self.delegate recommendView:self didSelectedItemWith:model];
     }
 }

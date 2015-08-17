@@ -236,7 +236,7 @@ IQ_LoadCategory(IQUIViewToolbar)
 
 - (void)addRightLeftOnKeyboardWithTarget:(id)target leftButtonTitle:(NSString*)leftTitle rightButtonTitle:(NSString*)rightTitle rightButtonAction:(SEL)rightAction leftButtonAction:(SEL)leftAction
 {
-    [self addRightLeftOnKeyboardWithTarget:target leftButtonTitle:leftTitle rightButtonTitle:rightTitle rightButtonAction:rightAction leftButtonAction:leftAction titleText:nil];
+//    [self addRightLeftOnKeyboardWithTarget:target leftButtonTitle:leftTitle rightButtonTitle:rightTitle rightButtonAction:rightAction leftButtonAction:leftAction titleText:nil];
 }
 
 - (void)addCancelDoneOnKeyboardWithTarget:(id)target cancelAction:(SEL)cancelAction doneAction:(SEL)doneAction titleText:(NSString*)titleText

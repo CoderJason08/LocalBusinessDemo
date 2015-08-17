@@ -66,6 +66,13 @@
         self.coordinate = CLLocationCoordinate2DMake(36.06, 120.38);
         [self requestHomeData];
     }];
+    
+#warning  监听键盘弹出
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShowNotification) name:@"UIKeyboardDidShowNotification" object:nil];
+}
+
+- (void)dealloc {
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -231,6 +238,7 @@
     XLShopViewController *vc = [[XLShopViewController alloc] init];
     [vc.parameter setObject:[NSString stringWithFormat:@"%d",model.id] forKey:@"shop_id"];
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark - Getter & Setter 

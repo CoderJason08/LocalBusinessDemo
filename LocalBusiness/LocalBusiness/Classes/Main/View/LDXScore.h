@@ -29,4 +29,5 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable UIImage *highlightImg;
 
 
+
 @end

@@ -35,7 +35,9 @@
     MKPinAnnotationView *annotation = [[MKPinAnnotationView alloc] initWithAnnotation:anno reuseIdentifier:@"anno"];
     annotation.canShowCallout = YES;
     [mapView addAnnotation:(id)annotation];
-//    [mapView convertCoordinate:coordinate toPointToView:self.view];
+    // 移动镜头
+    MKCoordinateRegion region = MKCoordinateRegionMake(coordinate, MKCoordinateSpanMake(0.1, 0.1));
+    [mapView setRegion:region animated:YES];
     // 添加底部view
     [self.view addSubview:self.bottomView];
     [self setupConstraints];
@@ -47,6 +49,10 @@
         make.bottom.equalTo(self.view);
         make.height.mas_equalTo(40);
     }];
+}
+
+- (void)dealloc {
+    NSLog(@"dealloc");
 }
 
 - (void)didReceiveMemoryWarning {

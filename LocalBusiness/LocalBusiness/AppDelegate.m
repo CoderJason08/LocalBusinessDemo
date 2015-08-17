@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "XLTabBarController.h"
 #import "XLNavigationController.h"
+#import "UMSocial.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 设置友盟
+    [UMSocialData setAppKey:UMEN_APP_KEY];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window makeKeyAndVisible];

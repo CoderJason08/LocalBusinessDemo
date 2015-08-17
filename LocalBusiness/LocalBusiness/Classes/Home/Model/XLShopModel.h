@@ -61,7 +61,7 @@
 /**
  *  评论列表
  */
-@property (nonatomic, strong) NSArray<ShopCommentModel> *comment_list;
+@property (nonatomic, strong) NSMutableArray<ShopCommentModel> *comment_list;
 /**
  *  商品
  */
