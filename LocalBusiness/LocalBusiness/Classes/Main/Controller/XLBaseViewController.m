@@ -43,9 +43,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     if (self.navigationItem.rightBarButtonItem == nil) {
         return;
     }
+    
     XLBarButton *rightButton = (XLBarButton *)self.loginButton.customView;
     if ([XLUserInfo sharedInfo].isLogin) {
         [rightButton setImage:[UIImage imageNamed:@"nav_user"] forState:UIControlStateNormal];

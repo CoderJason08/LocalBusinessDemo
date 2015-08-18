@@ -72,7 +72,6 @@
     [self requestHomeData];
     
 #warning  监听键盘弹出
-    
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShowNotification) name:@"UIKeyboardDidShowNotification" object:nil];
 }
 

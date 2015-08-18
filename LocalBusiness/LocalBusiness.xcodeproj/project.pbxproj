@@ -103,6 +103,7 @@
 		966B58211B823D3E0032ED86 /* XLUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58201B823D3E0032ED86 /* XLUserInfo.m */; };
 		966B58241B8246090032ED86 /* XLUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58231B8246090032ED86 /* XLUserInfoModel.m */; };
 		966B58271B8257340032ED86 /* XLPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58261B8257340032ED86 /* XLPersonalViewController.m */; };
+		966B582A1B82C3060032ED86 /* XLFindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58291B82C3060032ED86 /* XLFindPwdViewController.m */; };
 		96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B538221B7E35DC002C06BC /* XLLocationManager.m */; };
 		96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385A1B7E6425002C06BC /* XLGuessCell.m */; };
 		96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */; };
@@ -336,6 +337,8 @@
 		966B58231B8246090032ED86 /* XLUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLUserInfoModel.m; sourceTree = "<group>"; };
 		966B58251B8257340032ED86 /* XLPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPersonalViewController.h; sourceTree = "<group>"; };
 		966B58261B8257340032ED86 /* XLPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPersonalViewController.m; sourceTree = "<group>"; };
+		966B58281B82C3060032ED86 /* XLFindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFindPwdViewController.h; sourceTree = "<group>"; };
+		966B58291B82C3060032ED86 /* XLFindPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFindPwdViewController.m; sourceTree = "<group>"; };
 		96B538211B7E35DC002C06BC /* XLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLocationManager.h; sourceTree = "<group>"; };
 		96B538221B7E35DC002C06BC /* XLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLocationManager.m; sourceTree = "<group>"; };
 		96B538591B7E6425002C06BC /* XLGuessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGuessCell.h; sourceTree = "<group>"; };
@@ -579,6 +582,8 @@
 				960F08FA1B7C3BC400DC0690 /* XLRegisterViewController.m */,
 				966B58251B8257340032ED86 /* XLPersonalViewController.h */,
 				966B58261B8257340032ED86 /* XLPersonalViewController.m */,
+				966B58281B82C3060032ED86 /* XLFindPwdViewController.h */,
+				966B58291B82C3060032ED86 /* XLFindPwdViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1412,6 +1417,7 @@
 				96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				9605D7D31B7905AE00FE2C37 /* XLAboutViewController.m in Sources */,
 				966B581E1B8234D30032ED86 /* SSKeychain.m in Sources */,
+				966B582A1B82C3060032ED86 /* XLFindPwdViewController.m in Sources */,
 				96EA1C451B8030990016B2EF /* UIImageView+XLWebImage.m in Sources */,
 				960F08B31B7BAF7F00DC0690 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				963D16B81B80A44F00156A93 /* IQSegmentedNextPrevious.m in Sources */,

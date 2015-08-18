@@ -390,6 +390,8 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark - Action
+
 /**
  *  登陆按钮点击事件
  */
@@ -415,7 +417,7 @@
     
     [self showActivityHUD];
     [XLNewtWorkManager XLPOST:kLogin parameters:para success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
         XLUserInfoModel *model = [[XLUserInfoModel alloc] initWithDictionary:responseObject error:NULL];
         // 获取数据
         [XLUserInfo userInfoWithModel:model];
@@ -430,8 +432,10 @@
         
         
     } error:^(id error) {
+        [self hideActivityHUD];
         NSLog(@"%@",error);
     } failure:^(NSError *error) {
+        [self hideActivityHUD];
         NSLog(@"%@",error);
     }];
 

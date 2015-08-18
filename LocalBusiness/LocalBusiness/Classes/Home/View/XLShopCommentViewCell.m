@@ -68,6 +68,11 @@
     
 }
 
+- (CGFloat)updateCellHeight {
+    CGRect rect = [self.commentLable.text boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 20, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :FONT(16)} context:nil];
+    return rect.size.height + 50;
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

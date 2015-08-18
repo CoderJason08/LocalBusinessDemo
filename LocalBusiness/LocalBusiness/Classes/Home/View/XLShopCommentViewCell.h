@@ -14,4 +14,6 @@
 @property (nonatomic,strong)ShopCommentModel *model;
 @property (weak, nonatomic) IBOutlet UIView *topSepLine;
 
+- (CGFloat)updateCellHeight;
+
 @end

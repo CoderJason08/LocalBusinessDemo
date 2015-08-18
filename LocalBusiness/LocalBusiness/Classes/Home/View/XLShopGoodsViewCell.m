@@ -60,6 +60,11 @@
     // Configure the view for the selected state
 }
 
+//- (XLBarButton *)more {
+//   if ([self.delegate respondsToSelector:@selector(shopGoodsViewCell:didClickMoreInfoButtonWithGoods:)]) {
+//       [self.delegate shopGoodsViewCell:self didClickMoreInfoButtonWithGoods:self.goods];
+//    }
+//}
 
 
 @end

@@ -25,17 +25,18 @@
 }
 
 + (void)saveUserInfoWith:(XLUserInfoModel *)model {
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *filePath = [path stringByAppendingPathComponent:@"userInfo.data"];
-    
-    BOOL flag = [NSKeyedArchiver archiveRootObject:model toFile:filePath];
-    NSLog(@"%d,%@",flag,filePath);
+    [NSKeyedArchiver archiveRootObject:model toFile:[XLFunction getUserInfoPath]];
 }
 
 + (void)loadUserInfo {
+
+    XLUserInfoModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:[XLFunction getUserInfoPath]];
+    [XLUserInfo userInfoWithModel:model];
+}
+
++ (NSString *)getUserInfoPath {
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *filePath = [path stringByAppendingPathComponent:@"userInfo.data"];
-    XLUserInfoModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
-    [XLUserInfo userInfoWithModel:model];
+    return filePath;
 }
 @end

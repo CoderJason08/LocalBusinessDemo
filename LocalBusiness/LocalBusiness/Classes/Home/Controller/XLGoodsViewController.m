@@ -57,8 +57,10 @@
         [self.tableView reloadData];
     } error:^(id error) {
         NSLog(@"%@",error);
+        [self hideActivityHUD];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
+        [self hideActivityHUD];
     }];
 }
 

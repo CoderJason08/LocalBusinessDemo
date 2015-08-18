@@ -7,6 +7,7 @@
 //
 
 #import "XLShopFooterView.h"
+#import "XLLoginViewController.h"
 #import "LDXScore.h"
 
 @interface XLShopFooterView ()
@@ -91,6 +92,12 @@
  *  发送评论
  */
 - (void)sendComment {
+    if (![XLUserInfo sharedInfo].isLogin) {
+        if ([self.delegate respondsToSelector:@selector(pushLoginViewController)]) {
+            [self.delegate pushLoginViewController];
+        }
+        return;
+    }
     if (self.inputView.text.length == 0) {
         [MBProgressHUD showError:@"请输入内容"];
         return;
@@ -114,6 +121,10 @@
         commentModel.name = [XLUserInfo sharedInfo].infoModel.user_name;
 
         [self.delegate shopFooter:self sendCommentButtonDidClickWith:commentModel];
+        
+        // 清空文本框
+        self.inputView.text = nil;
+        self.chooseStarView.show_star = 0;
     }
 }
 

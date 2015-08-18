@@ -15,6 +15,7 @@
 #import "XLShopModel.h"
 #import "XLShopLocationViewController.h"
 #import "UMSocial.h"
+#import "XLLoginViewController.h"
 
 @interface XLShopViewController () <UITableViewDataSource,XLShopHeaderViewDelegate,XLShopFooterViewDelegate,UMSocialUIDelegate,UIActionSheetDelegate>
 /**
@@ -59,6 +60,12 @@
     self.tableView.tableFooterView = self.footerView;
     // 禁用系统分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
+    
+//    动态计算cell高度
+//    self.tableView.estimatedRowHeight = 30;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -134,13 +141,16 @@
         
     } error:^(id error) {
         NSLog(@"%@",error);
+        [self hideActivityHUD];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
+        [self hideActivityHUD];
     }];
-    
 
-    
-    
+}
+
+- (void)pushLoginViewController {
+    [self.navigationController pushViewController:[[XLLoginViewController alloc] init] animated:YES];
 }
 
 #pragma mark - UMSocialUIDelegate
@@ -199,6 +209,16 @@
     }else if (indexPath.section == 1) { // 第二组,用户评价
         if (indexPath.row == self.shopModel.comment_list.count) { //  第二组最后一个cell为查看更多评论
             return 40;
+        }
+        if (self.shopModel.comment_list.count){
+            XLShopCommentViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XLShopCommentViewCell"];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"XLShopCommentViewCell" owner:nil options:nil] lastObject];
+            }
+//            NSLog(@"%zd",self.shopModel.comment_list.count);
+            cell.model = self.shopModel.comment_list[indexPath.row];
+//            NSLog(@"%lf",[cell updateCellHeight]);
+            return [cell updateCellHeight];
         }
         return 100;
     }
@@ -346,25 +366,51 @@
         NSIndexPath *path1 = [NSIndexPath indexPathForRow:self.produceCount - 2 inSection:0];
         [self.tableView insertRowsAtIndexPaths:@[path,path1] withRowAnimation:UITableViewRowAnimationTop];
     });
-    
 }
 
 - (void)moreCommentButtonClick {
+    static  int pageNum = 1;
+    pageNum ++;
+    NSMutableDictionary *prarm = [NSMutableDictionary dictionary];
     
+    NSString *pageStr = [NSString stringWithFormat:@"%zd",pageNum];
+    //参数
+    [prarm setObject:@"shop" forKey:@"res_name"];
+    [prarm setObject:[XLFunction getTimeStamp] forKey:@"time"];
+    [prarm setObject:[NSString stringWithFormat:@"%d",self.shopModel.id] forKey:@"res_id"];
+    [prarm setObject:pageStr forKey:@"page"];
+    NSArray *arr = @[APP_ID,prarm[@"res_name"],prarm[@"res_id"],prarm[@"page"],prarm[@"time"],APP_KEY];
+    [prarm setObject:[XLFunction MD5SignWithParaArray:arr] forKey:@"sign"];
+    
+    [prarm setObject:APP_ID forKey:@"app_id"];
+    
+    [self showActivityHUD];
+    [XLNewtWorkManager XLPOST:@"api/1/comment/get_comment_list" parameters:prarm success:^(id responseObject) {
+        for (NSDictionary *dict in ((NSDictionary *)responseObject)[@"list"]) {
+            [self hideActivityHUD];
+            ShopCommentModel *commentModel = [[ShopCommentModel alloc] initWithDictionary:dict error:nil];
+            //            NSLog(@"%@",comModel);
+            [self.shopModel.comment_list addObject:commentModel];
+        }
+        [self.tableView reloadData];
+    } error:^(id error) {
+        [self hideActivityHUD];
+    } failure:^(NSError *error) {
+        [self hideActivityHUD];
+    }];
 }
 
 
 #pragma mark - Private Function
 
-
 - (void)setShopModel:(XLShopModel *)shopModel {
     _shopModel = shopModel;
     self.headerView.shopModel = shopModel;
     // 更新HeaderView的高度,先取出,修改frame之后再次赋值
-    UIView *view = self.headerView;
+    XLShopHeaderView *view = self.headerView;
     // 调用updateFrame方法动态计算高度
     view.frame = [self.headerView updateFrame];
-    self.tableView.tableHeaderView = (XLShopHeaderView *)view;
+    self.tableView.tableHeaderView = view;
 }
 
 /**

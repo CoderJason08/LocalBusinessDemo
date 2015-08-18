@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "XLShopModel.h"
+@class XLShopGoodsViewCell;
+
+//@protocol XLShopGoodsViewCellDelegate <NSObject>
+//@optional
+//- (void)shopGoodsViewCell:(XLShopGoodsViewCell *)shopGoodsCell didClickMoreInfoButtonWithGoods:(NSDictionary *)goods;
+//@end
+
 
 @interface XLShopGoodsViewCell : UITableViewCell
+
+//@property (nonatomic, weak) id<XLShopGoodsViewCellDelegate> delegate;
 
 @property (nonatomic,strong) NSDictionary *goods;
 /**

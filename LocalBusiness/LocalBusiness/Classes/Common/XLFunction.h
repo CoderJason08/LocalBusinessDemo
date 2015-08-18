@@ -35,6 +35,10 @@
  *  读取用户信息
  */
 + (void)loadUserInfo;
+/**
+ *  获取保存用户信息的文件地址
+ */
++ (NSString *)getUserInfoPath;
 
 
 @end

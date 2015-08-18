@@ -13,6 +13,7 @@
 @protocol XLShopFooterViewDelegate <NSObject>
 @optional
 - (void)shopFooter:(XLShopFooterView *)shopFooterView sendCommentButtonDidClickWith:(ShopCommentModel *)commentModel;
+- (void)pushLoginViewController;
 @end
 @interface XLShopFooterView : UIView
 

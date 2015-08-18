@@ -21,9 +21,7 @@
 
 @end
 
-
 @implementation XLHeaderView
-
 
 + (instancetype)headerViewWithTitle:(NSString *)title color:(UIColor *)color {
     XLHeaderView *headerView = [[XLHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
