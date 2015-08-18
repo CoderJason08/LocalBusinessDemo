@@ -404,7 +404,10 @@
     
     // service使用bundleID,保证唯一性
     [SSKeychain setPassword:self.userSecretText.text forService:identifier account:self.accountTextField.text];
-
+    
+   
+    
+    
     // 设置请求参数
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
     [para setObject:self.accountTextField.text forKey:@"curr_account"];

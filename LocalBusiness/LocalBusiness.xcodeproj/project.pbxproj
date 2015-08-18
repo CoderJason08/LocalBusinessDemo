@@ -461,23 +461,24 @@
 			children = (
 				9605D75F1B7905AE00FE2C37 /* Common */,
 				9605D76C1B7905AE00FE2C37 /* Main */,
-				9605D7591B7905AE00FE2C37 /* Circle */,
-				9605D7601B7905AE00FE2C37 /* Home */,
-				9605D7661B7905AE00FE2C37 /* Login */,
-				9605D77D1B7905AE00FE2C37 /* More */,
-				9605D79A1B7905AE00FE2C37 /* News */,
-				9605D7A01B7905AE00FE2C37 /* Ours */,
+				9605D7591B7905AE00FE2C37 /* Circle(圈子) */,
+				9605D7601B7905AE00FE2C37 /* Home(主页) */,
+				9605D7661B7905AE00FE2C37 /* Login(登录注册) */,
+				9605D77D1B7905AE00FE2C37 /* More(更多) */,
+				9605D79A1B7905AE00FE2C37 /* News(新闻) */,
+				9605D7A01B7905AE00FE2C37 /* Tools(工具) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		9605D7591B7905AE00FE2C37 /* Circle */ = {
+		9605D7591B7905AE00FE2C37 /* Circle(圈子) */ = {
 			isa = PBXGroup;
 			children = (
 				9605D75A1B7905AE00FE2C37 /* Controller */,
 				9605D75D1B7905AE00FE2C37 /* Model */,
 				9605D75E1B7905AE00FE2C37 /* View */,
 			);
+			name = "Circle(圈子)";
 			path = Circle;
 			sourceTree = "<group>";
 		};
@@ -523,13 +524,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		9605D7601B7905AE00FE2C37 /* Home */ = {
+		9605D7601B7905AE00FE2C37 /* Home(主页) */ = {
 			isa = PBXGroup;
 			children = (
 				9605D7611B7905AE00FE2C37 /* Controller */,
 				9605D7641B7905AE00FE2C37 /* Model */,
 				960F08C31B7BBA9F00DC0690 /* View */,
 			);
+			name = "Home(主页)";
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -563,13 +565,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9605D7661B7905AE00FE2C37 /* Login */ = {
+		9605D7661B7905AE00FE2C37 /* Login(登录注册) */ = {
 			isa = PBXGroup;
 			children = (
 				9605D7671B7905AE00FE2C37 /* Controller */,
 				9605D76A1B7905AE00FE2C37 /* Model */,
 				9605D76B1B7905AE00FE2C37 /* View */,
 			);
+			name = "Login(登录注册)";
 			path = Login;
 			sourceTree = "<group>";
 		};
@@ -655,7 +658,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		9605D77D1B7905AE00FE2C37 /* More */ = {
+		9605D77D1B7905AE00FE2C37 /* More(更多) */ = {
 			isa = PBXGroup;
 			children = (
 				9605D77E1B7905AE00FE2C37 /* About */,
@@ -664,6 +667,7 @@
 				9605D7901B7905AE00FE2C37 /* Shake */,
 				9605D7961B7905AE00FE2C37 /* XMPP */,
 			);
+			name = "More(更多)";
 			path = More;
 			sourceTree = "<group>";
 		};
@@ -830,13 +834,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		9605D79A1B7905AE00FE2C37 /* News */ = {
+		9605D79A1B7905AE00FE2C37 /* News(新闻) */ = {
 			isa = PBXGroup;
 			children = (
 				9605D79B1B7905AE00FE2C37 /* Controller */,
 				9605D79E1B7905AE00FE2C37 /* Model */,
 				9605D79F1B7905AE00FE2C37 /* View */,
 			);
+			name = "News(新闻)";
 			path = News;
 			sourceTree = "<group>";
 		};
@@ -863,13 +868,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		9605D7A01B7905AE00FE2C37 /* Ours */ = {
+		9605D7A01B7905AE00FE2C37 /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
 				9605D7A11B7905AE00FE2C37 /* Controller */,
 				9605D7A21B7905AE00FE2C37 /* Model */,
 				9605D7A31B7905AE00FE2C37 /* View */,
 			);
+			name = "Tools(工具)";
 			path = Ours;
 			sourceTree = "<group>";
 		};
