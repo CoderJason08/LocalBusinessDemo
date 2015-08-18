@@ -100,19 +100,47 @@
 }
 
 #pragma mark - XLShopFooterViewDelegate
-
+/**
+ *  发表评论
+ */
 - (void)shopFooter:(XLShopFooterView *)shopFooterView sendCommentButtonDidClickWith:(ShopCommentModel *)commentModel {
-    [self.shopModel.comment_list addObject:commentModel];
+    // 将评论添加到模型数组
+    [self.shopModel.comment_list insertObject:commentModel atIndex:0];
+    // 设置请求参数
+    NSString *res_name = @"shop";
+    NSMutableDictionary *para = [NSMutableDictionary dictionary];
+    [para setObject:[NSString stringWithFormat:@"%d",commentModel.user_id] forKey:@"user_id"];
+    [para setObject:res_name forKey:@"res_name"];
+    [para setObject:[NSString stringWithFormat:@"%d",self.shopModel.id] forKey:@"res_id"];
+    [para setObject:commentModel.content forKey:@"cont"];
+    [para setObject:[NSString stringWithFormat:@"%d",commentModel.score] forKey:@"score"];
+    [para setObject:[XLFunction getTimeStamp] forKey:@"time"];
+    NSArray *paraArray = @[APP_ID,para[@"user_id"],para[@"res_name"],para[@"res_id"],para[@"score"],para[@"time"],APP_KEY];
+    [para setObject:[XLFunction MD5SignWithParaArray:paraArray] forKey:@"sign"];
+    [para setObject:APP_ID forKey:@"app_id"];
+   
+    
+    /**
+     *  发送请求
+     */
     [self showActivityHUD];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [XLNewtWorkManager XLPOST:@"api/1/comment/commit_comment" parameters:para success:^(id responseObject) {
+        NSLog(@"%@",responseObject);
         [self hideActivityHUD];
-    });
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.shopModel.comment_list.count - 1 inSection:1];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
-    // 移动到底部
-    CGPoint tempPoint = self.tableView.contentOffset;
-    tempPoint.y += 100;
-    [self.tableView setContentOffset:tempPoint animated:YES];
+        [self showSuccessMessage:@"评论成功!"];
+        NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:1];
+        [self.tableView insertRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationRight];
+        
+        
+    } error:^(id error) {
+        NSLog(@"%@",error);
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+
+    
+    
 }
 
 #pragma mark - UMSocialUIDelegate
@@ -322,13 +350,6 @@
 }
 
 - (void)moreCommentButtonClick {
-    [self showActivityHUD];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self hideActivityHUD];
-        if (self.shopModel.comment_list.count == 2) {
-            [self showErrorMessage:@"没有更多评论"];
-        }
-    });
     
 }
 

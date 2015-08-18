@@ -20,8 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    // 设置友盟
+    // 设置友盟AppKey
     [UMSocialData setAppKey:UMEN_APP_KEY];
+    
+    // 从本地加载用户信息
+    [XLFunction loadUserInfo];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setBackgroundColor:[UIColor whiteColor]];

@@ -20,6 +20,15 @@
 #import "XLFactory.h"
 #import "UIImageView+XLWebImage.h"
 #import "UIButton+XLWebImage.h"
+#import "XLUserInfo.h"
+
+
+/**********  通知  **********/
+/**
+ *  改变登录状态
+ */
+#define kNotificationChangeLoginState @"changeLoginState"
+
 
 /**********  颜色  **********/
 #define COLOR_RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:(a)]
@@ -85,7 +94,14 @@
  */
 #define kShopInfo @"api/1/shop/get_shop_info"
 
+/**
+ *  登陆详情
+ */
+#define kLogin @"index.php?anu=api/1/user/dispose_login"
 
+/**
+ *  友盟APP_Key
+ */
 #define UMEN_APP_KEY @"55d1900567e58e1781000ee3"
 
 

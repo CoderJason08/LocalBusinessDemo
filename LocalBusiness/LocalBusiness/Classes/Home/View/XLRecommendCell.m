@@ -90,7 +90,6 @@
     [self addSubview:self.starImageView];
     [self addSubview:self.iconImageView];
     
-#warning 约束和子控件的添加顺序的关系
     [self addSubview:self.distanceButton];
     [self addSubview:self.introLabel];
     
@@ -158,8 +157,6 @@
 
 
 #pragma mark - Getter & Setter 
-
-#warning 设置了测试数据
 
 - (UILabel *)nameLabel {
     if (!_nameLabel) {

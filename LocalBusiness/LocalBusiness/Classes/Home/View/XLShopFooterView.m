@@ -95,6 +95,10 @@
         [MBProgressHUD showError:@"请输入内容"];
         return;
     }
+    if (self.chooseStarView.show_star == 0) {
+        [MBProgressHUD showError:@"请选择评分"];
+        return;
+    }
     
     if ([self.delegate respondsToSelector:@selector(shopFooter:sendCommentButtonDidClickWith:)]) {
         // 创建评论模型
@@ -104,13 +108,11 @@
         commentModel.date = [fmr stringFromDate:[NSDate date]];
         commentModel.content = self.inputView.text;
         commentModel.score = (int)self.chooseStarView.show_star > 5 ? 5 : (int)self.chooseStarView.show_star;
-#warning fakeData
-        commentModel.id = 796;
-        commentModel.user_id = 632;
-        commentModel.avatar = @"http://www.qd-life.com/images/default/general.gif";
-        commentModel.name = @"游客";
-        
-        NSLog(@"%@",commentModel);
+        commentModel.id = 8888;
+        commentModel.user_id = [XLUserInfo sharedInfo].infoModel.user_id.intValue;
+        commentModel.avatar = [XLUserInfo sharedInfo].infoModel.small_avatar;
+        commentModel.name = [XLUserInfo sharedInfo].infoModel.user_name;
+
         [self.delegate shopFooter:self sendCommentButtonDidClickWith:commentModel];
     }
 }

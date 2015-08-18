@@ -22,9 +22,7 @@
 
 @property (nonatomic, strong) XLShopModel *shopModel;
 
-
 @property (nonatomic, weak) id<XLShopHeaderViewDelegate> delegate;
-
 /**
  *  初始化一个商品详情的顶部视图
  */

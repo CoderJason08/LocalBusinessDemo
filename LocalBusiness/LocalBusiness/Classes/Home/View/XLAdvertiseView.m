@@ -131,8 +131,17 @@ static NSUInteger advertiseCount = 3;
     self.pageControl.currentPage = self.currentPage;
     FocusModel *foucus = self.list.list[self.currentPage];
     self.descLabel.text = foucus.title;
+//    NSLog(@"%zd",self.currentPage);
 
 }
+
+//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+//    [self.timer invalidate];
+//}
+//
+//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+//    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+//}
 
 #pragma mark - Private Function
 
@@ -163,9 +172,9 @@ static NSUInteger advertiseCount = 3;
 }
 
 
-#warning 移动焦点图的方法
 - (void)moveScrollView {
-    
+    self.currentPage = (self.currentPage + 1) % 3;
+    [self.scrollView setContentOffset:CGPointMake(SCREEN_WIDTH * self.currentPage, 0) animated:YES];
 }
 
 #pragma mark - Getter & Setter 
@@ -245,7 +254,7 @@ static NSUInteger advertiseCount = 3;
 
 - (NSTimer *)timer {
     if (!_timer) {
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(moveScrollView) userInfo:nil repeats:YES];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(moveScrollView) userInfo:nil repeats:YES];
     }
     return _timer;
 }

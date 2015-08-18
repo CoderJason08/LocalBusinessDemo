@@ -99,6 +99,10 @@
 		9644DEAC1B7F2BCF007FDFB4 /* XLShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEAB1B7F2BCF007FDFB4 /* XLShopViewController.m */; };
 		9644DEE51B7F5338007FDFB4 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEE41B7F5338007FDFB4 /* UIView+Toast.m */; };
 		9644DEE81B7F5A46007FDFB4 /* XLGoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEE71B7F5A46007FDFB4 /* XLGoodModel.m */; };
+		966B581E1B8234D30032ED86 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B581D1B8234D30032ED86 /* SSKeychain.m */; };
+		966B58211B823D3E0032ED86 /* XLUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58201B823D3E0032ED86 /* XLUserInfo.m */; };
+		966B58241B8246090032ED86 /* XLUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58231B8246090032ED86 /* XLUserInfoModel.m */; };
+		966B58271B8257340032ED86 /* XLPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58261B8257340032ED86 /* XLPersonalViewController.m */; };
 		96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B538221B7E35DC002C06BC /* XLLocationManager.m */; };
 		96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385A1B7E6425002C06BC /* XLGuessCell.m */; };
 		96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */; };
@@ -324,6 +328,14 @@
 		9644DEE41B7F5338007FDFB4 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		9644DEE61B7F5A46007FDFB4 /* XLGoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGoodModel.h; sourceTree = "<group>"; };
 		9644DEE71B7F5A46007FDFB4 /* XLGoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGoodModel.m; sourceTree = "<group>"; };
+		966B581C1B8234D30032ED86 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		966B581D1B8234D30032ED86 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		966B581F1B823D3E0032ED86 /* XLUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLUserInfo.h; sourceTree = "<group>"; };
+		966B58201B823D3E0032ED86 /* XLUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLUserInfo.m; sourceTree = "<group>"; };
+		966B58221B8246090032ED86 /* XLUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLUserInfoModel.h; sourceTree = "<group>"; };
+		966B58231B8246090032ED86 /* XLUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLUserInfoModel.m; sourceTree = "<group>"; };
+		966B58251B8257340032ED86 /* XLPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPersonalViewController.h; sourceTree = "<group>"; };
+		966B58261B8257340032ED86 /* XLPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPersonalViewController.m; sourceTree = "<group>"; };
 		96B538211B7E35DC002C06BC /* XLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLocationManager.h; sourceTree = "<group>"; };
 		96B538221B7E35DC002C06BC /* XLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLocationManager.m; sourceTree = "<group>"; };
 		96B538591B7E6425002C06BC /* XLGuessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGuessCell.h; sourceTree = "<group>"; };
@@ -565,6 +577,8 @@
 				9605D7691B7905AE00FE2C37 /* XLLoginViewController.m */,
 				960F08F91B7C3BC400DC0690 /* XLRegisterViewController.h */,
 				960F08FA1B7C3BC400DC0690 /* XLRegisterViewController.m */,
+				966B58251B8257340032ED86 /* XLPersonalViewController.h */,
+				966B58261B8257340032ED86 /* XLPersonalViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -572,6 +586,10 @@
 		9605D76A1B7905AE00FE2C37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				966B581F1B823D3E0032ED86 /* XLUserInfo.h */,
+				966B58201B823D3E0032ED86 /* XLUserInfo.m */,
+				966B58221B8246090032ED86 /* XLUserInfoModel.h */,
+				966B58231B8246090032ED86 /* XLUserInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -874,6 +892,7 @@
 		9605D7A61B7905AE00FE2C37 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				966B581B1B8234D30032ED86 /* keychain */,
 				96F0A10B1B81C6ED008DCA48 /* UMSocial_Sdk_4.2.3 */,
 				963D169F1B80A44F00156A93 /* IQKeyBoardManager */,
 				9644DEE21B7F5338007FDFB4 /* Toast */,
@@ -1158,6 +1177,15 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		966B581B1B8234D30032ED86 /* keychain */ = {
+			isa = PBXGroup;
+			children = (
+				966B581C1B8234D30032ED86 /* SSKeychain.h */,
+				966B581D1B8234D30032ED86 /* SSKeychain.m */,
+			);
+			path = keychain;
+			sourceTree = "<group>";
+		};
 		96B538581B7E63FA002C06BC /* Guess(猜你喜欢) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1376,12 +1404,14 @@
 				960F08B81B7BAF7F00DC0690 /* UIWebView+AFNetworking.m in Sources */,
 				96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */,
 				960F08B51B7BAF7F00DC0690 /* UIButton+AFNetworking.m in Sources */,
+				966B58211B823D3E0032ED86 /* XLUserInfo.m in Sources */,
 				9605D7CA1B7905AE00FE2C37 /* XLCircleViewController.m in Sources */,
 				9605D7D71B7905AE00FE2C37 /* XLNewsViewController.m in Sources */,
 				96EA1C481B8031130016B2EF /* UIButton+XLWebImage.m in Sources */,
 				9605D7D11B7905AE00FE2C37 /* XLBarButton.m in Sources */,
 				96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				9605D7D31B7905AE00FE2C37 /* XLAboutViewController.m in Sources */,
+				966B581E1B8234D30032ED86 /* SSKeychain.m in Sources */,
 				96EA1C451B8030990016B2EF /* UIImageView+XLWebImage.m in Sources */,
 				960F08B31B7BAF7F00DC0690 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				963D16B81B80A44F00156A93 /* IQSegmentedNextPrevious.m in Sources */,
@@ -1429,6 +1459,7 @@
 				9605D7E11B7905AE00FE2C37 /* NSArray+MASAdditions.m in Sources */,
 				963D165E1B806B1100156A93 /* XLShopFooterView.m in Sources */,
 				960F08C61B7BBAB100DC0690 /* XLAdvertiseView.m in Sources */,
+				966B58271B8257340032ED86 /* XLPersonalViewController.m in Sources */,
 				963D16BD1B80A44F00156A93 /* UIView+Hierarchy.m in Sources */,
 				960F08F01B7BCD3800DC0690 /* XLHomeModel.m in Sources */,
 				9605D7D61B7905AE00FE2C37 /* XLShakeViewController.m in Sources */,
@@ -1437,6 +1468,7 @@
 				960F08FB1B7C3BC400DC0690 /* XLRegisterViewController.m in Sources */,
 				960F093B1B7CBAD500DC0690 /* XLHeaderView.m in Sources */,
 				960F093E1B7CC25000DC0690 /* XLRecommendView.m in Sources */,
+				966B58241B8246090032ED86 /* XLUserInfoModel.m in Sources */,
 				960F08B11B7BAF7F00DC0690 /* AFURLSessionManager.m in Sources */,
 				960F08AD1B7BAF7F00DC0690 /* AFSecurityPolicy.m in Sources */,
 				9605D7CE1B7905AE00FE2C37 /* XLNavigationController.m in Sources */,

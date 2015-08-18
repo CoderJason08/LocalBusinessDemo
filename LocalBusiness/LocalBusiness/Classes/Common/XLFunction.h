@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XLUserInfoModel.h"
 
 @interface XLFunction : NSObject
 /**
@@ -24,4 +25,16 @@
  *  @return 加密后的sign
  */
 + (NSString *)MD5SignWithParaArray:(NSArray *)para;
+
+/**
+ *  将用户信息写入本地
+ */
++ (void)saveUserInfoWith:(XLUserInfoModel *)model;
+
+/**
+ *  读取用户信息
+ */
++ (void)loadUserInfo;
+
+
 @end

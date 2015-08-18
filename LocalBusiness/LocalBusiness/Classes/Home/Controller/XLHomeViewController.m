@@ -39,9 +39,11 @@
 
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    [super viewDidLoad];
+    
+    // Do any additional setup after loading the view.
+//    NSLog(@"%@",[XLUserInfo sharedInfo].infoModel);
     // 禁用系统分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 禁用滚动条
@@ -67,18 +69,23 @@
         [self requestHomeData];
     }];
     
+    [self requestHomeData];
+    
 #warning  监听键盘弹出
+    
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShowNotification) name:@"UIKeyboardDidShowNotification" object:nil];
 }
 
 - (void)dealloc {
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 
 - (void)setHomeModel:(XLHomeModel *)homeModel {
@@ -142,7 +149,6 @@
     }else if (section == 1) { // 第1组,名店推荐
         return 1;
     }else {
-#warning 多加几组数据测试
         return 10;
 //        return self.homeModel.guess.list.count;
     }

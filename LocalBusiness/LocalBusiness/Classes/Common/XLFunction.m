@@ -8,6 +8,8 @@
 
 #import "XLFunction.h"
 #import "MD5.h"
+#import "XLUserInfo.h"
+
 @implementation XLFunction
 
 + (NSString *)getTimeStamp {
@@ -20,5 +22,20 @@
         [string appendString:str];
     }];
     return [MD5 MD5Encrypt:string];
+}
+
++ (void)saveUserInfoWith:(XLUserInfoModel *)model {
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *filePath = [path stringByAppendingPathComponent:@"userInfo.data"];
+    
+    BOOL flag = [NSKeyedArchiver archiveRootObject:model toFile:filePath];
+    NSLog(@"%d,%@",flag,filePath);
+}
+
++ (void)loadUserInfo {
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *filePath = [path stringByAppendingPathComponent:@"userInfo.data"];
+    XLUserInfoModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    [XLUserInfo userInfoWithModel:model];
 }
 @end

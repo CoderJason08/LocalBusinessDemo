@@ -29,7 +29,6 @@
 @property (weak, nonatomic) IBOutlet XLBarButton *more;
 
 #warning 添加点击事件
-
 @end
 
 @implementation XLShopGoodsViewCell

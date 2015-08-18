@@ -8,10 +8,10 @@
 
 #import "XLBaseViewController.h"
 #import "XLLoginViewController.h"
-#import "XLRegisterViewController.h"
 #import "XLBarButton.h"
 #import "XLNavRightButton.h"
 #import "XLShopGoodsViewCell.h"
+#import "XLPersonalViewController.h"
 #import "IQKeyboardManager.h"
 
 @interface XLBaseViewController () <XLNavRightButtonDelegate>
@@ -27,6 +27,7 @@
 @implementation XLBaseViewController
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // 添加右边注册按钮
@@ -34,7 +35,26 @@
     // 设置IQKeyBoard
     // 可以点击外界退出键盘
     [[IQKeyboardManager sharedManager] setShouldResignOnTouchOutside:YES];
-    
+  
+#warning 用通知实现?如何拿到所有右边按钮
+    // 监听是否改变用户登录状态
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeLoginState) name:kNotificationChangeLoginState object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (self.navigationItem.rightBarButtonItem == nil) {
+        return;
+    }
+    XLBarButton *rightButton = (XLBarButton *)self.loginButton.customView;
+    if ([XLUserInfo sharedInfo].isLogin) {
+        [rightButton setImage:[UIImage imageNamed:@"nav_user"] forState:UIControlStateNormal];
+        [rightButton setTitle:nil forState:UIControlStateNormal];
+    }else {
+        [rightButton setTitle:@"登录/注册" forState:UIControlStateNormal];
+        [rightButton setImage:nil forState:UIControlStateNormal];
+    }
+    [rightButton sizeToFit];
 }
 
 /**
@@ -59,39 +79,45 @@
     [MBProgressHUD showError:message];
 }
 
-//#pragma mark - XLNavRightButtonDelegate
-//
-//- (void)navRightButtonDidClickWithType:(XLNavRightButtonType)type {
-//    if (type == XLNavRightButtonTypeLogin) {
-//        [self.navigationController pushViewController:[[XLLoginViewController alloc] init] animated:YES];
-//    }else if (type == XLNavRightButtonTypeRegister) {
-//        [self.navigationController pushViewController:[[XLRegisterViewController alloc] init]animated:YES];
-//    }
-//}
+
+
+
 
 #pragma mark - Event Response
 
 - (void)loginButtonDidClicked:(XLBarButton *)button {
-    [self.navigationController pushViewController:[[XLLoginViewController alloc] init] animated:YES];
+    if ([XLUserInfo sharedInfo].isLogin) {
+         [self.navigationController pushViewController:[[XLPersonalViewController alloc] init] animated:YES];
+    }else {
+        [self.navigationController pushViewController:[[XLLoginViewController alloc] init] animated:YES];
+    }
+}
+
+
+
+/**
+ *  通知响应事件,修改右边按钮
+ */
+- (void)changeLoginState {
+    XLBarButton *rightButton = (XLBarButton *)self.loginButton.customView;
+    if ([XLUserInfo sharedInfo].isLogin) {
+        rightButton = [XLFactory buttonWithTitle:nil image:[UIImage imageNamed:@"nav_user"] type:XLButtonTypeNormal];
+        [rightButton setImage:[UIImage imageNamed:@"nav_user"] forState:UIControlStateNormal];
+    }else {
+        rightButton = [XLFactory buttonWithTitle:@"登录" image:nil type:XLButtonTypeNormal];
+    }
+    [rightButton sizeToFit];
 }
 
 #pragma mark - Getter & Setter
 
 - (UIBarButtonItem *)loginButton {
     if (!_loginButton) {
-        
-        UIButton *rightButton = [XLFactory buttonWithTitle:@"登陆/注册" image:nil type:XLButtonTypeNormal];
-//        rightButton.backgroundColor = Random_COLOR;
-        [rightButton sizeToFit];
+        XLBarButton *rightButton = [XLFactory buttonWithTitle:nil image:nil type:XLButtonTypeNormal];
         [rightButton addTarget:self action:@selector(loginButtonDidClicked:) forControlEvents:UIControlEventTouchDown];
         self.loginButton = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     }
     return _loginButton;
 }
-
-
-
-
-
 
 @end
