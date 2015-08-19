@@ -111,6 +111,7 @@
     return _lifeButton;
 }
 
+
 - (XLBarButton *)communityButton {
     if (!_communityButton) {
         self.communityButton = [XLFactory buttonWithTitle:@"在线" image:nil type:XLButtonTypeNormal];
