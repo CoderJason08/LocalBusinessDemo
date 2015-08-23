@@ -111,6 +111,7 @@
  *  发表评论
  */
 - (void)shopFooter:(XLShopFooterView *)shopFooterView sendCommentButtonDidClickWith:(ShopCommentModel *)commentModel {
+    NSLog(@"%@",commentModel);
     // 将评论添加到模型数组
     [self.shopModel.comment_list insertObject:commentModel atIndex:0];
     // 设置请求参数

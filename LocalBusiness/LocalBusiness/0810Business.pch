@@ -100,6 +100,16 @@
 #define kLogin @"index.php?anu=api/1/user/dispose_login"
 
 /**
+ *  所有圈子
+ */
+#define kAllCircles @"api/1/group/get_group_list"
+
+/**
+ *  工具
+ */
+#define kTools @"index.php?anu=api/1/live_tools/get_tools_list"
+
+/**
  *  友盟APP_Key
  */
 #define UMEN_APP_KEY @"55d1900567e58e1781000ee3"

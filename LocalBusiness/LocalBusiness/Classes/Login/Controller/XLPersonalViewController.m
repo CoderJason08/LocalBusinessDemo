@@ -7,64 +7,88 @@
 //
 
 #import "XLPersonalViewController.h"
+#import "XLPersonalHeaderView.h"
+#import "XLPersonalCell.h"
+#import "XLPersonalFooterView.h"
 
-@interface XLPersonalViewController ()
+@interface XLPersonalViewController () <XLPersonalFooterViewDelegate>
+/**
+ *  tableHeaderView
+ */
+@property (nonatomic, strong) XLPersonalHeaderView *headerView;
+/**
+ *  tableFooterView
+ */
+@property (nonatomic, strong) XLPersonalFooterView *footerView;
 
-@property (nonatomic, strong) XLBarButton *exitButton;
 
 @end
 
 @implementation XLPersonalViewController
 
-- (void)loadView {
-    self.view = [[UIView alloc] init];
-    self.view.backgroundColor = [UIColor whiteColor];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     [self.navigationItem setTitle:@"个人中心"];
     // 隐藏右边按钮
     self.navigationItem.rightBarButtonItem = nil;
     
-    [self.view addSubview:self.exitButton];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    [self setupConstraints];
-}
-
-- (void)setupConstraints {
-    [self.exitButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view);
-        make.top.equalTo(self.view).offset(64);
-        make.size.mas_equalTo(CGSizeMake(100, 50));
-    }];
+    self.tableView.tableHeaderView = self.headerView;
+    self.tableView.tableFooterView = self.footerView;
 }
 
 
-#pragma mark - Action
+#pragma mark - XLPersonalFooterViewDelegate
 
-- (void)exitButtonDidClick {
-    NSFileManager *fmr = [NSFileManager defaultManager];
-    [fmr removeItemAtPath:[XLFunction getUserInfoPath] error:NULL];
-    // 退出登录
-    [XLUserInfo sharedInfo].isLogin = NO;
+- (void)didClickexitButton {
     [self.navigationController popViewControllerAnimated:YES];
-    [self showSuccessMessage:@"退出登录"];
+    [self showSuccessMessage:@"退出成功"];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    XLPersonalCell *cell = [XLPersonalCell cellWithTableView:tableView];
+    NSMutableDictionary *para = [NSMutableDictionary dictionary];
+    if (indexPath.row == 0) {
+        NSString *gender = [XLUserInfo sharedInfo].infoModel.gender ? @"男" : @"女";
+        [para setObject:gender forKey:@"right"];
+        [para setObject:@"性别" forKey:@"left"];
+    }else if (indexPath.row == 1) {
+        [para setObject:@"手机" forKey:@"left"];
+        [para setObject: [XLUserInfo sharedInfo].infoModel.mobile forKey:@"right"];
+    }
+    cell.parameter = para;
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 42;
 }
 
 
 #pragma mark - Getter & Setter
 
-- (XLBarButton *)exitButton {
-    if (!_exitButton) {
-        self.exitButton = [XLFactory buttonWithTitle:@"退出登录" image:nil type:XLButtonTypeRound];
-        self.exitButton.backgroundColor = Random_COLOR;
-//        self.exitButton.frame = CGRectMake(0, 0, 100, 50);
-        [self.exitButton addTarget:self action:@selector(exitButtonDidClick) forControlEvents:UIControlEventTouchUpInside];
+- (XLPersonalHeaderView *)headerView {
+    if (!_headerView) {
+        self.headerView = [XLPersonalHeaderView personalHeaderView];
     }
-    return _exitButton;
+    return _headerView;
 }
+
+- (XLPersonalFooterView *)footerView {
+    if (!_footerView) {
+        self.footerView = [XLPersonalFooterView personalFooterView];
+        self.footerView.delegate = self;
+    }
+    return _footerView;
+}
+
 
 @end

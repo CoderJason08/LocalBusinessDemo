@@ -26,6 +26,9 @@
         case XLButtonTypeRound:
             button.layer.cornerRadius = 5;
             break;
+        case XLButtonTypeCircle:
+//            button.layer.cornerRadius = 54;
+            break;
         default:
             break;
     }

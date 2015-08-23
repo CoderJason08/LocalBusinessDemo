@@ -1,42 +1,38 @@
 //
-//  XLNewsViewController.m
-//  0810电商项目
+//  XLToolDetailViewController.m
+//  LocalBusiness
 //
-//  Created by Jason on 15/8/10.
+//  Created by Jason on 15/8/22.
 //  Copyright (c) 2015年 Jason. All rights reserved.
 //
 
-#import "XLNewsViewController.h"
+#import "XLToolDetailViewController.h"
 
-@interface XLNewsViewController () <UIWebViewDelegate>
-
-@property (nonatomic, strong) UIWebView *webView;
+@interface XLToolDetailViewController () <UIWebViewDelegate>
 
 @end
 
-@implementation XLNewsViewController
+@implementation XLToolDetailViewController {
+    UIWebView *_webView;
+}
 
 - (void)loadView {
-    self.view = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.webView = (UIWebView *)self.view;
-    self.webView.delegate = self;
+    _webView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _webView.delegate = self;
+    self.view = _webView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.webView.scalesPageToFit = YES;
-    NSURL *url = [NSURL URLWithString:@"http://www.qd-life.com/news&src=webview"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[self.parameter objectForKey:@"url"]];
+    [_webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - UIWebViewDelegate 
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [self showActivityHUD];

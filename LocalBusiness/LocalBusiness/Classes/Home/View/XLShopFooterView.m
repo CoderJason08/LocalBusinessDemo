@@ -115,7 +115,6 @@
         commentModel.date = [fmr stringFromDate:[NSDate date]];
         commentModel.content = self.inputView.text;
         commentModel.score = (int)self.chooseStarView.show_star > 5 ? 5 : (int)self.chooseStarView.show_star;
-        commentModel.id = 8888;
         commentModel.user_id = [XLUserInfo sharedInfo].infoModel.user_id.intValue;
         commentModel.avatar = [XLUserInfo sharedInfo].infoModel.small_avatar;
         commentModel.name = [XLUserInfo sharedInfo].infoModel.user_name;

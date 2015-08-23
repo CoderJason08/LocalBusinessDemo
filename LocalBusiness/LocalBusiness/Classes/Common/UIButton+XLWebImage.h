@@ -14,5 +14,9 @@
  *  设置按钮图片
  */
 - (void)xlSetImageWithURL:(NSString *)url;
+/**
+ *  设置背景图片
+ */
+- (void)xlSetBackgroundImageWithURL:(NSString *)url;
 
 @end

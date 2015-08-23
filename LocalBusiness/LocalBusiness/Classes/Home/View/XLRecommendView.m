@@ -95,6 +95,7 @@
     return 1;
 }
 
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 4;
 }
@@ -106,6 +107,7 @@
 
     return cell;
 }
+
 
 #pragma mark - UICollectionViewDelegate
 

@@ -22,7 +22,6 @@
 		9605D7D21B7905AE00FE2C37 /* XLTabPopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D77C1B7905AE00FE2C37 /* XLTabPopBar.m */; };
 		9605D7D31B7905AE00FE2C37 /* XLAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7811B7905AE00FE2C37 /* XLAboutViewController.m */; };
 		9605D7D41B7905AE00FE2C37 /* XLOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7871B7905AE00FE2C37 /* XLOnlineViewController.m */; };
-		9605D7D51B7905AE00FE2C37 /* XLToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D78D1B7905AE00FE2C37 /* XLToolsViewController.m */; };
 		9605D7D61B7905AE00FE2C37 /* XLShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7931B7905AE00FE2C37 /* XLShakeViewController.m */; };
 		9605D7D71B7905AE00FE2C37 /* XLNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D79D1B7905AE00FE2C37 /* XLNewsViewController.m */; };
 		9605D7D81B7905AE00FE2C37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9605D7A41B7905AE00FE2C37 /* Images.xcassets */; };
@@ -41,6 +40,7 @@
 		9605D7E51B7905AE00FE2C37 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9605D7C31B7905AE00FE2C37 /* MBProgressHUD.bundle */; };
 		9605D7E61B7905AE00FE2C37 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7C51B7905AE00FE2C37 /* MBProgressHUD.m */; };
 		9605D7E71B7905AE00FE2C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605D7C61B7905AE00FE2C37 /* main.m */; };
+		9608841B1B8628CD002FE471 /* XLPersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9608841A1B8628CD002FE471 /* XLPersonalHeaderView.m */; };
 		960F08801B7BAE1300DC0690 /* XLSubBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F087F1B7BAE1300DC0690 /* XLSubBaseViewController.m */; };
 		960F08A91B7BAF7F00DC0690 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08841B7BAF7F00DC0690 /* AFHTTPRequestOperation.m */; };
 		960F08AA1B7BAF7F00DC0690 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F08861B7BAF7F00DC0690 /* AFHTTPRequestOperationManager.m */; };
@@ -99,14 +99,26 @@
 		9644DEAC1B7F2BCF007FDFB4 /* XLShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEAB1B7F2BCF007FDFB4 /* XLShopViewController.m */; };
 		9644DEE51B7F5338007FDFB4 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEE41B7F5338007FDFB4 /* UIView+Toast.m */; };
 		9644DEE81B7F5A46007FDFB4 /* XLGoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9644DEE71B7F5A46007FDFB4 /* XLGoodModel.m */; };
+		965FD0A81B8862BA0051D22F /* XLToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FD0A51B8862BA0051D22F /* XLToolsViewController.m */; };
+		965FD0AB1B8865170051D22F /* XLToolsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FD0AA1B8865170051D22F /* XLToolsListModel.m */; };
+		965FD0B21B88684E0051D22F /* XLToolsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FD0B01B88684E0051D22F /* XLToolsCollectionViewCell.m */; };
+		965FD0B31B88684E0051D22F /* XLToolsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 965FD0B11B88684E0051D22F /* XLToolsCollectionViewCell.xib */; };
+		965FD0B61B88704A0051D22F /* XLToolDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FD0B51B88704A0051D22F /* XLToolDetailViewController.m */; };
+		965FD0B91B8873AB0051D22F /* XLShopDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FD0B81B8873AB0051D22F /* XLShopDetailHeaderView.m */; };
+		965FD0BB1B8874160051D22F /* XLShopDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 965FD0BA1B8874160051D22F /* XLShopDetailHeaderView.xib */; };
 		966B581E1B8234D30032ED86 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B581D1B8234D30032ED86 /* SSKeychain.m */; };
 		966B58211B823D3E0032ED86 /* XLUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58201B823D3E0032ED86 /* XLUserInfo.m */; };
 		966B58241B8246090032ED86 /* XLUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58231B8246090032ED86 /* XLUserInfoModel.m */; };
 		966B58271B8257340032ED86 /* XLPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58261B8257340032ED86 /* XLPersonalViewController.m */; };
 		966B582A1B82C3060032ED86 /* XLFindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B58291B82C3060032ED86 /* XLFindPwdViewController.m */; };
+		969773A71B873C6B00671B5B /* XLPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 969773A61B873C6B00671B5B /* XLPersonalCell.m */; };
+		969773AD1B873CA300671B5B /* XLPersonalFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 969773AC1B873CA300671B5B /* XLPersonalFooterView.m */; };
 		96B538231B7E35DC002C06BC /* XLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B538221B7E35DC002C06BC /* XLLocationManager.m */; };
 		96B5385B1B7E6425002C06BC /* XLGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385A1B7E6425002C06BC /* XLGuessCell.m */; };
 		96B5385F1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */; };
+		96D2C29A1B874C920041907A /* XLCircleListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D2C2991B874C920041907A /* XLCircleListModel.m */; };
+		96D2C2A11B8770D60041907A /* XLAllCirclesCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D2C29F1B8770D60041907A /* XLAllCirclesCollectionCell.m */; };
+		96D2C2A21B8770D60041907A /* XLAllCirclesCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D2C2A01B8770D60041907A /* XLAllCirclesCollectionCell.xib */; };
 		96EA1C451B8030990016B2EF /* UIImageView+XLWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EA1C441B8030990016B2EF /* UIImageView+XLWebImage.m */; };
 		96EA1C481B8031130016B2EF /* UIButton+XLWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EA1C471B8031130016B2EF /* UIButton+XLWebImage.m */; };
 		96EA1C4F1B8039250016B2EF /* XLShopCommentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EA1C4A1B8039250016B2EF /* XLShopCommentViewCell.m */; };
@@ -171,8 +183,6 @@
 		9605D7811B7905AE00FE2C37 /* XLAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLAboutViewController.m; sourceTree = "<group>"; };
 		9605D7861B7905AE00FE2C37 /* XLOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLOnlineViewController.h; sourceTree = "<group>"; };
 		9605D7871B7905AE00FE2C37 /* XLOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLOnlineViewController.m; sourceTree = "<group>"; };
-		9605D78C1B7905AE00FE2C37 /* XLToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLToolsViewController.h; sourceTree = "<group>"; };
-		9605D78D1B7905AE00FE2C37 /* XLToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLToolsViewController.m; sourceTree = "<group>"; };
 		9605D7921B7905AE00FE2C37 /* XLShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShakeViewController.h; sourceTree = "<group>"; };
 		9605D7931B7905AE00FE2C37 /* XLShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShakeViewController.m; sourceTree = "<group>"; };
 		9605D79C1B7905AE00FE2C37 /* XLNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLNewsViewController.h; sourceTree = "<group>"; };
@@ -209,6 +219,8 @@
 		9605D7C41B7905AE00FE2C37 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		9605D7C51B7905AE00FE2C37 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		9605D7C61B7905AE00FE2C37 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		960884191B8628CD002FE471 /* XLPersonalHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPersonalHeaderView.h; sourceTree = "<group>"; };
+		9608841A1B8628CD002FE471 /* XLPersonalHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPersonalHeaderView.m; sourceTree = "<group>"; };
 		960F087E1B7BAE1300DC0690 /* XLSubBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSubBaseViewController.h; sourceTree = "<group>"; };
 		960F087F1B7BAE1300DC0690 /* XLSubBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSubBaseViewController.m; sourceTree = "<group>"; };
 		960F08831B7BAF7F00DC0690 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -329,6 +341,18 @@
 		9644DEE41B7F5338007FDFB4 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		9644DEE61B7F5A46007FDFB4 /* XLGoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGoodModel.h; sourceTree = "<group>"; };
 		9644DEE71B7F5A46007FDFB4 /* XLGoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGoodModel.m; sourceTree = "<group>"; };
+		965FD0A41B8862BA0051D22F /* XLToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLToolsViewController.h; sourceTree = "<group>"; };
+		965FD0A51B8862BA0051D22F /* XLToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLToolsViewController.m; sourceTree = "<group>"; };
+		965FD0A91B8865170051D22F /* XLToolsListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLToolsListModel.h; sourceTree = "<group>"; };
+		965FD0AA1B8865170051D22F /* XLToolsListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLToolsListModel.m; sourceTree = "<group>"; };
+		965FD0AF1B88684E0051D22F /* XLToolsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XLToolsCollectionViewCell.h; path = LocalBusiness/Classes/Tools/View/XLToolsCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		965FD0B01B88684E0051D22F /* XLToolsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XLToolsCollectionViewCell.m; path = LocalBusiness/Classes/Tools/View/XLToolsCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		965FD0B11B88684E0051D22F /* XLToolsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XLToolsCollectionViewCell.xib; path = LocalBusiness/Classes/Tools/View/XLToolsCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		965FD0B41B88704A0051D22F /* XLToolDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XLToolDetailViewController.h; path = LocalBusiness/Classes/Tools/Controller/XLToolDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		965FD0B51B88704A0051D22F /* XLToolDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XLToolDetailViewController.m; path = LocalBusiness/Classes/Tools/Controller/XLToolDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		965FD0B71B8873AB0051D22F /* XLShopDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShopDetailHeaderView.h; sourceTree = "<group>"; };
+		965FD0B81B8873AB0051D22F /* XLShopDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShopDetailHeaderView.m; sourceTree = "<group>"; };
+		965FD0BA1B8874160051D22F /* XLShopDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLShopDetailHeaderView.xib; sourceTree = "<group>"; };
 		966B581C1B8234D30032ED86 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		966B581D1B8234D30032ED86 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		966B581F1B823D3E0032ED86 /* XLUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLUserInfo.h; sourceTree = "<group>"; };
@@ -339,12 +363,21 @@
 		966B58261B8257340032ED86 /* XLPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPersonalViewController.m; sourceTree = "<group>"; };
 		966B58281B82C3060032ED86 /* XLFindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFindPwdViewController.h; sourceTree = "<group>"; };
 		966B58291B82C3060032ED86 /* XLFindPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFindPwdViewController.m; sourceTree = "<group>"; };
+		969773A51B873C6B00671B5B /* XLPersonalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPersonalCell.h; sourceTree = "<group>"; };
+		969773A61B873C6B00671B5B /* XLPersonalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPersonalCell.m; sourceTree = "<group>"; };
+		969773AB1B873CA300671B5B /* XLPersonalFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPersonalFooterView.h; sourceTree = "<group>"; };
+		969773AC1B873CA300671B5B /* XLPersonalFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPersonalFooterView.m; sourceTree = "<group>"; };
 		96B538211B7E35DC002C06BC /* XLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLocationManager.h; sourceTree = "<group>"; };
 		96B538221B7E35DC002C06BC /* XLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLocationManager.m; sourceTree = "<group>"; };
 		96B538591B7E6425002C06BC /* XLGuessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGuessCell.h; sourceTree = "<group>"; };
 		96B5385A1B7E6425002C06BC /* XLGuessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGuessCell.m; sourceTree = "<group>"; };
 		96B5385D1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		96B5385E1B7EDA18002C06BC /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		96D2C2981B874C920041907A /* XLCircleListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCircleListModel.h; sourceTree = "<group>"; };
+		96D2C2991B874C920041907A /* XLCircleListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCircleListModel.m; sourceTree = "<group>"; };
+		96D2C29E1B8770D60041907A /* XLAllCirclesCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLAllCirclesCollectionCell.h; sourceTree = "<group>"; };
+		96D2C29F1B8770D60041907A /* XLAllCirclesCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLAllCirclesCollectionCell.m; sourceTree = "<group>"; };
+		96D2C2A01B8770D60041907A /* XLAllCirclesCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLAllCirclesCollectionCell.xib; sourceTree = "<group>"; };
 		96EA1C431B8030990016B2EF /* UIImageView+XLWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XLWebImage.h"; sourceTree = "<group>"; };
 		96EA1C441B8030990016B2EF /* UIImageView+XLWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XLWebImage.m"; sourceTree = "<group>"; };
 		96EA1C461B8031130016B2EF /* UIButton+XLWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XLWebImage.h"; sourceTree = "<group>"; };
@@ -466,7 +499,7 @@
 				9605D7661B7905AE00FE2C37 /* Login(登录注册) */,
 				9605D77D1B7905AE00FE2C37 /* More(更多) */,
 				9605D79A1B7905AE00FE2C37 /* News(新闻) */,
-				9605D7A01B7905AE00FE2C37 /* Tools(工具) */,
+				965FD0A21B8862BA0051D22F /* Tools(工具) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -494,6 +527,8 @@
 		9605D75D1B7905AE00FE2C37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				96D2C2981B874C920041907A /* XLCircleListModel.h */,
+				96D2C2991B874C920041907A /* XLCircleListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,6 +536,9 @@
 		9605D75E1B7905AE00FE2C37 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96D2C29E1B8770D60041907A /* XLAllCirclesCollectionCell.h */,
+				96D2C29F1B8770D60041907A /* XLAllCirclesCollectionCell.m */,
+				96D2C2A01B8770D60041907A /* XLAllCirclesCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +643,12 @@
 		9605D76B1B7905AE00FE2C37 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				960884191B8628CD002FE471 /* XLPersonalHeaderView.h */,
+				9608841A1B8628CD002FE471 /* XLPersonalHeaderView.m */,
+				969773A51B873C6B00671B5B /* XLPersonalCell.h */,
+				969773A61B873C6B00671B5B /* XLPersonalCell.m */,
+				969773AB1B873CA300671B5B /* XLPersonalFooterView.h */,
+				969773AC1B873CA300671B5B /* XLPersonalFooterView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -750,8 +794,6 @@
 		9605D78B1B7905AE00FE2C37 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9605D78C1B7905AE00FE2C37 /* XLToolsViewController.h */,
-				9605D78D1B7905AE00FE2C37 /* XLToolsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -862,38 +904,6 @@
 			sourceTree = "<group>";
 		};
 		9605D79F1B7905AE00FE2C37 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9605D7A01B7905AE00FE2C37 /* Tools(工具) */ = {
-			isa = PBXGroup;
-			children = (
-				9605D7A11B7905AE00FE2C37 /* Controller */,
-				9605D7A21B7905AE00FE2C37 /* Model */,
-				9605D7A31B7905AE00FE2C37 /* View */,
-			);
-			name = "Tools(工具)";
-			path = Ours;
-			sourceTree = "<group>";
-		};
-		9605D7A11B7905AE00FE2C37 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		9605D7A21B7905AE00FE2C37 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9605D7A31B7905AE00FE2C37 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -1188,6 +1198,47 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		965FD0A21B8862BA0051D22F /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+				965FD0A31B8862BA0051D22F /* Controller */,
+				965FD0A61B8862BA0051D22F /* Model */,
+				965FD0A71B8862BA0051D22F /* View */,
+			);
+			name = "Tools(工具)";
+			path = News/Tools;
+			sourceTree = "<group>";
+		};
+		965FD0A31B8862BA0051D22F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				965FD0A41B8862BA0051D22F /* XLToolsViewController.h */,
+				965FD0A51B8862BA0051D22F /* XLToolsViewController.m */,
+				965FD0B41B88704A0051D22F /* XLToolDetailViewController.h */,
+				965FD0B51B88704A0051D22F /* XLToolDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		965FD0A61B8862BA0051D22F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				965FD0A91B8865170051D22F /* XLToolsListModel.h */,
+				965FD0AA1B8865170051D22F /* XLToolsListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		965FD0A71B8862BA0051D22F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				965FD0AF1B88684E0051D22F /* XLToolsCollectionViewCell.h */,
+				965FD0B01B88684E0051D22F /* XLToolsCollectionViewCell.m */,
+				965FD0B11B88684E0051D22F /* XLToolsCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		966B581B1B8234D30032ED86 /* keychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -1218,6 +1269,9 @@
 		96EEC77C1B7F99690035F6EF /* GoodDetail(商品详情) */ = {
 			isa = PBXGroup;
 			children = (
+				965FD0B71B8873AB0051D22F /* XLShopDetailHeaderView.h */,
+				965FD0B81B8873AB0051D22F /* XLShopDetailHeaderView.m */,
+				965FD0BA1B8874160051D22F /* XLShopDetailHeaderView.xib */,
 			);
 			name = "GoodDetail(商品详情)";
 			sourceTree = "<group>";
@@ -1367,6 +1421,7 @@
 			files = (
 				96F0A1261B81C6ED008DCA48 /* UMSocialLocalizable.strings in Resources */,
 				963D16B61B80A44F00156A93 /* IQKeyboardManager.bundle in Resources */,
+				965FD0B31B88684E0051D22F /* XLToolsCollectionViewCell.xib in Resources */,
 				96EA1C521B8039250016B2EF /* XLShopGoodsViewCell.xib in Resources */,
 				9605D7D91B7905AE00FE2C37 /* Info.plist in Resources */,
 				9605D7D81B7905AE00FE2C37 /* Images.xcassets in Resources */,
@@ -1374,8 +1429,10 @@
 				96F0A1281B81C6ED008DCA48 /* UMSCommentDetailController.xib in Resources */,
 				96F0A12E1B81C6ED008DCA48 /* UMSnsAccountViewController.xib in Resources */,
 				9605D7C81B7905AE00FE2C37 /* LaunchScreen.xib in Resources */,
+				965FD0BB1B8874160051D22F /* XLShopDetailHeaderView.xib in Resources */,
 				96F0A12D1B81C6ED008DCA48 /* UMSLoginViewController.xib in Resources */,
 				96F0A1291B81C6ED008DCA48 /* UMSCommentInputController.xib in Resources */,
+				96D2C2A21B8770D60041907A /* XLAllCirclesCollectionCell.xib in Resources */,
 				9605D7DA1B7905AE00FE2C37 /* Info.plist in Resources */,
 				96F0A12A1B81C6ED008DCA48 /* UMSCommentInputControlleriPad.xib in Resources */,
 				96F0A12F1B81C6ED008DCA48 /* UMSShareListController.xib in Resources */,
@@ -1409,6 +1466,7 @@
 				963D16BB1B80A44F00156A93 /* IQToolbar.m in Sources */,
 				960F08EC1B7BCD1100DC0690 /* JSONKeyMapper.m in Sources */,
 				960F08E61B7BCD1100DC0690 /* JSONModelClassProperty.m in Sources */,
+				965FD0AB1B8865170051D22F /* XLToolsListModel.m in Sources */,
 				960F09411B7CC26C00DC0690 /* XLRecommendCell.m in Sources */,
 				960F08BE1B7BAF8A00DC0690 /* XLFunction.m in Sources */,
 				963D16B91B80A44F00156A93 /* IQTextView.m in Sources */,
@@ -1428,7 +1486,10 @@
 				960F08B31B7BAF7F00DC0690 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				963D16B81B80A44F00156A93 /* IQSegmentedNextPrevious.m in Sources */,
 				960F08B41B7BAF7F00DC0690 /* UIAlertView+AFNetworking.m in Sources */,
+				965FD0B21B88684E0051D22F /* XLToolsCollectionViewCell.m in Sources */,
 				960F08B91B7BAF7F00DC0690 /* MD5.m in Sources */,
+				96D2C2A11B8770D60041907A /* XLAllCirclesCollectionCell.m in Sources */,
+				969773A71B873C6B00671B5B /* XLPersonalCell.m in Sources */,
 				9605D7DF1B7905AE00FE2C37 /* MASViewAttribute.m in Sources */,
 				96EA1C511B8039250016B2EF /* XLShopGoodsViewCell.m in Sources */,
 				9605D7DE1B7905AE00FE2C37 /* MASLayoutConstraint.m in Sources */,
@@ -1440,6 +1501,7 @@
 				9605D7CB1B7905AE00FE2C37 /* XLHomeViewController.m in Sources */,
 				960F08FE1B7C581F00DC0690 /* XLCirclesCell.m in Sources */,
 				960F08A91B7BAF7F00DC0690 /* AFHTTPRequestOperation.m in Sources */,
+				965FD0B91B8873AB0051D22F /* XLShopDetailHeaderView.m in Sources */,
 				960F08ED1B7BCD1100DC0690 /* JSONValueTransformer.m in Sources */,
 				9605D7CC1B7905AE00FE2C37 /* XLLoginViewController.m in Sources */,
 				96EEC7891B7FAA260035F6EF /* XLFactory.m in Sources */,
@@ -1466,8 +1528,10 @@
 				960F08E41B7BCD1100DC0690 /* JSONModel.m in Sources */,
 				9605D7DB1B7905AE00FE2C37 /* MASCompositeConstraint.m in Sources */,
 				963D16641B80723100156A93 /* XLShopLocationViewController.m in Sources */,
+				969773AD1B873CA300671B5B /* XLPersonalFooterView.m in Sources */,
 				960F08AB1B7BAF7F00DC0690 /* AFHTTPSessionManager.m in Sources */,
 				963D16DE1B80B57E00156A93 /* LDXScore.m in Sources */,
+				965FD0B61B88704A0051D22F /* XLToolDetailViewController.m in Sources */,
 				9605D7E11B7905AE00FE2C37 /* NSArray+MASAdditions.m in Sources */,
 				963D165E1B806B1100156A93 /* XLShopFooterView.m in Sources */,
 				960F08C61B7BBAB100DC0690 /* XLAdvertiseView.m in Sources */,
@@ -1477,6 +1541,7 @@
 				9605D7D61B7905AE00FE2C37 /* XLShakeViewController.m in Sources */,
 				960F08AF1B7BAF7F00DC0690 /* AFURLRequestSerialization.m in Sources */,
 				963D16BC1B80A44F00156A93 /* NSArray+Sort.m in Sources */,
+				96D2C29A1B874C920041907A /* XLCircleListModel.m in Sources */,
 				960F08FB1B7C3BC400DC0690 /* XLRegisterViewController.m in Sources */,
 				960F093B1B7CBAD500DC0690 /* XLHeaderView.m in Sources */,
 				960F093E1B7CC25000DC0690 /* XLRecommendView.m in Sources */,
@@ -1484,6 +1549,7 @@
 				960F08B11B7BAF7F00DC0690 /* AFURLSessionManager.m in Sources */,
 				960F08AD1B7BAF7F00DC0690 /* AFSecurityPolicy.m in Sources */,
 				9605D7CE1B7905AE00FE2C37 /* XLNavigationController.m in Sources */,
+				9608841B1B8628CD002FE471 /* XLPersonalHeaderView.m in Sources */,
 				9605D7E31B7905AE00FE2C37 /* View+MASAdditions.m in Sources */,
 				960F08801B7BAE1300DC0690 /* XLSubBaseViewController.m in Sources */,
 				9605D7E01B7905AE00FE2C37 /* MASViewConstraint.m in Sources */,
@@ -1498,7 +1564,7 @@
 				96EA1C4F1B8039250016B2EF /* XLShopCommentViewCell.m in Sources */,
 				960F08BF1B7BAF8A00DC0690 /* XLNewtWorkManager.m in Sources */,
 				960F08F61B7C353600DC0690 /* XLNavRightButton.m in Sources */,
-				9605D7D51B7905AE00FE2C37 /* XLToolsViewController.m in Sources */,
+				965FD0A81B8862BA0051D22F /* XLToolsViewController.m in Sources */,
 				96EEC7831B7FA6C80035F6EF /* XLShopHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

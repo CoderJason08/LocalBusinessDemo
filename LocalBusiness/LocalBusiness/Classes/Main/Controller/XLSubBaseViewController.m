@@ -31,11 +31,12 @@
 }
 
 - (void)backButtonDidClicked {
+    [self hideActivityHUD];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 /**
- *  后退按钮方法
+ *  后退按钮
  */
 - (UIBarButtonItem *)backButton {
     if (!_backButton) {
